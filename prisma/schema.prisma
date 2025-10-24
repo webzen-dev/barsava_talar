@@ -1,0 +1,78 @@
+// schema.prisma
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}
+
+model User {
+    id        Int      @id @default(autoincrement())
+    username  String   @unique
+    password  String
+    createdAt DateTime @default(now())
+}
+
+model Reservation {
+    id           Int      @id @default(autoincrement())
+    first_name   String
+    last_name    String
+    phone_number String
+    description  String
+    guests       Int      @default(200)
+    date         String
+    status       String   @default("Pending")
+    createdAt    DateTime @default(now())
+    member       Members? @relation(fields: [memberId], references: [id])
+    memberId     Int?
+}
+
+model Members {
+    id           Int           @id @default(autoincrement())
+    phoneNumber  String        @unique
+    createdAt    DateTime      @default(now())
+    reservations Reservation[]
+}
+
+model Menu {
+    id          Int        @id
+    name        String
+    description String?
+    picId       String?
+    Items       MenuItem[]
+}
+
+model MenuItem {
+    id          Int     @id @default(autoincrement())
+    name        String
+    description String?
+    picId       String?
+    Menus       Menu?   @relation(fields: [menusId], references: [id])
+    menusId     Int?
+}
+
+model ContactUs {
+    id           Int      @id @default(autoincrement())
+    first_name   String
+    last_name    String
+    phone_number String
+    message      String
+    isRead       Boolean  @default(false)
+    createdAt    DateTime @default(now())
+}
+
+model Media {
+    id        Int       @id @default(autoincrement())
+    url       String
+    title     String?
+    createdAt DateTime  @default(now())
+    isMain    Boolean   @default(false)
+    type      MediaType
+}
+
+enum MediaType {
+    IMAGE
+    VIDEO
+}

@@ -1,0 +1,188 @@
+@import "tailwindcss";
+@import url("../../public/fonts/stylesheet.css");
+@import url("/fonts/stylesheet.css");
+@font-face {
+  font-family: "IRANYekan";
+  src: url("../../public/fonts/IRANYekan-Bold.woff2") format("woff2"),
+    url("../../public/fonts/IRANYekan-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IRANYekan";
+  src: url("../../public/fonts/IRANYekan-Black.woff2") format("woff2"),
+    url("../../public/fonts/IRANYekan-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+* {
+  outline: none;
+}
+body {
+  font-family: "IRANYekan", sans-serif;
+  background: #f7f1ea;
+}
+
+@-webkit-keyframes box1 {
+  0%,
+  50% {
+    transform: translate(100%, 0);
+  }
+
+  100% {
+    transform: translate(200%, 0);
+  }
+}
+
+@keyframes box1 {
+  0%,
+  50% {
+    transform: translate(100%, 0);
+  }
+
+  100% {
+    transform: translate(200%, 0);
+  }
+}
+
+@-webkit-keyframes box2 {
+  0% {
+    transform: translate(0, 100%);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(100%, 0);
+  }
+}
+
+@keyframes box2 {
+  0% {
+    transform: translate(0, 100%);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(100%, 0);
+  }
+}
+
+@-webkit-keyframes box3 {
+  0%,
+  50% {
+    transform: translate(100%, 100%);
+  }
+
+  100% {
+    transform: translate(0, 100%);
+  }
+}
+
+@keyframes box3 {
+  0%,
+  50% {
+    transform: translate(100%, 100%);
+  }
+
+  100% {
+    transform: translate(0, 100%);
+  }
+}
+
+@-webkit-keyframes box4 {
+  0% {
+    transform: translate(200%, 0);
+  }
+
+  50% {
+    transform: translate(200%, 100%);
+  }
+
+  100% {
+    transform: translate(100%, 100%);
+  }
+}
+
+@keyframes box4 {
+  0% {
+    transform: translate(200%, 0);
+  }
+
+  50% {
+    transform: translate(200%, 100%);
+  }
+
+  100% {
+    transform: translate(100%, 100%);
+  }
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.rmdp-month-picker,
+.rmdp-year-picker,
+.custom-calendar {
+  background-color: #f7f1ea !important;
+  color: #423a2f !important;
+  border-radius: 12px;
+}
+
+.custom-calendar .rmdp-day,
+.custom-calendar .rmdp-week-day {
+  color: #423a2f !important;
+}
+.rmdp-day span:hover {
+  background: rgba(66, 58, 47, 0.5) !important;
+}
+
+.custom-calendar .rmdp-header-values {
+  color: #423a2f !important;
+}
+
+.custom-calendar .rmdp-day.rmdp-selected span {
+  background-color: #423a2f !important;
+  color: #f7f1ea !important;
+  border-radius: 6px;
+}
+
+.custom-calendar .rmdp-day.rmdp-disabled span {
+  color: #aaa !important;
+  background: transparent !important;
+}
+.rmdp-day.rmdp-today span {
+  background: rgba(66, 58, 47, 0.8) !important;
+}

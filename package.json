@@ -1,0 +1,52 @@
+{
+  "name": "barsava-talar",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.1",
+    "@prisma/client": "^6.14.0",
+    "@reduxjs/toolkit": "^2.8.2",
+    "axios": "^1.11.0",
+    "bcryptjs": "^3.0.2",
+    "dayjs": "^1.11.18",
+    "gsap": "^3.13.0",
+    "jalali-dayjs": "^0.0.1",
+    "keen-slider": "^6.8.6",
+    "moment-jalaali": "^0.10.4",
+    "next": "15.4.3",
+    "next-auth": "^4.24.11",
+    "prisma": "^6.14.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-icons": "^5.5.0",
+    "react-loading-skeleton": "^3.5.0",
+    "react-multi-date-picker": "^4.5.2",
+    "react-redux": "^9.2.0",
+    "sonner": "^2.0.7",
+    "zod": "^4.0.17"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/react-redux": "^7.1.34",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.3",
+    "tailwindcss": "^4",
+    "tsx": "^4.20.4",
+    "typescript": "^5"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  }
+}
