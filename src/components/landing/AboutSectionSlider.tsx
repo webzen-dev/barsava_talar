@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useKeenSlider } from "keen-slider/react";
 import Link from "next/link";
+import { useKeenSlider } from "keen-slider/react";
 import { useEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "gsap/all";
 import { gsap } from "gsap";
@@ -51,7 +51,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const AboutSectionSlider = () => {
   const fadeUpEl = useRef<HTMLDivElement[]>([]);
-  const [mounted, setMounted] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
@@ -86,12 +85,6 @@ const AboutSectionSlider = () => {
   });
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (!mounted) return;
-
     if (instanceRef.current) instanceRef.current.update();
 
     if (fadeUpEl.current) {
@@ -113,9 +106,8 @@ const AboutSectionSlider = () => {
 
       return () => ctx.revert();
     }
-  }, [mounted, instanceRef]);
+  }, [instanceRef]);
 
-  if (!mounted) return null;
 
   const nextSlide = () => instanceRef.current?.next();
   const prevSlide = () => instanceRef.current?.prev();
@@ -135,6 +127,7 @@ const AboutSectionSlider = () => {
               src={slide.src}
               alt={`slide-${index}`}
               fill
+              loading="lazy"
               className="object-cover rounded-2xl select-none"
               draggable={false}
             />
@@ -166,9 +159,8 @@ const AboutSectionSlider = () => {
           {slides.map((_, index) => (
             <span
               key={index}
-              className={`w-[40px] h-[4px] rounded-2xl transition-all duration-300 ${
-                currentSlide === index ? "bg-[#dec39a]" : "bg-[#c2c2c2]"
-              }`}
+              className={`w-[40px] h-[4px] rounded-2xl transition-all duration-300 ${currentSlide === index ? "bg-[#dec39a]" : "bg-[#c2c2c2]"
+                }`}
             ></span>
           ))}
         </div>
