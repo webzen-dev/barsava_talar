@@ -12,7 +12,6 @@ const slides: string[] = [
 ];
 
 const AboutHeroSlider = () => {
-  const [currentSlide, setCurrentSlide] = useState<number>(0);
 
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
     loop: true,

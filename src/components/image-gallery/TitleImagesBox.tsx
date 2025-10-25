@@ -17,9 +17,10 @@ const TitleImagesBox = () => {
               width={60}
               height={60}
             />
+            
             <div className="h-[0.5px] bg-[#423A2F] flex-1"></div>
           </div>
-          <b className="text-4xl pb-2.5 max-md:text-base">تصاویر سالن بانوان بارثاوا</b>{" "}
+          <b className="text-4xl pb-2.5 max-md:text-base">تصاویر سالن اقایان</b>{" "}
         </div>
       </div>
   );

@@ -20,11 +20,11 @@ const OtherPhoto = () => {
             />
             <div className="h-[0.5px] bg-[#423A2F] flex-1"></div>
           </div>
-          <b className="text-4xl pb-2.5 max-md:text-base">تصاویر دیگر </b>{" "}
+          <b className="text-4xl pb-2.5 max-md:text-base">تصاویر ورودی باغ تالار</b>{" "}
         </div>
       </div>{" "}
       <div
-        className=" md:grid-rows-6 gap-5 px-10 min-h-screen       grid  w-full pb-5 max-md:p-2.5
+        className=" md:grid-rows-6 gap-5 px-10 min-h-screen grid  w-full pb-5 max-md:p-2.5
         grid-cols-2 auto-rows-[250px]  
         sm:grid-cols-2 sm:auto-rows-[250px] 
         md:grid-cols-3 md:auto-rows-[300px] 
@@ -35,11 +35,11 @@ const OtherPhoto = () => {
       >
         <div
           className="flex items-center justify-center text-white font-bold rounded-xl 
-                      bg-gradient-to-r from-indigo-500 to-purple-500 relative
+                     bg-gradient-to-tr from-gray-400 to-gray-300 relative
                       md:col-span-4 md:row-span-2"
         >
           <Image
-            src={"/images/058A0053 - Copy.JPG"}
+            src={"/images/DSC07600.JPG"}
             alt="image"
             fill
             className="object-cover rounded-2xl select-none"
@@ -49,7 +49,7 @@ const OtherPhoto = () => {
 
         <div
           className="flex items-center justify-center text-white font-bold rounded-xl 
-                      bg-gradient-to-r from-green-400 to-emerald-600 relative
+                     bg-gradient-to-tr from-gray-400 to-gray-300 relative
                       md:col-span-1 md:row-span-2 md:col-start-5"
         >
           {" "}
@@ -64,11 +64,11 @@ const OtherPhoto = () => {
 
         <div
           className="flex items-center justify-center text-white font-bold rounded-xl 
-                      bg-gradient-to-r from-pink-500 to-rose-600 relative
-                      md:col-span-3 md:row-span-2 md:col-start-3 md:row-start-3"
+                     bg-gradient-to-tr from-gray-400 to-gray-300 relative
+                      md:col-span-3 md:row-span-2  md:col-start-3 md:row-start-3"
         >
           <Image
-            src={"/images/640A1000.JPG"}
+            src={"/images/DSC07610.jpg"}
             alt="image"
             fill
             className="object-cover rounded-2xl select-none"
@@ -78,7 +78,7 @@ const OtherPhoto = () => {
 
         <div
           className="flex items-center justify-center text-white font-bold rounded-xl 
-                      bg-gradient-to-r from-yellow-400 to-orange-500 relative
+                     bg-gradient-to-tr from-gray-400 to-gray-300 relative
                       md:col-span-2 md:row-span-2 md:col-start-1 md:row-start-3"
         >
           {" "}
@@ -93,8 +93,8 @@ const OtherPhoto = () => {
 
         <div
           className="flex items-center justify-center text-white font-bold rounded-xl 
-                      bg-gradient-to-r from-cyan-400 to-blue-600 relative
-                      md:col-span-5 md:row-span-4 col-span-2 md:row-start-5"
+                  bg-gradient-to-tr from-gray-400 to-gray-300 relative
+                      md:col-span-5 md:row-span-4 col-span-4 md:row-start-5"
         >
           {" "}
           <Image

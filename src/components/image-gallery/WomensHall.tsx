@@ -20,7 +20,7 @@ const WomensHall = () => {
             />
             <div className="h-[0.5px] bg-[#423A2F] flex-1"></div>
           </div>
-          <b className="text-4xl pb-2.5 max-md:text-base">تصاویر سالن اقایان</b>{" "}
+          <b className="text-4xl pb-2.5 max-md:text-base">تصاویر سالن بانوان</b>{" "}
         </div>
       </div>{" "}
       <div
@@ -58,7 +58,7 @@ const WomensHall = () => {
 
         <div className=" rounded-xl shadow-md lg:col-start-6 lg:row-start-3 lg:row-span-2 relative bg-gradient-to-tr from-gray-400 to-gray-300">
           <Image
-            src={"/images/640A0972.JPG"}
+            src={"/images/DSC07669.jpg"}
             alt="image"
             fill
             className="object-cover rounded-2xl select-none"
