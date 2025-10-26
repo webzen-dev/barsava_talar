@@ -22,21 +22,21 @@ const slides: SlideType[] = [
     title: "مراسم عروسی",
     caption: "لحظه‌ای خاص از حلقه انداختن",
     link: "/image-gallery",
-    src: "/images/640A1010.JPG",
+    src: "/images/640A1010.jpg",
   },
   {
     id: 2,
     title: "حلقه‌های ازدواج",
     caption: "نمادی از عشق ابدی",
     link: "/image-gallery",
-    src: "/images/640A0992.JPG",
+    src: "/images/640A0992.jpg",
   },
   {
     id: 3,
     title: "عروس و داماد",
     caption: "پرتره نزدیک از یک لحظه عاشقانه",
     link: "/image-gallery",
-    src: "/images/640A0972.JPG",
+    src: "/images/640A0972.jpg",
   },
   {
     id: 4,
@@ -108,7 +108,6 @@ const AboutSectionSlider = () => {
     }
   }, [instanceRef]);
 
-
   const nextSlide = () => instanceRef.current?.next();
   const prevSlide = () => instanceRef.current?.prev();
 
@@ -121,14 +120,15 @@ const AboutSectionSlider = () => {
               if (el) fadeUpEl.current[index] = el;
             }}
             key={index}
-            className="keen-slider__slide relative w-full h-[500px] cursor-pointer group overflow-hidden rounded-2xl"
+            className="keen-slider__slide relative w-full h-[500px] cursor-pointer group overflow-hidden rounded-2xl "
           >
+            <div className="absolue w-full h-full z-10 animate-pulse inset-0  bg-gradient-to-tr from-gray-400 to-gray-300 "></div>
             <Image
               src={slide.src}
               alt={`slide-${index}`}
               fill
               loading="lazy"
-              className="object-cover rounded-2xl select-none"
+              className="object-cover rounded-2xl select-none z-20"
               draggable={false}
             />
 
@@ -159,8 +159,9 @@ const AboutSectionSlider = () => {
           {slides.map((_, index) => (
             <span
               key={index}
-              className={`w-[40px] h-[4px] rounded-2xl transition-all duration-300 ${currentSlide === index ? "bg-[#dec39a]" : "bg-[#c2c2c2]"
-                }`}
+              className={`w-[40px] h-[4px] rounded-2xl transition-all duration-300 ${
+                currentSlide === index ? "bg-[#dec39a]" : "bg-[#c2c2c2]"
+              }`}
             ></span>
           ))}
         </div>

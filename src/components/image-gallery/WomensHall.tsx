@@ -11,9 +11,7 @@ const WomensHall = () => {
             <Image
               className="object-cover"
               draggable="false"
-              src={
-                "/images/flower.svg"
-              }
+              src={"/images/flower.svg"}
               alt="flower"
               width={60}
               height={60}
@@ -36,92 +34,103 @@ const WomensHall = () => {
         max-md:px-5
       "
       >
-        <div className="rounded-xl shadow-md lg:col-start-6 lg:row-start-1 lg:row-span-2 relative bg-gradient-to-tr from-gray-400 to-gray-300">
+        <div className="rounded-xl shadow-md lg:col-start-6 lg:row-start-1 lg:row-span-2 relative">
+          <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
           <Image
             src={"/images/DSC07787.jpg"}
             alt="image"
             fill
-            className="object-cover rounded-2xl select-none"
+            className="object-cover rounded-2xl select-none z-20"
             draggable={false}
           />
         </div>
 
-        <div className="rounded-xl shadow-md lg:col-start-4 lg:row-start-1 lg:col-span-2 lg:row-span-4 relative bg-gradient-to-tr from-gray-400 to-gray-300">
+        <div className="rounded-xl shadow-md lg:col-start-4 lg:row-start-1 lg:col-span-2 lg:row-span-4 relative">
+          <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
           <Image
             src={"/images/DSC07619.jpg"}
             alt="image"
             fill
-            className="object-cover rounded-2xl select-none"
+            className="object-cover rounded-2xl select-none z-20"
             draggable={false}
           />
         </div>
 
-        <div className=" rounded-xl shadow-md lg:col-start-6 lg:row-start-3 lg:row-span-2 relative bg-gradient-to-tr from-gray-400 to-gray-300">
+        <div className=" rounded-xl shadow-md lg:col-start-6 lg:row-start-3 lg:row-span-2 relative">
+          <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
           <Image
             src={"/images/DSC07669.jpg"}
             alt="image"
             fill
-            className="object-cover rounded-2xl select-none"
+            className="object-cover rounded-2xl select-none z-20"
             draggable={false}
           />
         </div>
 
-        <div className="rounded-xl shadow-md lg:col-start-5 lg:row-start-5 lg:col-span-2 lg:row-span-2 relative bg-gradient-to-tr from-gray-400 to-gray-300">
+        <div className="rounded-xl shadow-md lg:col-start-5 lg:row-start-5 lg:col-span-2 lg:row-span-2 relative">
+          <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
           <Image
             src={"/images/DSC07623.jpg"}
             alt="image"
             fill
-            className="object-cover rounded-2xl select-none"
+            className="object-cover rounded-2xl select-none z-20"
             draggable={false}
           />
         </div>
 
-        <div className=" rounded-xl shadow-md lg:col-start-3 lg:row-start-5 lg:col-span-2 lg:row-span-2 relative bg-gradient-to-tr from-gray-400 to-gray-300">
+        <div className=" rounded-xl shadow-md lg:col-start-3 lg:row-start-5 lg:col-span-2 lg:row-span-2 relative">
+          <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
           <Image
             src={"/images/DSC07630.jpg"}
             alt="image"
             fill
-            className="object-cover rounded-2xl select-none"
+            className="object-cover rounded-2xl select-none z-20"
             draggable={false}
           />
         </div>
 
-        <div className=" rounded-xl shadow-md lg:col-start-2 lg:row-start-1 lg:col-span-2 lg:row-span-4 relative bg-gradient-to-tr from-gray-400 to-gray-300">
+        <div className=" rounded-xl shadow-md lg:col-start-2 lg:row-start-1 lg:col-span-2 lg:row-span-4 relative">
+          <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
           <Image
             src={"/images/DSC07617.jpg"}
             alt="image"
             fill
-            className="object-cover rounded-2xl select-none"
+            className="object-cover rounded-2xl select-none z-20"
             draggable={false}
           />
         </div>
 
-        <div className="rounded-xl shadow-md lg:col-start-1 lg:row-start-1 lg:row-span-5 relative bg-gradient-to-tr from-gray-400 to-gray-300">
+        <div className="rounded-xl shadow-md lg:col-start-1 lg:row-start-1 lg:row-span-5 relative">
+          <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
           <Image
             src={"/images/DSC07610.jpg"}
             alt="image"
             fill
-            className="object-cover rounded-2xl select-none"
+            className="object-cover rounded-2xl select-none z-20"
             draggable={false}
           />
         </div>
 
-        <div className="rounded-xl shadow-md lg:col-start-1 lg:row-start-6 relative bg-gradient-to-tr from-gray-400 to-gray-300">
+        <div className="rounded-xl shadow-md lg:col-start-1 lg:row-start-6 relative ">
+          <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
+
           <Image
             src={"/images/DSC07790.jpg"}
             alt="image"
             fill
-            className="object-cover rounded-2xl select-none"
+            className="object-cover rounded-2xl select-none z-20"
             draggable={false}
           />
         </div>
 
-        <div className="rounded-xl shadow-md col-span-1 max-md:col-span-2 lg:col-start-2 lg:row-start-5 lg:row-span-2 relative bg-gradient-to-tr from-gray-400 to-gray-300">
+        <div className="rounded-xl shadow-md col-span-1 max-md:col-span-2 lg:col-start-2 lg:row-start-5 lg:row-span-2 relative ">
+          <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
+
           <Image
             src={"/images/DSC07773-Edit.jpg"}
             alt="image"
             fill
-            className="object-cover rounded-2xl select-none"
+            className="object-cover rounded-2xl select- z-20"
             draggable={false}
           />
         </div>
