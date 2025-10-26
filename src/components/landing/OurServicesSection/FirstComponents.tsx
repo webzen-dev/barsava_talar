@@ -19,7 +19,7 @@ interface Props {
 }
 const FirstComponents: React.FC<Props> = ({ image, description, dir }) => {
   const [sliderRef, instanceRef] = useKeenSlider({
-    loop: true, 
+    loop: true,
     rtl: true,
     mode: "snap",
     slides: {
@@ -41,12 +41,14 @@ const FirstComponents: React.FC<Props> = ({ image, description, dir }) => {
     `}
     >
       <div className="relative w-[50%] h-full min-w-[50%] max-md:h-[300px] max-md:w-[100%]">
+        <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
+
         <Image
           draggable="false"
           fill
           src={image}
-          alt="our services image"
-          className="rounded-2xl object-cover"
+          alt="our services image" 
+          className="rounded-2xl object-cover z-20"
         />
       </div>
       {/* section */}
@@ -78,16 +80,6 @@ const FirstComponents: React.FC<Props> = ({ image, description, dir }) => {
                 height={60}
               />
               <div className="h-[0.5px] bg-[#423A2F] flex-1"></div>
-              {/* <div className="flex text-[#698371] gap-1.5 ">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </div>
-              <span>
-                {des.reviews} {des.score} نقد
-              </span> */}
             </div>
             <div
               className={`flex flex-col gap-5 max-w-[50%]  ${

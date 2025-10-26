@@ -100,11 +100,13 @@ const WeddingPackage = () => {
           }}
           className="h-full flex-1 rounded-2xl flex items-end p-5 gap-5 cursor-pointer relative group max-lg:w-[60%] max-lg:min-w-[60%] max-lg:h-[300px] max-md:w-full  max-md:min-h-[300px]  max-sm:h-auto max-md:p-2"
         >
+                  <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
+
           <Image
             src={"/images/DSC07656.jpg"}
             fill
             alt="image"
-            className="object-cover rounded-2xl absolute top-0 left-0 right-0 bottom-0 z-10"
+            className="object-cover rounded-2xl absolute top-0 left-0 right-0 bottom-0 z-20"
           />
 
           <div className="

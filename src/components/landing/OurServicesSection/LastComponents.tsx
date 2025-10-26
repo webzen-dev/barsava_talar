@@ -2,7 +2,7 @@
 import { useKeenSlider } from "keen-slider/react";
 import Image from "next/image";
 import { useEffect } from "react";
-  
+
 import { FaStar } from "react-icons/fa6";
 interface DescriptionItem {
   score: number;
@@ -16,7 +16,7 @@ interface LastData {
   description: DescriptionItem[];
 }
 
-const LastComponents:React.FC<LastData> = ({description,images}) => {
+const LastComponents: React.FC<LastData> = ({ description, images }) => {
   const [sliderRef1, instanceRef1] = useKeenSlider({
     loop: true,
     rtl: true,
@@ -51,24 +51,27 @@ const LastComponents:React.FC<LastData> = ({description,images}) => {
   return (
     <div className="flex justify-between h-[340px] relative z-20 max-md:flex-col max-md:h-auto">
       <div className="w-[50%] min-w-[50%] h-full flex max-md:flex-col max-md:h-auto max-md:w-full max-md:gap-5">
-        <div ref={sliderRef1} className="keen-slider w-[50%] h-full max-md:w-full">
+        <div
+          ref={sliderRef1}
+          className="keen-slider w-[50%] h-full max-md:w-full"
+        >
           {description.slice(0, 3).map((des, index) => (
             <div
               key={index}
               className="keen-slider__slide h-full w-full flex flex-col justify-between p-4 cursor-pointer max-md:min-h-[200px] max-md:px-0"
             >
               <div className="flex gap-1.5 items-center text-lg">
-       <div className="h-[0.5px] bg-[#423A2F] flex-1"></div>
+                <div className="h-[0.5px] bg-[#423A2F] flex-1"></div>
 
-              <Image
-                className="object-cover"
-                draggable="false"
-                src={"/images/flower.svg"}
-                alt="flower"
-                width={60}
-                height={60}
-              />
-              <div className="h-[0.5px] bg-[#423A2F] flex-1"></div>
+                <Image
+                  className="object-cover"
+                  draggable="false"
+                  src={"/images/flower.svg"}
+                  alt="flower"
+                  width={60}
+                  height={60}
+                />
+                <div className="h-[0.5px] bg-[#423A2F] flex-1"></div>
               </div>
               <div className="flex flex-col gap-5 max-w-[100%]">
                 <b className="text-2xl">{des.title}</b>
@@ -84,21 +87,27 @@ const LastComponents:React.FC<LastData> = ({description,images}) => {
             src={images[0]}
             fill
             alt="our services image"
-            className="rounded-2xl object-cover"
-          />
+            className="rounded-2xl object-cover z-20"
+          />{" "}
+          <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
         </div>
       </div>
 
       <div className="relative w-[25%] h-full min-w-[25%] mr-10 ">
+        <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
+
         <Image
           draggable="false"
           src={images[1]}
           fill
           alt="our services image"
-          className="rounded-2xl object-cover"
+          className="rounded-2xl object-cover z-20"
         />
       </div>
-      <div ref={sliderRef2} className="keen-slider w-[25%] h-full mr-5 max-md:w-full max-md:mr-0">
+      <div
+        ref={sliderRef2}
+        className="keen-slider w-[25%] h-full mr-5 max-md:w-full max-md:mr-0"
+      >
         {description.slice(3, 6).map((des, index) => (
           <div
             key={index}
@@ -113,8 +122,7 @@ const LastComponents:React.FC<LastData> = ({description,images}) => {
                 <FaStar />
                 <FaStar />
               </div>
-              <span>
-                </span>
+              <span></span>
             </div>
             <div className="flex flex-col gap-5 max-w-[100%]">
               <b className="text-2xl">{des.title}</b>

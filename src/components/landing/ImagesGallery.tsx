@@ -11,9 +11,7 @@ const ImagesGallery = () => {
           <Image
             className="object-cover"
             draggable="false"
-            src={
-              "/images/flower.svg"
-            }
+            src={"/images/flower.svg"}
             alt="flower"
             width={60}
             height={60}
@@ -27,45 +25,55 @@ const ImagesGallery = () => {
         className="flex justify-between  items-start w-full relative group "
       >
         <div className="h-[330px] w-[300px] rounded-2xl rotate-[-9deg] relative z-20   2xl:w-[370px] 2xl:h-[360px]max-lg:w-[300px] max-lg:h-[250px]  max-md:w-[150px] max-md:h-[150px] max-sm:w-[90px] max-sm:h-[90px]">
+          {" "}
+          <div className="absolute inset-0 z-10 h-full w-full animate-pulse rounded-2xl bg-gradient-to-tr from-gray-400 to-gray-300" />
           <Image
             src={"/images/gallery/1.jpg"}
-            className="object-cover rounded-2xl shadow-2xl transition-all delay-150 duration-300 ease-in-out cursor-pointer hover:grayscale-0 max-sm:grayscale-0"
+            className="z-20 object-cover rounded-2xl shadow-2xl transition-all delay-150 duration-300 ease-in-out cursor-pointer hover:grayscale-0 max-sm:grayscale-0"
             fill
             alt=""
           />
         </div>
         <div className="absolute w-[50%] h-full flex justify-center  items-start pt-7.5  2xl:justify-end 2xl:pl-[200px] max-lg:pr-[100px]  max-md:pr-0">
           <div className="h-[330px] w-[300px] rounded-2xl rotate-[-5deg] z-20 2xl:w-[370px]  2xl:h-[380px] max-lg:w-[300px] max-lg:h-[270px]  max-md:w-[150px] max-md:h-[150px] max-sm:w-[90px] max-sm:h-[90px]">
+            {" "}
+            <div className="absolute inset-0 z-10 h-full w-full animate-pulse rounded-2xl bg-gradient-to-tr from-gray-400 to-gray-300" />
             <Image
               src={"/images/gallery/5.jpg"}
-              className="object-cover rounded-2xl  shadow-2xl transition-all delay-150 duration-300 ease-in-out cursor-pointer hover:grayscale-0"
+              className="z-20 object-cover rounded-2xl  shadow-2xl transition-all delay-150 duration-300 ease-in-out cursor-pointer hover:grayscale-0"
               fill
               alt=""
             />
           </div>
         </div>
         <div className="h-[375px] w-[375px] bg-[#423A2F]  rounded-2xl relative z-30 2xl:w-[440px] 2xl:h-[425px] max-lg:w-[320px] max-lg:h-[320px]  max-md:w-[200px] max-md:h-[200px]  max-sm:w-[120px] max-sm:h-[120px]">
+          {" "}
+          <div className="absolute inset-0 z-10 h-full w-full animate-pulse rounded-2xl bg-gradient-to-tr from-gray-400 to-gray-300" />
           <Image
             src={"/images/gallery/4.jpg"}
-            className="object-cover rounded-2xl shadow-2xl  cursor-pointer  transition-all delay-150 duration-300 ease-in-out"
+            className="z-20 object-cover rounded-2xl shadow-2xl  cursor-pointer  transition-all delay-150 duration-300 ease-in-out"
             fill
             alt=""
           />
         </div>
         <div className="absolute w-[50%] h-full flex justify-center items-start pt-7.5 left-0 2xl:justify-start 2xl:pr-[200px]  max-lg:pl-[100px]  max-md:pl-0">
           <div className="h-[330px] w-[300px] rounded-2xl rotate-[5deg] z-20   2xl:w-[370px] 2xl:h-[380px] max-lg:w-[300px] max-lg:h-[270px]  max-md:w-[150px] max-md:h-[150px] max-sm:w-[90px] max-sm:h-[90px]">
+            {" "}
+            <div className="absolute inset-0 z-10 h-full w-full animate-pulse rounded-2xl bg-gradient-to-tr from-gray-400 to-gray-300" />
             <Image
               src={"/images/gallery/3.jpg"}
-              className="object-cover rounded-2xl  shadow-2xl transition-all delay-150 duration-300 ease-in-out cursor-pointer hover:grayscale-0"
+              className="z-20 object-cover rounded-2xl  shadow-2xl transition-all delay-150 duration-300 ease-in-out cursor-pointer hover:grayscale-0"
               fill
               alt=""
             />
           </div>
         </div>{" "}
         <div className="h-[330px] w-[300px] rounded-2xl rotate-[9deg] 2xl:w-[370px] 2xl:h-[360px] max-lg:w-[300px] max-lg:h-[250px]  max-md:w-[150px] max-md:h-[150px] max-sm:w-[90px] max-sm:h-[90px]">
+          {" "}
+          <div className="absolute inset-0 z-10 h-full w-full animate-pulse rounded-2xl bg-gradient-to-tr from-gray-400 to-gray-300" />
           <Image
             src={"/images/gallery/2.jpg"}
-            className="object-cover rounded-2xl  shadow-2xl transition-all delay-150 duration-300 ease-in-out cursor-pointer hover:grayscale-0 max-sm:grayscale-0"
+            className="z-20 object-cover rounded-2xl  shadow-2xl transition-all delay-150 duration-300 ease-in-out cursor-pointer hover:grayscale-0 max-sm:grayscale-0"
             fill
             alt=""
           />
