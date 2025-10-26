@@ -139,11 +139,13 @@ const AboutHeroSlider = () => {
               fillOpacity="1"
             ></path>{" "}
           </svg>
+                    <div className="absolute inset-0 z-10 h-full w-full animate-pulse rounded-2xl bg-gradient-to-tr from-gray-400 to-gray-300" />
+
           <Image
             src={slide}
             alt={`slide-${index}`}
             fill
-            className="object-cover rounded-2xl select-none"
+            className="object-cover rounded-2xl select-none z-20"
             draggable={false}
           />
         </div>

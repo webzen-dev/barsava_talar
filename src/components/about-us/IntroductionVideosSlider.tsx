@@ -113,13 +113,15 @@ const prevSlide = () => instanceRef.current?.prev();
               className="keen-slider__slide relative w-full h-[600px] flex justify-center items-center cursor-pointer group overflow-hidden"
             >
               <div className="w-[337px] h-full relative">
+                          <div className="absolute inset-0 z-10 h-full w-full animate-pulse rounded-2xl bg-gradient-to-tr from-gray-400 to-gray-300" />
+
                 <video
                   ref={(el) => {
                     if (!videoRefs.current) videoRefs.current = [];
                     if (el) videoRefs.current[index] = el;
                   }}
                   src={slide.src}
-                  className="object-cover rounded-2xl select-none w-full h-full"
+                  className="object-cover rounded-2xl select-none w-full h-full z-20 relative"
                   poster={slide.poster}
                   controls
                   playsInline

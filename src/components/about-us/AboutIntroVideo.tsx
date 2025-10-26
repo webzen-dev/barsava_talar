@@ -22,7 +22,7 @@ const AboutIntroVideo = () => {
           },
         });
       }
-    }); 
+    });
     return () => ctx.revert();
   }, []);
   return (
@@ -33,9 +33,7 @@ const AboutIntroVideo = () => {
           <Image
             className="object-cover"
             draggable={false}
-            src={
-              "/images/flower.svg"
-            }
+            src={"/images/flower.svg"}
             alt="flower"
             width={60}
             height={60}
@@ -47,8 +45,10 @@ const AboutIntroVideo = () => {
         </b>
       </div>
       <div className="h-[calc(100vh-171.02px)] w-full relative">
+        <div className="absolute inset-0 z-10 h-full w-full animate-pulse rounded-2xl bg-gradient-to-tr from-gray-400 to-gray-300" />
+
         <video
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover z-20 relative rounded-2xl"
           src="/videos/spzylftmodqgb3391519668101053225.mp4"
           controls
           loop
