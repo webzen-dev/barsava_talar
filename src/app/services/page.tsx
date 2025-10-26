@@ -1,13 +1,8 @@
 "use client";
-import ServicesHeroSkeleton from "@/components/services/ServicesHeroSkeleton";
 import dynamic from "next/dynamic";
 
 const ServicesHeroComponent = dynamic(
-  () => import("@/components/services/ServicesHero"),
-  {
-    // Skeleton Loading
-    loading: () => <ServicesHeroSkeleton />,
-  }
+  () => import("@/components/services/ServicesHero")
 );
 const OurServicesSectionsComponent = dynamic(
   () => import("@/components/landing/OurServicesSections")

@@ -89,13 +89,15 @@ const FullWeddingPlanningSlider = () => {
             key={slide.id}
             className="keen-slider__slide relative w-full h-full rounded-2xl cursor-pointer"
           >
+                    <div className="absolute inset-0 z-10 h-full w-full animate-pulse rounded-2xl bg-gradient-to-tr from-gray-400 to-gray-300" />
+
             <Image
               fill
               src={slide.src}
               alt="wedding slide"
-              className="object-cover rounded-2xl"
+              className="object-cover rounded-2xl z-20"
             />
-            <div className="absolute inset-0 rounded-2xl bg-[rgba(0,0,0,0.5)] z-20 flex flex-col justify-end items-center gap-4 p-10 text-center text-white max-md:p-5">
+            <div className="absolute inset-0 rounded-2xl bg-[rgba(0,0,0,0.5)] z-30 flex flex-col justify-end items-center gap-4 p-10 text-center text-white max-md:p-5">
               <b className="text-lg font-bold max-md:text-base">
                 {slide.caption}
               </b>
