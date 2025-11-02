@@ -49,3 +49,12 @@ next-env.d.ts
 /public/**/*.jpeg
 /public/**/*.mov
 barsava-talar.rar
+.env
+.gitignore
+prisma/migrations/migration_lock.toml
+.env
+.gitignore
+prisma/migrations/migration_lock.toml
+prisma/migrations/20250825015057_add_members_relation/migration.sql
+prisma/migrations/20250912212311_init/migration.sql
+prisma/migrations/20251026134312_init/migration.sql

@@ -45,37 +45,28 @@ const HeartfeltPlanning = () => {
     return () => ctx.revert();
   }, []);
 
-const boxes = [
-  {
-    icon: "/images/Invitation.png",
-    title: "اجرای بی‌نقص",
-    desc: "هر مراسم با دقت، نظم و هماهنگی کامل برگزار می‌شود تا تجربه‌ای فراموش‌نشدنی رقم بخورد.",
-    bg: "opacity-20",
-    textColor: "#423A2F",
-  },
-  {
-    icon: "/images/Heart-Love-Romance-Wedding.png",
-    title: "تیم مورد اعتماد",
-    desc: "تیمی حرفه‌ای و باتجربه در کنار شماست تا با آرامش خاطر جشن‌تان را برگزار کنید.",
-    bg: "opacity-20",
-    textColor: "#423A2F",
-  },
-  {
-    icon: "/images/rings-jewel-wedding (1).png",
-    title: "تجربه سفارشی",
-    desc: "تمام جزئیات مراسم براساس سلیقه و رویاهای شما طراحی می‌شود تا خاص‌ترین روزتان خلق شود.",
-    bg: "",
-    textColor: "white",
-    bgColor: "#8b7d70",
-  },
-  {
-    icon: "/images/Heand-Love-Heart.png",
-    title: "لمس خلاقانه",
-    desc: "با طراحی‌های منحصربه‌فرد و ایده‌های نو، هر بخش از جشن شما جلوه‌ای خاص می‌یابد.",
-    bg: "opacity-20",
-    textColor: "#423A2F",
-  },
-];
+  const boxes = [
+    {
+      icon: "/images/Invitation.png",
+      title: "اجرای بی‌نقص",
+      desc: "هر مراسم با دقت، نظم و هماهنگی کامل برگزار می‌شود تا تجربه‌ای فراموش‌نشدنی رقم بخورد.",
+    },
+    {
+      icon: "/images/Heart-Love-Romance-Wedding.png",
+      title: "تیم مورد اعتماد",
+      desc: "تیمی حرفه‌ای و باتجربه در کنار شماست تا با آرامش خاطر جشن‌تان را برگزار کنید.",
+    },
+    {
+      icon: "/images/ring.png",
+      title: "تجربه سفارشی",
+      desc: "تمام جزئیات مراسم براساس سلیقه و رویاهای شما طراحی می‌شود تا خاص‌ترین روزتان خلق شود.",
+    },
+    {
+      icon: "/images/Heand-Love-Heart.png",
+      title: "لمس خلاقانه",
+      desc: "با طراحی‌های منحصربه‌فرد و ایده‌های نو، هر بخش از جشن شما جلوه‌ای خاص می‌یابد.",
+    },
+  ];
 
   return (
     <div className="p-10 flex flex-col items-center w-full max-md:p-5">
@@ -85,9 +76,7 @@ const boxes = [
           <Image
             className="object-cover"
             draggable={false}
-            src={
-              "/images/flower.svg"
-            }
+            src={"/images/flower.svg"}
             alt="flower"
             width={60}
             height={60}
@@ -106,17 +95,16 @@ const boxes = [
             ref={(el) => {
               if (el) boxesRef.current[i] = el;
             }}
-            className={`w-[calc(25%-20px)] h-full border-1 border-solid border-[#dec39a] rounded-2xl flex p-5 relative max-lg:h-[300px] max-lg:min-w-[calc(50%-20px)] max-md:w-full bg-[${box?.bgColor}] 
-            text-[${box.textColor}]
+            className={`w-[calc(25%-20px)] h-full border-1 border-solid border-[#dec39a] rounded-2xl flex p-5 relative max-lg:h-[300px] max-lg:min-w-[calc(50%-20px)] max-md:w-full
+            text-[#423A2F]
             `}
-            style={{ color: box.textColor }}
           >
             <div className="absolute top-0 left-0 bottom-0 right-0">
               <Image
                 src={"/images/BG-Card.png"}
                 fill
                 alt="BG Card"
-                className={`object-cover ${box.bg}`}
+                className={`object-cover opacity-30`}
               />
               <div className="z-20 relative flex flex-col items-center px-2.5 justify-between w-full h-full py-5 text-center">
                 <Image
