@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { memo } from "react";
 
-const LogoSticker = () => {
+function LogoSticker() {
   return (
     <Image
       src={"/images/barsava logo(gold).PNG"}
@@ -10,6 +11,6 @@ const LogoSticker = () => {
       className="fixed bottom-[30px] left-[30px] object-cover z-50"
     />
   );
-};
+}
 
-export default LogoSticker;
+export default memo(LogoSticker);
