@@ -86,7 +86,7 @@ export default function FoodMenuHeroSection() {
               key={index}
               className="relative flex h-68 items-center gap-2 rounded-2xl border-2 border-black/10 lg:flex-[calc(33.33%-16px)] xl:flex-[calc(25%-16px)] flex-[calc(50%-8px)] md:h-34 md:gap-8 max-md:flex-col"
             >
-              <div className="relative aspect-square md:h-full max-md:w-full">
+              <div className="relative aspect-square max-md:max-h-42 md:h-full max-md:w-full">
                 <Image
                   src={menu.src}
                   alt={menu.label}

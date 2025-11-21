@@ -93,7 +93,6 @@ const Header = () => {
           <span className="font-bold">خدمات </span>
         </Link>
         <div className="h-[35px] w-[1px] bg-gray-300"></div>
-
         <Link
           className={`flex flex-col  items-center  w-[120px] text-[#423A2F] duration-300 ease-in-out transition-all hover:text-black  ${
             pathname === "/image-gallery" ? "text-[#dec39a]" : "text-[#423A2F]"
@@ -101,6 +100,15 @@ const Header = () => {
           href={"/image-gallery"}
         >
           <span className="font-bold">گالری تصاویر</span>
+        </Link>{" "}
+        <div className="h-[35px] w-[1px] bg-gray-300"></div>
+        <Link
+          className={`flex flex-col  items-center  px-4 text-[#423A2F] duration-300 ease-in-out transition-all hover:text-black  ${
+            pathname === "/image-gallery" ? "text-[#dec39a]" : "text-[#423A2F]"
+          }`}
+          href={"/food-menu"}
+        >
+          <span className="font-bold">منو غذایی </span>
         </Link>
       </div>
       {/* cta box */}
