@@ -104,7 +104,7 @@ const Header = () => {
         <div className="h-[35px] w-[1px] bg-gray-300"></div>
         <Link
           className={`flex flex-col  items-center  px-4 text-[#423A2F] duration-300 ease-in-out transition-all hover:text-black  ${
-            pathname === "/image-gallery" ? "text-[#dec39a]" : "text-[#423A2F]"
+            pathname === "/food-menu" ? "text-[#dec39a]" : "text-[#423A2F]"
           }`}
           href={"/food-menu"}
         >

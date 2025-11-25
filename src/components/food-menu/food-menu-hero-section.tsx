@@ -1,72 +1,7 @@
-import Image from "next/image";
-
-const FoodMenu = [
-  {
-    src: "/images/food-menu/beef.jpg",
-    label: "گوشت درسته",
-    description: "پخت آرام و سرو ویژه.",
-    category: "گوشت قرمز",
-  },
-  {
-    src: "/images/food-menu/morgh.jpg",
-    label: "مرغ بریان",
-    description: "پوسته طلایی و طعم ملایم.",
-    category: "طیور",
-  },
-  {
-    src: "/images/food-menu/boogh.webp",
-    label: "بوقلمون",
-    description: "برشته با طعم ملایم.",
-    category: "طیور",
-  },
-  {
-    src: "/images/food-menu/fish.webp",
-    label: "ماهی",
-    description: "فیله تازه و سبک.",
-    category: "دریایی",
-  },
-  {
-    src: "/images/food-menu/beef-s.jpg",
-    label: "بیف استروگانف",
-    description: "سس خامه‌ای و گوشت ورقه‌ای.",
-    category: "غذای فرنگی",
-  },
-  {
-    src: "/images/food-menu/kabab.jpg",
-    label: "کباب سیخی",
-    description: "کباب ذغالی آبدار.",
-    category: "کباب",
-  },
-  {
-    src: "/images/food-menu/koko.jpg",
-    label: "کوکو شیرین",
-    description: "طعم اصیل و شیرین.",
-    category: "غذای ایرانی",
-  },
-  {
-    src: "/images/food-menu/tahchin.webp",
-    label: "ته‌چین مرغ",
-    description: "زعفرانی و خوش‌عطر.",
-    category: "غذای ایرانی",
-  },
-  {
-    src: "/images/food-menu/goosht-tike.webp",
-    label: "گوشت تکه‌ای",
-    description: "نرم با طعم سنتی.",
-    category: "گوشت قرمز",
-  },
-  {
-    src: "/images/food-menu/beef.jpg",
-    label: "خوراک زبان",
-    description: "نرم و لذیذ.",
-    category: "غذای ویژه",
-  },
-];
-
 export default function FoodMenuHeroSection() {
   return (
-    <div className="flex flex-col gap-10 px-5 pt-15">
-      <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-10 pt-15">
+      <div className="flex flex-col gap-4 px-5">
         <b className="text-lg md:text-4xl">
           گزینه‌های غذایی باغ تالار برای هر سلیقه
         </b>
@@ -77,7 +12,7 @@ export default function FoodMenuHeroSection() {
         </span>
       </div>
 
-      <div className="relative flex w-full flex-col gap-4 rounded-2xl bg-white/10 p-5 md:gap-10">
+      {/* <div className="relative flex w-full flex-col gap-4 rounded-2xl bg-white/10 p-5 md:gap-10">
         <span className="text-base font-bold md:text-2xl">منو انتخابی:</span>
 
         <div className="flex w-full flex-wrap items-center justify-center gap-4">
@@ -108,7 +43,7 @@ export default function FoodMenuHeroSection() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -13,6 +13,8 @@ const FoodMenuItem = dynamic(() => import("./food-menu-item"));
 
 export default function FoodMenuBox({ menuData, menuName }: FoodMenuBoxProps) {
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   return (
     <div className="flex flex-col p-10          gap-13">
       <b className="text-2xl md:text-3xl text-center">{menuName}</b>
@@ -54,14 +56,16 @@ export default function FoodMenuBox({ menuData, menuName }: FoodMenuBoxProps) {
                 </span>
                 <button
                   className="text-sm bg-[#dec39a] py-2 rounded-lg cursor-pointer text-white "
-                  onClick={() => setShowMenu(!showMenu)}
+                  onClick={() =>
+                    setOpenIndex(openIndex === index ? null : index)
+                  }
                 >
                   مشاهده ایتم های منو
                 </button>
               </div>
             </div>
-            {showMenu && (
-              <FoodMenuItem isOpen={() => setShowMenu(false)} menuData={item} />
+            {openIndex === index && (
+              <FoodMenuItem isOpen={() => setOpenIndex(null)} menuData={item} />
             )}
           </div>
         ))}
