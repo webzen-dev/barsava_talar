@@ -14,8 +14,6 @@ const WeddingPackage = () => {
         scrollTrigger: {
           trigger: ".wedding-package-container",
           start: "top 100%",
-          // toggleActions: "play none none reverse",
-          // markers: true,
         },
       });
 

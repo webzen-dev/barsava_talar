@@ -2,7 +2,6 @@
 
 import AboutSection from "@/components/landing/AboutSection";
 import Faq from "@/components/landing/Faq";
-import FoodMenu from "@/components/landing/FoodMenu";
 import HeartfeltPlanning from "@/components/landing/HeartfeltPlanning";
 import HeroSection from "@/components/landing/HeroSection";
 import ImagesGallery from "@/components/landing/ImagesGallery";
@@ -33,7 +32,6 @@ export default function Home() {
           <AboutSection />
           <HeartfeltPlanning />
           <OurServicesSections />
-          <FoodMenu/>
           <WeddingPackage />
           <TimelessMoments />
           <Faq /> 

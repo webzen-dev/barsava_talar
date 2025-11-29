@@ -53,6 +53,12 @@ const MobileHeader: React.FC<Prop> = ({ responsive, setResponsive }) => {
           href={"/image-gallery"}
         >
           <span className="font-bold">گالری تصاویر</span>
+        </Link>{" "}
+        <Link
+          className="flex flex-col  items-center  w-[120px] text-[#747474]  hover:text-black"
+          href={"/food-menu"}
+        >
+          <span className="font-bold">منو غذایی </span>
         </Link>
       </div>
       <div className="flex gap-4 flex-col-reverse">
@@ -73,7 +79,7 @@ const MobileHeader: React.FC<Prop> = ({ responsive, setResponsive }) => {
          w-[150px] justify-around"
         >
           <IoDownloadOutline className="text-3xl" />
-            <span className="transition-opacity duration-1000 text-sm">
+          <span className="transition-opacity duration-1000 text-sm">
             دانلود کاتالوگ
           </span>
         </a>
@@ -85,7 +91,8 @@ const MobileHeader: React.FC<Prop> = ({ responsive, setResponsive }) => {
             </a>
             <span className="text-[11px]">منتظر تماس شما هستیم</span>
           </div>
-          <Link href={'/contact-us'}
+          <Link
+            href={"/contact-us"}
             className="group  border-none bg-[#dec39a] text-white cursor-pointer h-[50px] rounded-lg flex items-center text-2xl  duration-300 ease-in-out transition-all
          w-[150px] justify-around"
           >
