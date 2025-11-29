@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import url("../../public/fonts/stylesheet.css");
+/* @import url("../../public/fonts/stylesheet.css");
 @import url("/fonts/stylesheet.css");
 @font-face {
   font-family: "IRANYekan";
@@ -17,7 +17,7 @@
   font-weight: 900;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 :root {
   --background: #ffffff;
