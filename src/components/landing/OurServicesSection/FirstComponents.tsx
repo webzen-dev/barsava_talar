@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { FaStar } from "react-icons/fa6";
 import { useKeenSlider } from "keen-slider/react";
 
 import React, { useEffect } from "react";

@@ -110,9 +110,9 @@ const prevSlide = () => instanceRef.current?.prev();
                 if (el) fadeUpEl.current[index] = el;
               }}
               key={index}
-              className="keen-slider__slide relative w-full h-[600px] flex justify-center items-center cursor-pointer group overflow-hidden"
+              className="keen-slider__slide relative w-1/3 max-md:h-[calc(100vh-200px)] md:aspect-square  flex justify-center items-center cursor-pointer group overflow-hidden"
             >
-              <div className="w-[337px] h-full relative">
+              <div className="w-full h-full  relative">
                           <div className="absolute inset-0 z-10 h-full w-full animate-pulse rounded-2xl bg-gradient-to-tr from-gray-400 to-gray-300" />
 
                 <video

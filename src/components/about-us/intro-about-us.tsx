@@ -16,10 +16,10 @@ export  interface IntroAboutUsProps {
 
 export default function IntroAboutUs({ direction, content }: IntroAboutUsProps) {
     return (
-        <div className={`w-full h-98 flex relative px-10 items-center flex-col gap-10
+        <div className={`w-full h-98 flex relative px-5 md:px-10 items-center flex-col gap-5 
             ${direction === "rtl" ? "md:flex-row" : "md:flex-row-reverse"} 
         `}>
-            <div className={`md:w-3/5 lg:w-2/5 bg-[#F7F1EA] flex flex-col gap-8 md:p-10 transform z-10 rounded-sm
+            <div className={`md:w-3/5 lg:w-2/5 bg-[#F7F1EA] flex flex-col gap-8 md:p-10 transform z-10 rounded-sm shadow-xl
                 ${direction === "rtl"?"md:-translate-x-1/5":"md:translate-x-1/5" }
                 `}>
                 <b className="text-2xl">{content?.title}</b>
