@@ -24,22 +24,9 @@ const Faq = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <div className="w-full py-[90px] flex-col flex p-10 px-[100px] text-[#423A2F]  max-lg:px-[50px] max-sm:p-5">
-      <div className="flex flex-col gap-2.5 items-center text-center relative z-20 pb-10">
-        <div className="flex items-center gap-2.5 w-[40%] max-md:w-[90%]">
-          <div className="h-[0.5px] bg-[#423A2F] flex-1"></div>
-          <Image
-            className="object-cover"
-            draggable="false"
-            src={"/images/flower.svg"}
-            alt="flower"
-            width={60}
-            height={60}
-          />
-          <div className="h-[0.5px] bg-[#423A2F] flex-1"></div>
-        </div>
-        <b className="text-4xl font-bold">سوالات متداول</b>
-      </div>
+    <div className="w-full flex-col flex px-5 md:px-10 text-[#423A2F] gap-5 max-md:px-5">
+
+        <b className="text-2xl font-bold">سوالات متداول</b>
 
       <div className="flex flex-col gap-5">
         {faq.map((f, index) => {

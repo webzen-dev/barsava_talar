@@ -16,10 +16,10 @@ export  interface IntroAboutUsProps {
 
 export default function IntroAboutUs({ direction, content }: IntroAboutUsProps) {
     return (
-        <div className={`w-full h-98 flex relative px-5 md:px-10 items-center flex-col gap-5 
+        <div className={`w-full flex relative px-5 md:px-10 items-center flex-col gap-5 
             ${direction === "rtl" ? "md:flex-row" : "md:flex-row-reverse"} 
         `}>
-            <div className={`md:w-3/5 lg:w-2/5 bg-[#F7F1EA] flex flex-col gap-8 md:p-10 transform z-10 rounded-sm shadow-xl
+            <div className={`md:w-3/5 lg:w-2/5 bg-[#F7F1EA] flex flex-col gap-8 p-10 transform z-10 rounded-xl shadow-xl
                 ${direction === "rtl"?"md:-translate-x-1/5":"md:translate-x-1/5" }
                 `}>
                 <b className="text-2xl">{content?.title}</b>
@@ -27,11 +27,11 @@ export default function IntroAboutUs({ direction, content }: IntroAboutUsProps) 
                 <Link href={content?.link.href} className="text-white bg-[#dec39a] max-w-48 py-2 rounded-lg cursor-pointer flex items-center justify-center">{content.link.label}</Link>
             </div>
 
-            <div className="h-98 w-full md:w-4/5 relative">
+            <div className="aspect-square md:aspect-auto md:h-98 w-full md:w-4/5 relative">
                 <Image src={content?.src}
-                    className="object-cover relative rounded-sm"
+                    className="object-cover relative rounded-xl"
                     fill
-                    alt={content?.title}
+                    alt={content?.title}    
                 />
             </div>
         </div>

@@ -1,6 +1,8 @@
 "use client";
+
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+
 import Image from "next/image";
 import { IoPersonCircleOutline } from "react-icons/io5";
 
@@ -81,14 +83,14 @@ export default function Reviews() {
   );
 
   return (
-    <div className="w-full flex flex-col gap-5 my-10 relative">
+    <div className="w-full flex flex-col gap-10 relative">
       <b className="text-2xl text-center">نظرات کاربران درباره بارثاوا</b>
-      <div className="overflow-hidden py-10 h-100" ref={emblaRef}>
+      <div className="overflow-hidden pb-10 h-90" ref={emblaRef}>
         <div className="flex h-full">
           {comments.map((coment) => (
             <div
               key={coment.id}
-              className="flex-[0_0_70%] md:flex-[0_0_33%] lg:flex-[0_0_24%] h-full bg-[rgba(255,255,255,0.3)] shadow-lg  shadow-[rgba(0,0,0,0.1)] mx-2 p-6 select-none"
+              className="flex-[0_0_70%] md:flex-[0_0_33%] lg:flex-[0_0_24%] h-full bg-[rgba(255,255,255,0.3)] shadow-lg  shadow-[rgba(0,0,0,0.1)] mx-2 p-6 select-none rounded-2xl"
             >
               <div className="w-full h-full flex flex-col gap-5 relative">
                 <Image
