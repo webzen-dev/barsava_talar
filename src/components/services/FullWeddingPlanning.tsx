@@ -5,7 +5,7 @@ import FullWeddingPlanningSlider from "./FullWeddingPlanningSlider";
 
 const FullWeddingPlanning = () => {
   return (
-    <div className="py-10 px-20 flex gap-10 flex-col items-center max-lg:px-5">
+    <div className="flex gap-10 flex-col items-center">
       {/* text box */}
 
       <div className="flex  items-center gap-2.5 w-[40%] max-md:w-[90%]">
@@ -25,8 +25,8 @@ const FullWeddingPlanning = () => {
       <div className="flex w-full justify-between gap-10 max-md:flex-col">
         <div className="flex flex-col min-w-[50%] gap-20 flex-1 max-lg:gap-10 max-md:w-full ">
           <div className="flex flex-col gap-5">
-            <b className="text-3xl 2xl:text-4xl max-lg:text-2xl max-md:text-lg">برنامه‌ریزی کامل عروسی</b>
-            <p className="text-sm 2xl:text-lg max-md:text-xs  ">
+            <b className="text-xl md:text-2xl">برنامه‌ریزی کامل عروسی</b>
+            <p className="text-sm 2xl:text-2xl">
               برنامه‌ریزی عروسی می‌تواند طاقت‌فرسا باشد - اما لازم نیست اینطور
               باشد. خدمات کامل برنامه‌ریزی عروسی ما برای زوج‌هایی طراحی شده است
               که می‌خواهند جشنی بدون استرس و زیبا از ابتدا تا انتها برگزار شود.
