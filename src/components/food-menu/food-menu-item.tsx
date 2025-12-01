@@ -1,4 +1,4 @@
-import { MenuItem } from "@/app/food-menu/global-data";
+import { MenuItem } from "@/app/food-menu/global-data_back-up";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
@@ -21,7 +21,7 @@ export default function FoodMenuItem({ menuData, isOpen }: FoodMenuItemProps) {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black/20 backdrop-blur-2xl w-full fixed inset-0 z-60 overflow-y-auto">
+    <div className="min-h-screen bg-black/ backdrop-blur- w-full fixed inset-0 z-60 overflow-y-auto">
       <div
         ref={menuRef}
         className="w-9/10 md:w-4/5 lg:w-2/3 xl:w-1/2 min-h-full bg-white h-auto flex flex-col gap-7 p-10 relative"

@@ -6,11 +6,12 @@ import { useEffect, useRef, useState } from "react";
 import { FiPhoneCall } from "react-icons/fi";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { IoCalendarOutline, IoDownloadOutline } from "react-icons/io5";
-import MobileHeader from "./MobileHeader";
 import { MdOutlineClose } from "react-icons/md";
 import { usePathname } from "next/navigation";
+import dynamic from "next/dynamic";
 
-const Header = () => {
+const MobileHeader = dynamic(()=>import('./MobileHeader'))
+export default function Header() {
   const pathname = usePathname();
   const [responsive, setResponsive] = useState<boolean>(false);
 
@@ -46,16 +47,15 @@ const Header = () => {
       ref={header}
     >
       <Link href={"/"} className="flex items-center  gap-3">
-        {" "}
         <Image
           src={"/images/barsava logo(gold).PNG"}
           alt="logo"
           width={68}
           height={73.85}
-          className="object-cover  cursor-pointer"
-        />{" "}
+          className="object-cover cursor-pointer"
+        />
         <div
-          className="flex flex-col gap-1.5 text-[13px] font-semibold
+          className="flex flex-col gap-1.5 text-[13px] font-semibold md:hidden lg:flex
 "
         >
           <span>رزرو تالار رؤیایی شما؛</span>
@@ -164,6 +164,4 @@ const Header = () => {
       )}
     </header>
   );
-};
-
-export default Header;
+}

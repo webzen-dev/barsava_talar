@@ -9,38 +9,37 @@ gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = () => {
   const fadeUpEl = useRef<HTMLDivElement | null>(null);
-useEffect(() => {
-  if (!fadeUpEl.current) return;
+  useEffect(() => {
+    if (!fadeUpEl.current) return;
 
-  const ctx = gsap.context(() => {
-    gsap.from(fadeUpEl.current, {
-      y: 60,
-      opacity: 0,
-      stagger: 0.2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: fadeUpEl.current,
-        start: "top 50%",
-      },
-      duration: 1.5,
-    });
-  }, fadeUpEl);
+    const ctx = gsap.context(() => {
+      gsap.from(fadeUpEl.current, {
+        y: 60,
+        opacity: 0,
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: fadeUpEl.current,
+          start: "top 50%",
+        },
+        duration: 1.5,
+      });
+    }, fadeUpEl);
 
-  ScrollTrigger.refresh();
+    ScrollTrigger.refresh();
 
-  return () => {
-    ctx.revert();
-  };
-}, []);
-
+    return () => {
+      ctx.revert();
+    };
+  }, []);
 
   return (
-    <div className="p-10 flex flex-col justify-center items-center about-section-container max-md:p-5">
+    <div className="flex flex-col justify-center gap-10 items-center about-section-container px-10 md:px-5">
       <div
-        className="py-12 flex flex-col gap-2.5 text-center items-center pb-10"
+        className="flex flex-col gap-2.5 text-center items-center"
         ref={fadeUpEl}
       >
-        <div className="flex items-center gap-2.5 w-full">
+        <div className="flex items-center gap-2.5 w-full max-w-[90%] md:max-w-[40%]">
           {/* line */}
           <div className="h-[0.5px] bg-[#423A2F] flex-1"></div>
           <Image
@@ -54,12 +53,13 @@ useEffect(() => {
           <div className="h-[0.5px] bg-[#423A2F] flex-1"></div>
         </div>
 
-        <b className="text-4xl py-5 max-sm:text-lg">درباره بارثاوا</b>
-        <b className="text-lg text-[#575757] max-w-[70%] max-md:max-w-[90%] max-sm:text-sm">
-          ما معتقدیم که هر داستان عاشقانه‌ای سزاوار جشنی به زیبایی و منحصر به فرد بودن زوج پشت آن است.
-        </b>
-        <span className="text-sm text-[#575757] max-w-[50%] max-md:max-w-[70%] max-sm:text-xs">
-          با اشتیاق به ظرافت بی‌انتها و برنامه‌ریزی متفکرانه تأسیس شد
+        <b className="text-lg md:text-2xl ">درباره بارثاوا</b>
+        <span className="text-sm md:text-lg text-[#575757] max-w-[90%] md:max-w-[50%] ">
+          بارثاوا با تکیه بر تجربه حرفه‌ای در برگزاری جشن‌ها و مراسم‌ رسمی،
+          جایگاهی قابل‌اعتماد میان برگزارکنندگان و مهمانان به دست آورده است.
+          تمرکز مجموعه بر کیفیت پذیرایی، اجرای دقیق جزئیات و رضایت مهمانان است؛
+          ارزش‌هایی که بارثاوا را به انتخابی مطمئن برای عروسی‌ها، جشن‌ها و
+          رویدادهای سازمانی تبدیل کرده است{" "}
         </span>
       </div>
       <AboutSectionSlider />

@@ -73,7 +73,7 @@ const Reservation = () => {
           <b className="text-2xl max-sm:text-lg">رزرو کنید !</b>
           <span className="text-[rgba(66,58,47,0.7)] text-sm text-center max-sm:text-xs">
             رویایی‌ترین لحظه‌های زندگی‌تان اینجاست! شما و عزیزانتان فقط یک قدم
-            با برگزاری جشن باشکوه در باغ تالار لوکس فاصله دارید.
+            با برگزاری جشن باشکوه در تالار لوکس فاصله دارید.
           </span>
           <form
             onSubmit={onSubmit}
@@ -127,7 +127,7 @@ const Reservation = () => {
                   onChange={(e) => setGuests(Number(e.target.value))}
                   type="number"
                   className="w-full px-5 text-sm flex items-center h-[40px] border-b-2 border-b-solid border-b-[#423A2F]  bg-[rgba(66,58,47,0.1)] rounded-t-lg"
-                  placeholder="200 نفر"
+                  placeholder="حداکثر 500 نفر"
                 />
               </div>
             </div>{" "}
@@ -174,7 +174,7 @@ const Reservation = () => {
               className="flex flex-col  gap-5 text-center
             "
             >
-              <b className="text-4xl text-[#f7f1ea]">باغ تلار بارثاوا</b>
+              <b className="text-4xl text-[#f7f1ea]"> تالار بارثاوا</b>
               <span className="text-[rgba(247,241,234,0.6)] text-2xl">
                 شبی رویایی در کنار عزیزانتان
               </span>

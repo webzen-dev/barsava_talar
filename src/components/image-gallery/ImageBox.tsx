@@ -18,7 +18,7 @@ const ImageBox = () => {
         <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
 
         <Image
-          src={"/images/DSC07690.jpg"}
+          src={"/images/men/men-2.webp"}
           alt="image"
           fill
           className="object-cover rounded-2xl select-none z-20"
@@ -30,7 +30,7 @@ const ImageBox = () => {
         <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
 
         <Image
-          src={"/images/DSC07785.jpg"}
+          src={"/images/men/men-7.webp"}
           alt="image"
           fill
           className="object-cover rounded-2xl select-none z-20"
@@ -42,7 +42,7 @@ const ImageBox = () => {
         <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
 
         <Image
-          src={"/images/DSC07600.jpg"}
+          src={"/images/men/men-6.webp"}
           alt="image"
           fill
           className="object-cover rounded-2xl select-none z-20"
@@ -54,7 +54,7 @@ const ImageBox = () => {
         <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
 
         <Image
-          src={"/images/DSC07655.jpg"}
+          src={"/images/men/men-1.webp"}
           alt="image"
           fill
           className="object-cover rounded-2xl select-none z-20"
@@ -66,7 +66,7 @@ const ImageBox = () => {
         <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
 
         <Image
-          src={"/images/DSC07705.jpg"}
+          src={"/images/men/men-4.webp"}
           alt="image"
           fill
           className="object-cover rounded-2xl select-none z-20"
@@ -78,7 +78,7 @@ const ImageBox = () => {
         <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
 
         <Image
-          src={"/images/DSC07669.jpg"}
+          src={"/images/men/men-3.webp"}
           alt="image"
           fill
           className="object-cover rounded-2xl select-none z-20"

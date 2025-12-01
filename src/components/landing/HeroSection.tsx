@@ -74,10 +74,10 @@ const HeroSection = () => {
           </b>
           <div className="flex  gap-1.5 flex-col text-lg max-md:text-sm"></div>
         </div>
-        <div className="hero-text-box flex-1 flex w-full min-h-[100vh]  h-[100vh] relative max-md:min-h-[calc(50vh)] max-md:h-[50vh]">
-          <div className="w-full h-[100vh] bg-gradient-to-br from-[#ececec] to-[#b1b1b1] rounded-2xl flex-wrap flex items-center justify-between gap-10 max-md:h-[50vh] max-md:gap-5">
+        <div className="hero-text-box flex-1 flex w-full relative aspect-1/2 md:aspect-auto md:h-screen md:min-h-screen">
+          <div className="w-full h-full bg-gradient-to-br from-[#ececec] to-[#b1b1b1] rounded-2xl flex-wrap flex items-center justify-between aspect-2/1 md:aspect-auto gap-5 md:gap-10">
             <Image
-              src={"/images/DSC04795.jpg"}
+              src={"/images/hero-image.webp"}
               alt="hero image"
               fill
               className="object-cover rounded-2xl"

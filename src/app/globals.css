@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@import url("../../public/fonts/stylesheet.css");
-@import url("/fonts/stylesheet.css");
+/* @import url("../../public/fonts/stylesheet.css"); */
+/* @import url("/fonts/stylesheet.css"); */
 @font-face {
   font-family: "IRANYekan";
   src: url("../../public/fonts/IRANYekan-Bold.woff2") format("woff2"),

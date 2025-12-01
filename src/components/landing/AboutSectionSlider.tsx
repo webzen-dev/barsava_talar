@@ -22,28 +22,28 @@ const slides: SlideType[] = [
     title: "مراسم عروسی",
     caption: "لحظه‌ای خاص از حلقه انداختن",
     link: "/image-gallery",
-    src: "/images/640A1010.jpg",
+    src: "/images/landing-images/about-slider-1.webp",
   },
   {
     id: 2,
     title: "حلقه‌های ازدواج",
     caption: "نمادی از عشق ابدی",
     link: "/image-gallery",
-    src: "/images/640A0992.jpg",
+    src: "/images/landing-images/about-slider-2.webp",
   },
   {
     id: 3,
     title: "عروس و داماد",
     caption: "پرتره نزدیک از یک لحظه عاشقانه",
     link: "/image-gallery",
-    src: "/images/640A0972.jpg",
+    src: "/images/landing-images/about-slider-3.webp",
   },
   {
     id: 4,
     title: "سالن پذیرایی",
     caption: "نمایی از دکوراسیون و میزهای جشن",
     link: "/image-gallery",
-    src: "/images/DSC07772.jpg",
+    src: "/images/landing-images/about-slider-4.webp",
   },
 ];
 
@@ -120,9 +120,9 @@ const AboutSectionSlider = () => {
               if (el) fadeUpEl.current[index] = el;
             }}
             key={index}
-            className="keen-slider__slide relative w-full h-[500px] cursor-pointer group overflow-hidden rounded-2xl "
+            className="keen-slider__slide relative w-full aspect-2/3 cursor-pointer group overflow-hidden rounded-2xl "
           >
-            <div className="absolue w-full h-full z-10 animate-pulse inset-0  bg-gradient-to-tr from-gray-400 to-gray-300 "></div>
+            {/* <div className="absolue w-full h-full z-10 animate-pulse inset-0  bg-gradient-to-tr from-gray-400 to-gray-300 "></div> */}
             <Image
               src={slide.src}
               alt={`slide-${index}`}

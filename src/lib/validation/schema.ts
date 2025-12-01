@@ -5,7 +5,7 @@ export const reservationSchema = z.object({
   last_name: z.string().min(2, "Last name is too short"),
   phone_number: z.string().regex(/^[0-9]{11}$/, "Invalid phone number"),
   description: z.string().min(5).max(500),
-  guests: z.number().min(1).max(200),
+  guests: z.number().min(1).max(500),
   date:z.string(),
   memberId:z.number()
 });

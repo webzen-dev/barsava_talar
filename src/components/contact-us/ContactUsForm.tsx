@@ -196,7 +196,7 @@ const ContactUsForm = () => {
             <div className="flex flex-col text-sm gap-[2px]">
               <span className="font-bold">ادرس باغ تالار </span>
               <a href="" className="text-xs">
-                مشهد_جاده شاندیز روبروی موجهای خروشان مدرس ١
+                مشهد_جاده شاندیز روبروی موجهای خروشان مدرس ۱/۶
               </a>
             </div>
           </div>

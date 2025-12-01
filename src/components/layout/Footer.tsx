@@ -83,10 +83,10 @@ const Footer = () => {
                 <HiOutlineLocationMarker />
               </div>
               <span className="text-gray-200 font-[100] text-sm max-md:text-xs">
-                مشهد, جاده شاندیز , مدرس ١
+                مشهد, جاده شاندیز , مدرس ۱/۶
               </span>
             </div>{" "}
-          </div>{" "} 
+          </div>{" "}
           <div className="flex flex-col  gap-3 max-md:w-[calc(50%-10px)] max-sm:w-full">
             <div className="flex items-center gap-2.5 text-white">
               <b>دسترسی سریع </b>

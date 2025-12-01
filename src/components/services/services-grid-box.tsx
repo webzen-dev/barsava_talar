@@ -17,8 +17,8 @@ export default function ServicesGridBox() {
       "
       >
         <div className="lg:col-span-3 lg:row-span-2 p-5 md:p-10 flex flex-col gap-5 border-black/20 border-2 rounded-lg">
-          <h3 className="font-bold text-2xl">برنامه‌ریزی دقیق مراسم</h3>
-          <p className="text-black/70 text-base flex-1">
+          <h3 className="font-bold text-lg md text-lg:md:text-2xl">برنامه‌ریزی دقیق مراسم</h3>
+          <p className="text-black/70 text-sm md text-sm:md:text-base flex-1">
             همه جزئیات جشن شما با دقت چیده می‌شود تا از لحظه ورود مهمان‌ها تا
             پایان مراسم، تجربه‌ای منظم، روان و بدون استرس داشته باشید.
           </p>
@@ -51,8 +51,8 @@ export default function ServicesGridBox() {
 
 <div className="p-5 md:p-10 flex flex-col gap-5 border-black/20 border-2 rounded-lg lg:row-start-3 lg:col-span-2 lg:row-span-2
   order-1 md:order-2">
-  <h3 className="font-bold text-2xl">دیزاین و دکور اختصاصی</h3>
-  <p className="text-black/70 text-base flex-1">
+  <h3 className="font-bold text-lg md:text-2xl">دیزاین و دکور اختصاصی</h3>
+  <p className="text-black/70 text-sm md:text-base flex-1">
     فضا با توجه به سلیقه شما طراحی می‌شود تا هویت مراسم کاملا مطابق
     حال‌وهوای مورد نظرتان باشد.
   </p>
@@ -66,8 +66,8 @@ export default function ServicesGridBox() {
 
 
         <div className="p-5 md:p-10 flex flex-col gap-5 border-black/20 border-2 rounded-lg md:col-span-1 lg:col-start-2 lg:row-start-5 lg:col-span-2 lg:row-span-2">
-          <h3 className="font-bold text-2xl">مدیریت مهمان‌ها</h3>
-          <p className="text-black/70 text-base flex-1">
+          <h3 className="font-bold text-lg md:text-2xl">مدیریت مهمان‌ها</h3>
+          <p className="text-black/70 text-sm md:text-base flex-1">
             حرکت، جای‌نشینی و هماهنگی مهمان‌ها به شکلی حرفه‌ای مدیریت می‌شود تا
             فضا روان و بدون ازدحام پیش برود.
           </p>
@@ -89,8 +89,8 @@ export default function ServicesGridBox() {
         </div>
 
         <div className="p-5 md:p-10 flex flex-col gap-5 border-black/20 border-2 rounded-lg col-span-full  order-2 lg:row-start-7 lg:col-span-3 lg:row-span-2">
-          <h3 className="font-bold text-2xl">اجرای بی‌وقفه مراسم</h3>
-          <p className="text-black/70 text-base flex-1">
+          <h3 className="font-bold text-lg md:text-2xl">اجرای بی‌وقفه مراسم</h3>
+          <p className="text-black/70 text-sm md:text-base flex-1">
             نور، صدا، زمان‌بندی و هماهنگی پشت‌صحنه با یک تیم متخصص کنترل می‌شود
             تا هیچ لحظه‌ای از مراسم از ریتم طبیعی خودش خارج نشود. تمام اجزای جشن
             به صورت زنده رصد و مدیریت می‌شوند؛ از ورود مهمان‌ها تا اجراهای اصلی،

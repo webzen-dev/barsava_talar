@@ -62,11 +62,11 @@ const WeddingPackage = () => {
           پکیج عروسی
         </b>
 
-        <b className="wedding-package-title text-sm  text-[#575757] max-w-[70%] max-md:max-w-[90%] max-md:text-xs">
-          پکیج‌های عروسی منتخب که متناسب با سبک، نیازها و بودجه شما طراحی
-          شده‌اند را بررسی کنید تا جشنی داشته باشید که واقعاً حس و حال شما را
-          داشته باشد
-        </b>
+
+<b className="wedding-package-title text-sm text-[#575757] max-w-[70%] max-md:max-w-[90%] max-md:text-xs">
+  مجموعه‌ای از پکیج‌های اختصاصی که برای جشنی باشکوه، منظم و هماهنگ با سلیقه شما طراحی شده‌اند. 
+  هر پکیج شامل خدمات حرفه‌ای باغ تالار بوده و به شما امکان می‌دهد مراسم خود را آنلاین انتخاب و رزرو کنید.
+</b>
       </div>
       {/* package Box */}
       <div className="flex justify-between items-center gap-5  h-[300px] w-full max-lg:h-auto max-lg:flex-wrap">
