@@ -113,7 +113,7 @@ const AboutSectionSlider = () => {
 
   return (
     <div className="w-full h-auto flex flex-col gap-[20px] relative">
-      <div ref={sliderRef} className="keen-slider w-full">
+      <div ref={sliderRef} className="keen-slider w-full h-auto aspect-2/3 md:aspect-auto"> 
         {slides.map((slide, index) => (
           <div
             ref={(el) => {
