@@ -3,9 +3,9 @@ import ImageGalleryHeroSlider from "./ImageGalleryHeroSlider";
 
 const ImageGalleryHero = () => {
   return (
-    <div className="flex flex-col justify-between h-[100vh] py-10">
+    <div className="flex flex-col justify-between py-10">
       {/* Hero Section Text Box */}
-      <div className="flex items-center  justify-center pt-[80px] p-10 flex-1">
+      <div className="flex items-center  justify-center pt-20 p-10 flex-1">
         <div className="flex flex-col gap-2.5 text-center w-full items-center">
           <div className="flex  items-center gap-2.5 w-[40%] max-md:w-[90%]">
             {/* line */}

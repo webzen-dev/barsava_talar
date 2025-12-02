@@ -20,45 +20,80 @@ const OtherPhoto = () => {
           <b className="pb-2.5 text-4xl max-md:text-base">تصاویر ورودی تالار</b>
         </div>
       </div>
+<div
+  className="
+    grid gap-4 w-full px-10 pb-5 max-md:p-2.5
+    grid-cols-1  
+    sm:grid-cols-2 sm:auto-rows-[250px]
+    md:grid-cols-3 md:auto-rows-[300px]
+    lg:grid-cols-5 lg:grid-rows-5 lg:auto-rows-auto
+    h-auto lg:h-screen
+    max-md:gap-2
+    max-md:px-5
+  "
+>
 
-      <div className="flex flex-wrap w-full px-5 md:px-10 gap-5">
-        <div className="flex-[calc(100%/2-20px)] rounded-xl shadow-md md:flex-[calc(100%/3-40px)] aspect-square lg:flex-[calc(100%/4-60px)] relative ">
-          <Image
-            src={"/images/women/DSC07773-Edit.webp"}
-            alt="image"
-            fill
-            className="object-cover rounded-2xl select-none"
-            draggable={false}
-          />
-        </div>{" "}
-        <div className="flex-[calc(100%/2-20px)] rounded-xl shadow-md md:flex-[calc(100%/3-40px)] aspect-square lg:flex-[calc(100%/4-60px)] relative ">
-          <Image
-            src={"/images/women/DSC07773-Edit.webp"}
-            alt="image"
-            fill
-            className="object-cover rounded-2xl select-none"
-            draggable={false}
-          />
-        </div>{" "}
-        <div className="flex-[calc(100%/2-20px)] rounded-xl shadow-md md:flex-[calc(100%/3-40px)] aspect-square lg:flex-[calc(100%/4-60px)] relative ">
-          <Image
-            src={"/images/women/DSC07773-Edit.webp"}
-            alt="image"
-            fill
-            className="object-cover rounded-2xl select-none"
-            draggable={false}
-          />
-        </div>{" "}
-        <div className="flex-[calc(100%/2-20px)] rounded-xl shadow-md md:flex-[calc(100%/3-40px)] aspect-square lg:flex-[calc(100%/4-60px)] relative max-h-70 lg:max-h-none">
-          <Image
-            src={"/images/women/DSC07773-Edit.webp"}
-            alt="image"
-            fill
-            className="object-cover rounded-2xl select-none"
-            draggable={false}
-          />
-        </div>
+      <div className="w-full aspect-square sm:w-auto sm:aspect-auto lg:col-span-2 lg:row-span-3 relative rounded-xl shadow-md overflow-hidden ">
+        <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
+
+        <Image
+          src={"/images/other-images/other-3.webp"}
+          alt="image"
+          fill
+          className="object-cover rounded-2xl select-none z-20"
+          draggable={false}
+        />
       </div>
+
+      <div className="lg:col-start-3 lg:row-span-3 relative rounded-xl shadow-md overflow-hidden w-full aspect-square sm:w-auto sm:aspect-auto">
+        <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
+
+        <Image
+          src={"/images/other-images/other-4.webp"}
+          alt="image"
+          fill
+          className="object-cover rounded-2xl select-none z-20"
+          draggable={false}
+        />
+      </div>
+
+      <div className="relative rounded-xl shadow-md overflow-hidden lg:col-start-1 lg:row-start-4 lg:row-span-2 w-full aspect-square sm:w-auto sm:aspect-auto">
+        <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
+
+        <Image
+          src={"/images/other-images/other-1.webp"}
+          alt="image"
+          fill
+          className="object-cover rounded-2xl select-none z-20"
+          draggable={false}
+        />
+      </div>
+
+      <div className="relative rounded-xl shadow-md overflow-hidden lg:col-start-2 lg:row-start-4 lg:col-span-2 lg:row-span-2  w-full aspect-square sm:w-auto sm:aspect-auto">
+        <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
+
+        <Image
+          src={"/images/food-menu/DSC07600.webp "}
+          alt="image"
+          fill
+          className="object-cover rounded-2xl select-none z-20"
+          draggable={false}
+        />
+      </div>
+
+
+      <div className="relative rounded-xl shadow-md overflow-hidden sm:col-span-2 lg:col-start-4 lg:row-start-1 lg:col-span-2 lg:row-span-5 bg-gradient-to-tr w-full aspect-square sm:w-auto sm:aspect-auto">
+        <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />
+
+        <Image
+          src={"/images/other-images/other-2.webp"}
+          alt="image"
+          fill
+          className="object-cover rounded-2xl select-none z-20"
+          draggable={false}
+        />
+      </div>
+    </div>
     </div>
   );
 };
