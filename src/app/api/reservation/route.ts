@@ -1,5 +1,5 @@
 // import { authOptions } from "@/lib/auth";
-import prisma from "@/lib/prisma";
+import { prisma } from "@/lib/prisma";
 import { reservationSchema } from "@/lib/validation/schema";
 // import { getServerSession } from "next-auth";
 import { NextRequest, NextResponse } from "next/server";

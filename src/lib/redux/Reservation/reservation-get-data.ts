@@ -7,7 +7,7 @@ async getReservationData(): Promise<ReservationType[]> {
         try {
             const res = await axios.get(RESERVATION_API);
             const data = res.data;
-
+            
             if (!data) {
                 return [];
             }
