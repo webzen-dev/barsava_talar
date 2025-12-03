@@ -6,8 +6,8 @@ export const reservationSchema = z.object({
   phone_number: z.string().regex(/^[0-9]{11}$/, "Invalid phone number"),
   description: z.string().min(5).max(500),
   guests: z.number().min(1).max(500),
-  date:z.string(),
-  memberId:z.number()
+  date: z.string(),
+  memberId: z.number(),
 });
 export type ReservationInput = z.infer<typeof reservationSchema>;
 export const deleteReservationSchema = z.object({
@@ -46,4 +46,20 @@ export const ContactUsScheme = z.object({
   last_name: z.string().min(2, "Last name is too short"),
   phone_number: z.string().regex(/^[0-9]{11}$/, "Invalid phone number"),
   message: z.string().min(5).max(500),
+});
+
+export const CommentsScheme = z.object({
+  fullName: z
+    .string()
+    .min(2, "full name is too short")
+    .max(50, "full name is too long"),
+    phoneNumber: z
+    .string()
+    .regex(/^\d{10,11}$/, "Invalid phone number"),
+    title: z
+      .string()
+      .min(2, "title is too short")
+      .max(50, "title is too long"),
+  message: z.string().min(5, "Message too short").max(200, "Message too long"),
+  isRead: z.boolean().optional(),
 });
