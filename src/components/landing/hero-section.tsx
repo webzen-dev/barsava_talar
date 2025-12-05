@@ -45,16 +45,16 @@ const HeroSection = () => {
         <b className="text-base md:text-2xl fade-up">
           از عشق شما الهام می‌گیریم،
         </b>
-        
+
         <b className="text-base md:text-2xl fade-up">
           و خاطراتی می‌سازیم که هیچ‌گاه رنگ کهنگی نمی‌گیرند
         </b>
-      </div>
 
-      <p className="text-sm md:text-lg text-black/70 fade-up">
-        بگذارید ما تمام جزئیات را مدیریت کنیم در حالی که شما از سفر به سوی
-        خوشبختی ابدی خود لذت می‌برید.
-      </p>
+        <p className="text-sm md:text-lg text-black/70 pt-2 fade-up">
+          بگذارید ما تمام جزئیات را مدیریت کنیم در حالی که شما از سفر به سوی
+          خوشبختی ابدی خود لذت می‌برید.
+        </p>
+      </div>
 
       <div className="flex-1 w-full relative aspect-2/3 md:aspect-2/1 fade-up">
         <Image

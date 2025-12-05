@@ -2,7 +2,7 @@ import HeroSection from "@/components/landing/hero-section";
 import AboutSection from "@/components/landing/about-section";
 
 import Faq from "@/components/landing/Faq";
-import HeartfeltPlanning from "@/components/landing/HeartfeltPlanning";
+import HeartfeltPlanning from "@/components/landing/heartfelt-planning";
 import ImagesGallery from "@/components/landing/ImagesGallery";
 import OurServicesSections from "@/components/landing/OurServicesSections";
 import TimelessMoments from "@/components/landing/TimelessMoments";
@@ -39,6 +39,32 @@ const config = {
       src: "/images/landing-images/about-slider-4.webp",
     },
   ],
+  heartfeltPlanningData: [
+    {
+      icon: "/images/Invitation.png",
+      title: "اجرای بی‌نقص",
+      description:
+        "هر مراسم با دقت، نظم و هماهنگی کامل برگزار می‌شود تا تجربه‌ای فراموش‌نشدنی رقم بخورد.",
+    },
+    {
+      icon: "/images/Heart-Love-Romance-Wedding.png",
+      title: "تیم مورد اعتماد",
+      description:
+        "تیمی حرفه‌ای و باتجربه در کنار شماست تا با آرامش خاطر جشن‌تان را برگزار کنید.",
+    },
+    {
+      icon: "/images/ring.png",
+      title: "تجربه سفارشی",
+      description:
+        "تمام جزئیات مراسم براساس سلیقه و رویاهای شما طراحی می‌شود تا خاص‌ترین روزتان خلق شود.",
+    },
+    {
+      icon: "/images/Heand-Love-Heart.png",
+      title: "لمس خلاقانه",
+      description:
+        "با طراحی‌های منحصربه‌فرد و ایده‌های نو، هر بخش از جشن شما جلوه‌ای خاص می‌یابد.",
+    },
+  ],
 };
 
 export default function Home() {
@@ -49,8 +75,8 @@ export default function Home() {
     >
       <HeroSection />
       <AboutSection data={config.aboutSliderData} />
-      {/* <HeartfeltPlanning />
-      <OurServicesSections />
+      <HeartfeltPlanning data={config.heartfeltPlanningData} />
+      {/* <OurServicesSections />
       <WeddingPackage />
       <TimelessMoments />
       <Faq />
