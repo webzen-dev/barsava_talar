@@ -104,7 +104,7 @@ export default function AboutSectionCarousel({
           {slides.map((slide) => (
             <div
               key={slide.id}
-              className="shrink-0 grow-0 min-w-4/5 md:min-w-1/2 lg:min-w-1/3 aspect-2/3 px-2.5"
+              className="shrink-0 grow-0 min-w-4/5 md:min-w-1/2 lg:min-w-1/3 aspect-5/6 px-2.5"
             >
               <SlideItem slide={slide} />
             </div>

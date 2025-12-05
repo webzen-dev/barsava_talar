@@ -65,21 +65,68 @@ const config = {
         "با طراحی‌های منحصربه‌فرد و ایده‌های نو، هر بخش از جشن شما جلوه‌ای خاص می‌یابد.",
     },
   ],
+  servicesItems: [
+    {
+      id: 1,
+      title: "طراحی و دکوراسیون اختصاصی",
+      caption:
+        "فضاسازی مطابق با سلیقه و تم مراسم شما، از گل‌آرایی تا نورپردازی حرفه‌ای.",
+      src: "/images/services/flower.png",
+    },
+    {
+      id: 2,
+      title: "پذیرایی مجلل",
+      caption:
+        "منوی متنوع از غذاها و دسرهای باکیفیت که با بهترین مواد اولیه آماده می‌شوند.",
+      src: "/images/services/room.png",
+    },
+    {
+      id: 3,
+      title: "تیم حرفه‌ای تشریفات",
+      caption:
+        "پرسنل آموزش‌دیده با نظم، احترام و دقت در خدمت شما و میهمانانتان خواهند بود.",
+      src: "/images/services/management.png",
+    },
+    {
+      id: 4,
+      title: "امکانات صوتی و تصویری پیشرفته",
+      caption:
+        "سیستم‌های نور و صدای حرفه‌ای برای اجرای زنده، موزیک و لحظات خاص مراسم.",
+      src: "/images/services/music.png",
+    },
+    {
+      id: 5,
+      title: "خدمات مشاوره و برنامه‌ریزی",
+      caption:
+        "همراهی قدم‌به‌قدم از شروع تا پایان برای طراحی مراسمی بی‌نقص و متناسب با خواسته‌های شما.",
+      src: "/images/services/calendar.png",
+    },
+    {
+      id: 6,
+      title: "فضاهای لوکس عکاسی",
+      caption: "محیط‌هایی شیک و چشم‌نواز برای ثبت زیباترین لحظات زندگی شما.",
+      src: "/images/services/camera.png",
+    },
+  ],
 };
 
 export default function Home() {
   return (
-    <div
-      className="flex flex-col gap-10 bg-[var(--page-background)] overflow-hidden pt-20 px-5 md:px-10 container mx-auto"
-    >
-      <HeroSection />
-      <AboutSection data={config.aboutSliderData} />
-      <HeartfeltPlanning data={config.heartfeltPlanningData} />
-      <ServicesSection />
-      {/* <WeddingPackage />
-      <TimelessMoments />
+    <div className="flex flex-col gap-20 bg-[var(--page-background)] overflow-hidden pt-20">
+      <div className="px-5 md:px-10 container mx-auto flex flex-col gap-20">
+        <HeroSection />
+        <AboutSection data={config.aboutSliderData} />
+        <HeartfeltPlanning data={config.heartfeltPlanningData} />
+      </div>
+
+      <ServicesSection items={config.servicesItems} />
+      
+      <div className="px-5 md:px-10 container mx-auto flex flex-col gap-20">
+        <WeddingPackage />
+      </div>
+      {/* <TimelessMoments />
       <Faq />
-      <ImagesGallery /> */}
+      <ImagesGallery />  */}
     </div>
   );
 }

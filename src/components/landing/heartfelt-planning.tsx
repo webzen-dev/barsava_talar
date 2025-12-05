@@ -19,18 +19,12 @@ export default function HeartfeltPlanning({
         <b className="text-lg md:text-2xl">برنامه‌ریزی صمیمانه</b>
       </div>
 
-      <div className="flex w-full justify-between items-stretch gap-5">
+      <div className="flex w-full justify-between items-stretch gap-5 flex-col md:flex-row md:flex-wrap lg:flex-nowrap">
         {data.map((box, i) => (
           <div
             key={i}
-            className="w-1/4 flex flex-col items-start gap-5 border-2 border-solid border-[var(--brown)] rounded-2xl p-5"
+            className="w-full md:w-[calc(100%/2-10px)] lg:w-1/4 flex flex-col items-start gap-5 border-2 border-solid border-[var(--brown)] rounded-2xl p-5"
           >
-            {/* <Image
-                src={"/images/BG-Card.png"}
-                fill
-                alt="BG Card"
-                className={`object-cover opacity-30`}
-              /> */}
             <Image
               src={box.icon}
               height={80}

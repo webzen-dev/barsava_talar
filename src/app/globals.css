@@ -27,9 +27,8 @@
   --gold: #dec39a;
 }
 
-.about-section-fade-up ,
-.fade-scroll
-{
+/* .about-section-fade-up , */
+.fade-scroll {
   opacity: 0;
   transform: translateY(30px);
 }

@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import ScrollFadeProvider from "../ScrollFadeProvider";
 import AboutSectionCarousel from "./about-section-carousel";
 import HeaderSection from "../header-sections";
@@ -15,11 +13,11 @@ export interface AboutDataProps {
 export default function AboutSection({ data }: { data: AboutDataProps[] }) {
   return (
     <div className="flex flex-col justify-center gap-6 items-center">
-        <ScrollFadeProvider
+        {/* <ScrollFadeProvider
           selector=".about-section-fade-up"
           enabledStagger={true}
           staggerTimeLine={0.8}
-        />
+        /> */}
 
       <div className="flex flex-col gap-2.5 text-center items-center">
         <HeaderSection className="about-section-fade-up" />
