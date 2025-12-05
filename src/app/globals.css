@@ -22,10 +22,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --brown:#423A2F;
-  --page-background:#F7F1EA;
+  --brown: #423a2f;
+  --page-background: #f7f1ea;
+  --gold: #dec39a;
 }
 
+.fade-scroll,
+.about-section-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -188,4 +194,3 @@ input[type="number"] {
 .rmdp-day.rmdp-today span {
   background: rgba(66, 58, 47, 0.8) !important;
 }
-
