@@ -23,7 +23,7 @@ export default function ServicesSection({ items }: { items: ServicesType[] }) {
         </p>
       </div>
 
-      <div className={clsx("w-full px-5 py-10 md:px-10 bg-[var(--brown)] relative")}>
+      <div className={clsx("w-full px-5 py-10 bg-[var(--brown)] relative")}>
         <Image
           src={"/images/aluminum-foil-6961638_960_720.jpg"}
           className="grayscale opacity-10 object-cover"
@@ -44,7 +44,7 @@ export default function ServicesSection({ items }: { items: ServicesType[] }) {
                 height={100}
                 className="object-cover  drop-shadow-[0_0_20px_var(--gold)]"
               />
-              
+
               <b className="text-lg md:text-2xl text-[var(--gold)]">
                 {service.title}
               </b>

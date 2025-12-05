@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/all";
 import { gsap } from "gsap";
+import HeaderSections from "../header-sections";
 gsap.registerPlugin(ScrollTrigger);
 const TimelessMoments = () => {
   const headerEls = useRef<HTMLDivElement[]>([]);
@@ -20,7 +21,6 @@ const TimelessMoments = () => {
         scrollTrigger: {
           trigger: headerEls?.current[0],
           start: "top 90%",
-          // markers: true,
         },
       });
       gsap.from(".timelessImage1", {
@@ -51,31 +51,15 @@ const TimelessMoments = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center w-full gap-15 p-10 max-sm:p-5 max-sm:overflow-hidden">
+    <div className="flex flex-col items-center w-full gap-10 max-sm:p-5 max-sm:overflow-hidden">
       <div className="flex flex-col items-center w-full text-center gap-2.5">
-        <div
-          ref={(el) => {
-            if (el) headerEls.current[0] = el;
-          }}
-          className="flex items-center w-[40%] gap-2.5 max-md:w-[90%]"
-        >
-          <div className="flex-1 h-[0.5px] bg-[#423A2F]" />
-          <Image
-            src="/images/flower.svg"
-            alt="flower"
-            width={60}
-            height={60}
-            draggable="false"
-            className="object-cover"
-          />
-          <div className="flex-1 h-[0.5px] bg-[#423A2F]" />
-        </div>
+        <HeaderSections />
 
         <div
           ref={(el) => {
             if (el) headerEls.current[1] = el;
           }}
-          className="pb-2.5 text-4xl font-bold max-sm:text-lg"
+          className="pb-2.5 text-lg md:text-2xl font-bold"
         >
           لحظات بی‌زمان
         </div>
@@ -84,7 +68,7 @@ const TimelessMoments = () => {
           ref={(el) => {
             if (el) headerEls.current[2] = el;
           }}
-          className="w-[70%] text-sm font-bold text-[#575757] max-md:w-[90%]"
+          className="text-sm md:text-base font-bold text-black/70 w-9/10 md:w-4/5"
         >
           به جشن‌های فراموش‌نشدنی که ما ترتیب داده‌ایم قدم بگذارید - هر عکس
           داستانی را روایت می‌کند

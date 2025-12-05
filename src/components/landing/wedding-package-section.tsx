@@ -4,13 +4,13 @@ import clsx from "clsx";
 
 export default function WeddingPackage() {
   return (
-    <div className="flex flex-col items-center w-full gap-6">
+    <div className="flex flex-col items-center w-full gap-6 px-5 md:px-0">
       <div className="flex flex-col gap-2.5 text-center w-full items-center">
         <HeaderSections />
 
         <b className="text-lg md:text-2xl">پکیج عروسی</b>
 
-        <b className="text-sm md:text-base text-black/70">
+        <b className="text-sm md:text-base text-black/70 w-9/10 md:w-4/5">
           مجموعه‌ای از پکیج‌های اختصاصی که برای جشنی باشکوه، منظم و هماهنگ با
           سلیقه شما طراحی شده‌اند. هر پکیج شامل خدمات حرفه‌ای باغ تالار بوده و
           به شما امکان می‌دهد مراسم خود را آنلاین انتخاب و رزرو کنید.
@@ -42,7 +42,7 @@ export default function WeddingPackage() {
 
         <div
           className={clsx(
-            "h-full flex-1 rounded-2xl flex items-end p-5 gap-5 cursor-pointer relative group"
+            "h-full flex-1 rounded-2xl flex items-end md:p-5 gap-5 cursor-pointer relative group"
           )}
         >
           <Image
@@ -55,12 +55,13 @@ export default function WeddingPackage() {
           <div
             className={clsx(
               "flex flex-col justify-between w-full h-8/10 gap-2.5",
-              "bg-[var(--page-background)] rounded-2xl relative z-20 p-10",
+              "backdrop-blur-sm md:bg-[var(--page-background)] rounded-2xl relative z-20 p-5",
               "opacity-0 max-md:opacity-100",
               "group-hover:opacity-100",
               "transition-opacity duration-500 ease-out"
             )}
           >
+
             <Image
               src={"/images/signature-50.png"}
               height={60}
@@ -69,11 +70,11 @@ export default function WeddingPackage() {
               className="object-cover"
             />
 
-            <b className="text-lg md:text-2xl text-[var(--brown)] flex items-center">
+            <b className="text-lg md:text-2xl text-[var(--page-background)] md:text-[var(--brown)] flex items-center">
               بسته ویژه
             </b>
 
-            <div className="text-black/70 text-sm md:text-base">
+            <div className="text-[var(--page-background)]/90  md:text-[var(--brown)]/70 text-sm md:text-base">
               یک تجربه کامل برنامه‌ریزی از ابتدا تا انتها. شامل انتخاب محل
               برگزاری، مدیریت فروشندگان، طراحی مفهومی و هماهنگی کامل روز عروسی.
             </div>

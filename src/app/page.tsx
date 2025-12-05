@@ -120,13 +120,14 @@ export default function Home() {
       </div>
 
       <ServicesSection items={config.servicesItems} />
-      
-      <div className="px-5 md:px-10 container mx-auto flex flex-col gap-20">
+
+      <div className="container mx-auto flex flex-col gap-20">
         <WeddingPackage />
       </div>
-      {/* <TimelessMoments />
+
+      <TimelessMoments />
       <Faq />
-      <ImagesGallery />  */}
+      <ImagesGallery />
     </div>
   );
 }

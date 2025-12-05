@@ -77,7 +77,7 @@ export default function AboutSectionCarousel({
 
   return (
     <div className="w-full h-auto flex flex-col gap-5 relative">
-      <div className="flex justify-end items-center gap-3 w-full pe-2.5">
+      <div className="flex justify-end items-center gap-3 w-full md:pe-2.5">
         <button
           onClick={() => emblaApi?.scrollPrev()}
           className={clsx(
