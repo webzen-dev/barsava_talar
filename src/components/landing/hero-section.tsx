@@ -50,7 +50,7 @@ const HeroSection = () => {
           و خاطراتی می‌سازیم که هیچ‌گاه رنگ کهنگی نمی‌گیرند
         </b>
 
-        <p className="text-sm md:text-lg text-black/70 pt-2 fade-up">
+        <p className="text-sm md:text-base text-black/70 pt-2 fade-up">
           بگذارید ما تمام جزئیات را مدیریت کنیم در حالی که شما از سفر به سوی
           خوشبختی ابدی خود لذت می‌برید.
         </p>

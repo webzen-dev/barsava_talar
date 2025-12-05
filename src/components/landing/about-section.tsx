@@ -2,7 +2,6 @@ import Image from "next/image";
 
 import ScrollFadeProvider from "../ScrollFadeProvider";
 import AboutSectionCarousel from "./about-section-carousel";
-import { memo } from "react";
 import HeaderSection from "../header-sections";
 
 export interface AboutDataProps {
@@ -16,11 +15,11 @@ export interface AboutDataProps {
 export default function AboutSection({ data }: { data: AboutDataProps[] }) {
   return (
     <div className="flex flex-col justify-center gap-6 items-center">
-      <ScrollFadeProvider
-        selector=".about-section-fade-up"
-        enabledStagger={true}
-        staggerTimeLine={0.8}
-      />
+        <ScrollFadeProvider
+          selector=".about-section-fade-up"
+          enabledStagger={true}
+          staggerTimeLine={0.8}
+        />
 
       <div className="flex flex-col gap-2.5 text-center items-center">
         <HeaderSection className="about-section-fade-up" />
@@ -28,7 +27,7 @@ export default function AboutSection({ data }: { data: AboutDataProps[] }) {
         <div className="flex flex-col items-center gap-4 about-section-fade-up">
           <b className="text-lg md:text-2xl">درباره بارثاوا</b>
 
-          <p className="text-sm md:text-base text-black/70 max-w-9/10u md:max-w-4/5 about-section-fade-up">
+          <p className="text-sm md:text-base text-black/70 max-w-9/10 md:max-w-4/5 about-section-fade-up">
             بارثاوا با تکیه بر تجربه حرفه‌ای در برگزاری جشن‌ها و مراسم‌ رسمی،
             جایگاهی قابل‌اعتماد میان برگزارکنندگان و مهمانان به دست آورده است.
             تمرکز مجموعه بر کیفیت پذیرایی، اجرای دقیق جزئیات و رضایت مهمانان

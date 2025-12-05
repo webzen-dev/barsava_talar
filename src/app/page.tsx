@@ -1,10 +1,10 @@
 import HeroSection from "@/components/landing/hero-section";
 import AboutSection from "@/components/landing/about-section";
+import HeartfeltPlanning from "@/components/landing/heartfelt-planning";
+import ServicesSection from "@/components/landing/services-section";
 
 import Faq from "@/components/landing/Faq";
-import HeartfeltPlanning from "@/components/landing/heartfelt-planning";
 import ImagesGallery from "@/components/landing/ImagesGallery";
-import OurServicesSections from "@/components/landing/OurServicesSections";
 import TimelessMoments from "@/components/landing/TimelessMoments";
 import WeddingPackage from "@/components/landing/WeddingPackage";
 
@@ -71,13 +71,12 @@ export default function Home() {
   return (
     <div
       className="flex flex-col gap-10 bg-[var(--page-background)] overflow-hidden pt-20 px-5 md:px-10 container mx-auto"
-      dir="rtl"
     >
       <HeroSection />
       <AboutSection data={config.aboutSliderData} />
       <HeartfeltPlanning data={config.heartfeltPlanningData} />
-      {/* <OurServicesSections />
-      <WeddingPackage />
+      <ServicesSection />
+      {/* <WeddingPackage />
       <TimelessMoments />
       <Faq />
       <ImagesGallery /> */}

@@ -1,12 +1,7 @@
-"use client";
-
-import Image from "next/image";
 import FirstComponents from "./OurServicesSection/FirstComponents";
 import LastComponents from "./OurServicesSection/LastComponents";
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
-gsap.registerPlugin(ScrollTrigger);
+import HeaderSections from "../header-sections";
+
 const firstdata = [
   {
     image: "/images/DSC04614.jpg",
@@ -137,64 +132,28 @@ const lastData = [
   },
 ];
 
-const OurServicesSections = () => {
-  const headerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!headerRef.current) return;
-
-    const headerEls = headerRef?.current.children;
-    const ctx = gsap.context(() => {
-      gsap.from(headerEls, {
-        opacity: 0,
-        y: 40,
-        stagger: 0.3,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: headerRef.current,
-          start: "top 80%",
-        },
-      });
-    }, headerRef);
-
-    return () => ctx.revert();
-  }, []);
-
+export default function OurServicesSectionsBackup() {
   return (
-    <div className=" bg-[#f7f1ea] px-[50px] text-[#423A2F] flex flex-col relative py-20 gap-10 w-full h-auto max-md:px-5">
-      <div
-        ref={headerRef}
-        className="flex flex-col gap-2.5 items-center text-center relative z-20 pb-10"
-      >
-        <div className="flex  items-center gap-2.5 w-[40%] max-md:w-[90%]">
-          {/* line */}
-          <div className="h-[0.5px] bg-[#423A2F] flex-1"></div>
-          <Image
-            className="object-cover "
-            draggable="false"
-            src={"/images/flower.svg"}
-            alt="flower"
-            width={60}
-            height={60}
-          />
-
-          <div className="h-[0.5px] bg-[#423A2F] flex-1"></div>
-        </div>
-        <b className="text-4xl font-bold max-sm:text-lg  ">خدمات ما</b>
-        <b className="text-sm md:text-base md:max-w-2/5">
-ارائه خدمات تخصصی برای برگزاری عروسی‌ها و جشن‌های به‌یادماندنی، با برنامه‌ریزی دقیق و اجرای هماهنگ. همچنین امکان میزبانی ایونت‌ها و سمینار با همان کیفیت و نظم همیشگی در تالار مجلل بارثاوا.        </b>
+    <div className=" flex flex-col relative gap-10 w-full h-auto">
+      <div className="flex flex-col items-center text-center gap-4">
+        <HeaderSections />
+        <b className="text-lg md:text-2xl">خدمات ما</b>
+        <p className="text-sm md:text-base md:max-w-4/5 text-black/70">
+          ارائه خدمات تخصصی برای برگزاری عروسی‌ها و جشن‌های به‌یادماندنی، با
+          برنامه‌ریزی دقیق و اجرای هماهنگ. همچنین امکان میزبانی ایونت‌ها و
+          سمینار با همان کیفیت و نظم همیشگی در تالار مجلل بارثاوا.
+        </p>
       </div>
+
       <FirstComponents
         image={firstdata[0].image}
         description={firstdata[0].description}
         dir="flex-row"
       />
-      {/* section */}
       <LastComponents
         description={lastData[0].description}
         images={lastData[0].images}
-      />{" "}
+      />
       <FirstComponents
         image={firstdata[1].image}
         description={firstdata[1].description}
@@ -203,9 +162,7 @@ const OurServicesSections = () => {
       <LastComponents
         description={lastData[1].description}
         images={lastData[1].images}
-      />{" "}
+      />
     </div>
   );
-};
-
-export default OurServicesSections;
+}
