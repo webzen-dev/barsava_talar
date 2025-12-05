@@ -2,11 +2,11 @@ import HeroSection from "@/components/landing/hero-section";
 import AboutSection from "@/components/landing/about-section";
 import HeartfeltPlanning from "@/components/landing/heartfelt-planning";
 import ServicesSection from "@/components/landing/services-section";
+import WeddingPackage from "@/components/landing/wedding-package-section";
 
 import Faq from "@/components/landing/Faq";
 import ImagesGallery from "@/components/landing/ImagesGallery";
 import TimelessMoments from "@/components/landing/TimelessMoments";
-import WeddingPackage from "@/components/landing/WeddingPackage";
 
 const config = {
   aboutSliderData: [
