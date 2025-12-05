@@ -22,6 +22,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --brown:#423A2F;
+  --page-background:#F7F1EA;
 }
 
 @theme inline {

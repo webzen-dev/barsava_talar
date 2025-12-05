@@ -13,6 +13,7 @@ interface ScrollFadeProviderProps {
   position?: string;
   enableScrollTriger?: boolean;
   enabledStagger?: boolean;
+  staggerTimeLine?:number
 }
 
 export default function ScrollFadeProvider({
@@ -22,6 +23,7 @@ export default function ScrollFadeProvider({
   position = "top 80%",
   enableScrollTriger = true,
   enabledStagger = true,
+  staggerTimeLine=0.5
 }: ScrollFadeProviderProps) {
   useEffect(() => {
     const elements = document.querySelectorAll(selector);
@@ -38,14 +40,12 @@ export default function ScrollFadeProvider({
             opacity: 1,
             y: 0,
             duration: duration,
-            stagger: enabledStagger ? 0.5 : 0,
-
+            stagger: enabledStagger ? staggerTimeLine: 0,
             scrollTrigger: enableScrollTriger
               ? {
                   trigger: batch[0],
                   start: position,
                   toggleActions: "play none none none",
-                  markers: true,
                 }
               : undefined,
           }
