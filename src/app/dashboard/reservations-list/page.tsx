@@ -32,7 +32,7 @@ const ReservationsList = () => {
       setReservations((prev) => prev.filter((r) => r.id !== id));
       toast.success("رزرو با موفقیت حذف شد!");
     } catch (error: unknown) {
-      toast.error("خطا در حذف رزرو. دوباره تلاش کنید.");
+      toast.error("خطا در حذف رزرو. دوباره تلاش کنید.", error);
     } finally {
       setLoadingIds((prev) => prev.filter((loadingId) => loadingId !== id));
     }
@@ -43,13 +43,11 @@ const ReservationsList = () => {
       setCheckingIds((prev) => [...prev, id]);
       await axios.patch(`/api/reservation/${id}`, { status: "Checked" });
       setReservations((prev) =>
-        prev.map((r) =>
-          r.id === id ? { ...r, status: "Success" } : r
-        )
+        prev.map((r) => (r.id === id ? { ...r, status: "Success" } : r))
       );
       toast.success("رزرو با موفقیت بررسی شد!");
     } catch (error: unknown) {
-      toast.error("خطا در بررسی رزرو. دوباره تلاش کنید.");
+      toast.error("خطا در بررسی رزرو. دوباره تلاش کنید.", error);
     } finally {
       setCheckingIds((prev) => prev.filter((checkingId) => checkingId !== id));
     }
@@ -88,11 +86,17 @@ const ReservationsList = () => {
               <div className="flex flex-col gap-2.5 flex-1 min-w-[120px]">
                 <div className="flex gap-2.5 items-center max-md:flex-col">
                   <span>تاریخ ثبت :</span>
-                  <span>{res.createdAt ? moment(res.createdAt).format("jYYYY/jM/jD HH:mm") : "-"}</span>
+                  <span>
+                    {res.createdAt
+                      ? moment(res.createdAt).format("jYYYY/jM/jD HH:mm")
+                      : "-"}
+                  </span>
                 </div>
                 <div className="flex gap-2.5 items-center max-md:flex-col">
                   <span>تاریخ رزرو :</span>
-                  <span>{res.date ? moment(res.date).format("jYYYY/jM/jD") : "-"}</span>
+                  <span>
+                    {res.date ? moment(res.date).format("jYYYY/jM/jD") : "-"}
+                  </span>
                 </div>
               </div>
 
