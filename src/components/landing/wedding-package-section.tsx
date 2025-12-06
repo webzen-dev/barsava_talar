@@ -1,16 +1,23 @@
 import Image from "next/image";
 import HeaderSections from "../header-sections";
 import clsx from "clsx";
+import ScrollFadeProvider from "../ScrollFadeProvider";
 
 export default function WeddingPackage() {
   return (
     <div className="flex flex-col items-center w-full gap-6 px-5 md:px-0">
+      <ScrollFadeProvider
+        selector=".wedding-package"
+        enabledStagger={true}
+        position="top 50%"
+        staggerTimeLine={0.3}
+      />;
       <div className="flex flex-col gap-2.5 text-center w-full items-center">
-        <HeaderSections />
+        <HeaderSections className="wedding-package" />
 
-        <b className="text-lg md:text-2xl">پکیج عروسی</b>
+        <b className="text-lg md:text-2xl wedding-package">پکیج عروسی</b>
 
-        <b className="text-sm md:text-base text-black/70 w-9/10 md:w-4/5">
+        <b className="text-sm md:text-base text-black/70 w-9/10 md:w-4/5 wedding-package">
           مجموعه‌ای از پکیج‌های اختصاصی که برای جشنی باشکوه، منظم و هماهنگ با
           سلیقه شما طراحی شده‌اند. هر پکیج شامل خدمات حرفه‌ای باغ تالار بوده و
           به شما امکان می‌دهد مراسم خود را آنلاین انتخاب و رزرو کنید.
@@ -20,7 +27,7 @@ export default function WeddingPackage() {
       <div className="flex justify-between items-stretch gap-5 w-full flex-col md:flex-row md:flex-wrap lg:flex-nowrap">
         <div
           className={clsx(
-            "flex flex-col gap-5 p-5 rounded-2xl cursor-pointer",
+            "flex flex-col gap-5 p-5 rounded-2xl cursor-pointer wedding-package",
             "w-full md:w-[calc(40%-20px)] md:min-w-[calc(40%-20px)] lg:min-w-auto lg:w-1/4",
             "border-2 border-solid border-[var(--brown)] justify-between"
           )}
@@ -43,6 +50,7 @@ export default function WeddingPackage() {
         <div
           className={clsx(
             "h-full flex-1 rounded-2xl flex items-end md:p-5 gap-5 cursor-pointer relative group"
+            ,'wedding-package'
           )}
         >
           <Image
@@ -61,7 +69,6 @@ export default function WeddingPackage() {
               "transition-opacity duration-500 ease-out"
             )}
           >
-
             <Image
               src={"/images/signature-50.png"}
               height={60}
@@ -84,7 +91,7 @@ export default function WeddingPackage() {
         <div
           className={clsx(
             "flex flex-col gap-5 p-5 rounded-2xl cursor-pointer",
-            "w-full lg:min-w-auto lg:w-1/4",
+            "w-full lg:min-w-auto lg:w-1/4 wedding-package",
             "border-2 border-solid border-[var(--brown)] justify-between"
           )}
         >

@@ -2,6 +2,7 @@ import Image from "next/image";
 import HeaderSections from "../header-sections";
 import clsx from "clsx";
 import Link from "next/link";
+import ScrollFadeProvider from "../ScrollFadeProvider";
 interface ServicesType {
   id: number;
   title: string;
@@ -12,11 +13,16 @@ interface ServicesType {
 export default function ServicesSection({ items }: { items: ServicesType[] }) {
   return (
     <div className="w-full flex flex-col gap-10">
-
+ <ScrollFadeProvider
+        selector=".services-section"
+        enabledStagger={true}
+        position="top 50%"
+        staggerTimeLine={0.3}
+      />
       <div className="flex flex-col items-center text-center gap-4 container mx-auto px-5 md:px-10">
-        <HeaderSections />
-        <b className="text-lg md:text-2xl">خدمات ما</b>
-        <p className="text-sm md:text-base md:max-w-4/5 text-black/70">
+        <HeaderSections className="services-section" />
+        <b className="text-lg md:text-2xl services-section">خدمات ما</b>
+        <p className="text-sm md:text-base md:max-w-4/5 text-black/70 services-section">
           ارائه خدمات تخصصی برای برگزاری عروسی‌ها و جشن‌های به‌یادماندنی، با
           برنامه‌ریزی دقیق و اجرای هماهنگ. همچنین امکان میزبانی ایونت‌ها و
           سمینار با همان کیفیت و نظم همیشگی در تالار مجلل بارثاوا.
@@ -35,7 +41,7 @@ export default function ServicesSection({ items }: { items: ServicesType[] }) {
           {items.map((service) => (
             <div
               key={service.id}
-              className="rounded-xl border-2 border-[var(--gold)] backdrop-blur-xs shadow-2xl flex flex-col gap-5 p-5 w-full"
+              className="rounded-xl border-2 border-[var(--gold)] backdrop-blur-xs shadow-2xl flex flex-col gap-5 p-5 w-full services-section"
             >
               <Image
                 src={service.src}

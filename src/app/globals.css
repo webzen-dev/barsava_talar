@@ -26,8 +26,10 @@
   --page-background: #f7f1ea;
   --gold: #dec39a;
 }
-
-/* .about-section-fade-up , */
+.services-section,
+.heart-felt-planning,
+.wedding-package,
+.about-section-fade-up,
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
