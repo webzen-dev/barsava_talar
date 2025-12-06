@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import prisma from "@/lib/prisma";
+import {prisma} from "@/lib/prisma";
 import fs from "fs";
 import path from "path";
 import { imageGallerySchema } from "@/lib/validation/schema";
