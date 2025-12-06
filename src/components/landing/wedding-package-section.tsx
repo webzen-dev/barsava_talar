@@ -106,6 +106,7 @@ export default function WeddingPackage() {
           <b className="text-lg md:text-2xl text-[var(--brown)] flex items-center">
             فضای منحصر به فرد
           </b>
+          
           <div className="text-black/70 text-sm md:text-base">
             مجموعه با ظرفیت ۵۰۰ نفر، دارای سالن‌های مرتفع و بدون ستون است.
           </div>

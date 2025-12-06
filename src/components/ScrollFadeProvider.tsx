@@ -43,7 +43,7 @@ export default function ScrollFadeProvider({
               duration: duration,
               stagger: enabledStagger ? staggerTimeLine : 0,
               onComplete: () => {
-                elements._animated = true; // mark as animated
+                elements._animated = true; 
               },
               scrollTrigger: enableScrollTrigger
                 ? {
@@ -65,13 +65,3 @@ export default function ScrollFadeProvider({
 
   return null;
 }
-
-//  [
-//     selector,
-//     duration,
-//     translateY,
-//     position,
-//     enabledStagger,
-//     staggerTimeLine,
-//     enableScrollTrigger,
-//   ]

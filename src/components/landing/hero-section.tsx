@@ -1,7 +1,7 @@
 import ScrollFadeProvider from "../ScrollFadeProvider";
 import Image from "next/image";
 
-const HeroSection = () => {
+export default function HeroSection() {
   return (
     <div className="relative h-auto w-full flex flex-col gap-5 justify-between min-h-screen">
       <ScrollFadeProvider
@@ -100,6 +100,4 @@ const HeroSection = () => {
       </div>
     </div>
   );
-};
-
-export default HeroSection;
+}
