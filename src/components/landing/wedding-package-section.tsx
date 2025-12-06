@@ -46,7 +46,7 @@ export default function WeddingPackage() {
           )}
         >
           <Image
-            src={"/images/DSC07656.jpg"}
+            src={"/images/DSC07655.webp"}
             fill
             alt="image"
             className="object-cover rounded-2xl absolute top-0 left-0 right-0 bottom-0 z-20"

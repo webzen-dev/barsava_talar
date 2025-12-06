@@ -11,7 +11,7 @@ interface ScrollFadeProviderProps {
   duration?: number;
   translateY?: number;
   position?: string;
-  enableScrollTriger?: boolean;
+  enableScrollTrigger?: boolean;
   enabledStagger?: boolean;
   staggerTimeLine?: number;
 }
@@ -21,7 +21,7 @@ export default function ScrollFadeProvider({
   duration = 0.8,
   translateY = 30,
   position = "top 80%",
-  enableScrollTriger = true,
+  enableScrollTrigger = true,
   enabledStagger = true,
   staggerTimeLine = 0.5,
 }: ScrollFadeProviderProps) {
@@ -41,19 +41,25 @@ export default function ScrollFadeProvider({
             y: 0,
             duration: duration,
             stagger: enabledStagger ? staggerTimeLine : 0,
-            scrollTrigger: enableScrollTriger
+            scrollTrigger: enableScrollTrigger
               ? {
                   trigger: batch[0],
                   start: position,
-                  // toggleActions: "play none none none",
-                  // markers:true
                 }
               : undefined,
           }
         );
       },
     });
-  }, [selector, duration, translateY, position, enabledStagger]);
+  }, [
+    selector,
+    duration,
+    translateY,
+    position,
+    enabledStagger,
+    staggerTimeLine,
+    enableScrollTrigger,
+  ]);
 
   return null;
 }

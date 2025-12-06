@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import clsx from "clsx";
 
 import { AboutDataProps } from "./about-section";
@@ -100,7 +100,7 @@ export default function AboutSectionCarousel({
       </div>
 
       <div ref={emblaRef} className="w-full overflow-hidden">
-        <div className="flex touch-pan-x touch-pinch-zoom">
+        <div className="flex touch-pan-x touch-pinch-zoom will-change-scroll">
           {slides.map((slide) => (
             <div
               key={slide.id}

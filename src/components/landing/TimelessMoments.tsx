@@ -77,7 +77,6 @@ const TimelessMoments = () => {
 
       <div className="relative flex items-end justify-between w-full group max-sm:flex-col max-sm:items-center max-sm:h-auto">
         <div className="timelessImage1 relative z-20 h-[330px] w-[300px] rotate-[9deg] rounded-2xl 2xl:w-[370px] 2xl:h-[380px] max-lg:w-[300px] max-lg:h-[250px] max-md:w-[150px] max-md:h-[150px] max-sm:h-[400px] max-sm:w-full">
-          <div className="absolute inset-0 z-10 h-full w-full animate-pulse rounded-2xl bg-gradient-to-tr from-gray-400 to-gray-300" />
           <Image
             src="/images/romantic-married-couple-celebrating-beach-wedding-2024-10-19-01-56-07-utc_11zon.jpg"
             alt=""
@@ -88,7 +87,6 @@ const TimelessMoments = () => {
 
         <div className="absolute flex h-full w-[50%] items-start justify-center pt-7.5 2xl:justify-end 2xl:pl-[200px] 2xl:pt-5 max-lg:pr-[100px] max-md:pr-0 max-sm:relative max-sm:w-full max-sm:p-0">
           <div className="timelessImage1 relative z-20 h-[330px] w-[300px] rotate-[5deg] rounded-2xl 2xl:w-[370px] 2xl:h-[380px] max-lg:w-[300px] max-lg:h-[270px] max-md:w-[150px] max-md:h-[150px] max-sm:h-[400px] max-sm:w-full max-sm:rotate-[9deg]">
-            <div className="absolute inset-0 z-10 h-full w-full animate-pulse rounded-2xl bg-gradient-to-tr from-gray-400 to-gray-300" />
             <Image
               src="/images/cheerful-redhead-groom-swinging-with-bride-in-whit-2024-11-08-12-52-10-utc_11zon.jpg"
               alt=""
@@ -104,7 +102,6 @@ const TimelessMoments = () => {
           }}
           className="relative z-30 h-[375px] w-[375px] rounded-2xl bg-[#423A2F] 2xl:w-[440px] 2xl:h-[425px] max-lg:w-[300px] max-lg:h-[300px] max-md:w-[200px] max-md:h-[200px] max-sm:h-[400px] max-sm:w-full max-sm:rotate-[9deg]"
         >
-          <div className="absolute inset-0 z-10 h-full w-full animate-pulse rounded-2xl bg-gradient-to-tr from-gray-400 to-gray-300" />
           <Image
             src="/images/newlyweds-walking-in-amazing-blossoming-flowers-fi-2024-09-16-08-59-12-utc_11zon.jpg"
             alt=""
@@ -115,7 +112,6 @@ const TimelessMoments = () => {
 
         <div className="absolute left-0 flex h-full w-[50%] items-start justify-center pt-7.5 2xl:justify-start 2xl:pr-[200px] 2xl:pt-5 max-lg:pl-[100px] max-md:pl-0 max-sm:relative max-sm:w-full max-sm:p-0">
           <div className="timelessImage2 relative z-20 h-[330px] w-[300px] rotate-[-5deg] rounded-2xl 2xl:w-[370px] 2xl:h-[380px] max-lg:w-[300px] max-lg:h-[270px] max-md:w-[150px] max-md:h-[150px] max-sm:h-[400px] max-sm:w-full max-sm:rotate-[9deg]">
-            <div className="absolute inset-0 z-10 h-full w-full animate-pulse rounded-2xl bg-gradient-to-tr from-gray-400 to-gray-300" />
             <Image
               src="/images/couple-just-married-together-on-the-majestic-agri-2025-03-18-20-58-56-utc_11zon.jpg"
               alt=""
@@ -126,7 +122,6 @@ const TimelessMoments = () => {
         </div>
 
         <div className="timelessImage2 h-[330px] w-[300px] rotate-[-9deg] rounded-2xl 2xl:w-[370px] 2xl:h-[380px] max-lg:w-[300px] max-lg:h-[250px] max-md:w-[150px] max-md:h-[150px] max-sm:h-[400px] max-sm:w-full max-sm:rotate-[9deg]">
-          <div className="absolute inset-0 z-10 h-full w-full animate-pulse rounded-2xl bg-gradient-to-tr from-gray-400 to-gray-300" />
           <Image
             src="/images/a-couple-in-love-a-guy-and-a-girl-on-a-walk-in-the-2025-01-08-22-32-48-utc-e1747808112273.jpg"
             alt=""

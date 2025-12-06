@@ -8,7 +8,7 @@ const HeroSection = () => {
         selector=".fade-up"
         duration={0.8}
         position="top -100%"
-        enableScrollTriger={false}
+        enableScrollTrigger={false}
         enabledStagger={true}
       />
 

@@ -6,7 +6,7 @@ function HeaderSection({ className }: { className?: string }) {
   return (
     <div
       className={clsx(
-        "w-full h-0.5 md:max-w-[40%] relative border-1 border-[var(--brown)] mb-10 ",
+        "w-full h-0.5 md:max-w-[40%] relative border-1 border-[var(--brown)] mb-10",
         className
       )}
     >

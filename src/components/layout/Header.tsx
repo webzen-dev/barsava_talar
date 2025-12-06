@@ -10,29 +10,30 @@ import { MdOutlineClose } from "react-icons/md";
 import { usePathname } from "next/navigation";
 import dynamic from "next/dynamic";
 
-const MobileHeader = dynamic(()=>import('./MobileHeader'))
+const MobileHeader = dynamic(() => import("./MobileHeader"));
+
 export default function Header() {
   const pathname = usePathname();
   const [responsive, setResponsive] = useState<boolean>(false);
 
   const header = useRef<HTMLElement | null>(null);
   useEffect(() => {
-    if (header.current) {
-      gsap.fromTo(
-        header.current,
+    if (!header.current) return;
+    
+    gsap.fromTo(
+      header.current,
 
-        {
-          y: -50,
-          duration: 1,
-          opacity: 0,
-        },
-        {
-          duration: 1,
-          y: 0,
-          opacity: 1,
-        }
-      );
-    }
+      {
+        y: -50,
+        duration: 1,
+        opacity: 0,
+      },
+      {
+        duration: 1,
+        y: 0,
+        opacity: 1,
+      }
+    );
   }, []);
 
   // reservation
@@ -42,7 +43,7 @@ export default function Header() {
 
   return (
     <header
-      className="fixed h-[80px] items-center w-full top-0 left-0 right-0 2xl:px-[200px] xl:px-[100px] flex  gap-5 z-50 bg-none backdrop-blur-lg bg-[#f7f1ea] max-md:justify-between max-md:px-10  max-md:backdrop-blur-2xl max-sm:px-5 text-[#423A2F] "
+      className="fixed h-[80px] items-center w-full top-0 left-0 right-0 2xl:px-[200px] xl:px-[100px] flex  gap-5 z-50 bg-none backdrop-blur-lg bg-[#f7f1ea] max-md:justify-between max-md:px-10  max-md:backdrop-blur-2xl max-sm:px-5 text-[#423A2F]"
       dir="rtl"
       ref={header}
     >
