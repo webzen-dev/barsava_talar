@@ -1,5 +1,5 @@
 import ScrollFadeProvider from "../ScrollFadeProvider";
-import AboutSectionCarousel from "./about-section-carousel";
+import AboutSectionCarousel from "./_about-section-carousel";
 import HeaderSection from "../header-sections";
 
 export interface AboutDataProps {
@@ -36,7 +36,7 @@ export default function AboutSection({ data }: { data: AboutDataProps[] }) {
         </div>
       </div>
 
-      <AboutSectionCarousel slides={data} />
+      <AboutSectionCarousel data={data} />
     </div>
   );
 }
