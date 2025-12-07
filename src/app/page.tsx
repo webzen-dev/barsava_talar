@@ -3,8 +3,8 @@ import AboutSection from "@/components/landing/about-section";
 import HeartfeltPlanning from "@/components/landing/heartfelt-planning";
 import ServicesSection from "@/components/landing/services-section";
 import WeddingPackage from "@/components/landing/wedding-package-section";
+import FaqsSection from "@/components/landing/faq-section";
 
-import Faq from "@/components/landing/Faq";
 import ImagesGallery from "@/components/landing/ImagesGallery";
 import TimelessMoments from "@/components/landing/TimelessMoments";
 
@@ -108,6 +108,37 @@ const config = {
       src: "/images/services/camera.png",
     },
   ],
+  faqsData: [
+    {
+      id: 1,
+      question: "ظرفیت تالار چقدر است؟",
+      answer: "مجموعه با ظرفیت حداکثری ۵۰۰ نفر، امکان پذیرایی دارد.",
+    },
+    {
+      id: 2,
+      question: "اطلاع از تاریخ برگزاری؟",
+      answer:
+        "جهت استعلام تاریخ برگزاری مراسم، لطفاً با شماره‌های درج‌شده تماس حاصل فرمایید.",
+    },
+    {
+      id: 3,
+      question: "آیا امکان تزئینات دلخواه وجود دارد؟",
+      answer:
+        "بله، شما می‌توانید نوع دکور، رنگ‌بندی و چینش میزها را مطابق سلیقه خود انتخاب کنید.",
+    },
+    {
+      id: 4,
+      question: "آیا برای عکاسی و فیلم‌برداری محدودیت دارید؟",
+      answer:
+        "خیر، امکان همکاری با گروه عکاسی دلخواه شما وجود دارد و از طرف مجموعه محدودیتی اعمال نمی‌شود.",
+    },
+    {
+      id: 5,
+      question: "پارکینگ مجموعه چطور است؟",
+      answer:
+        "مجموعه دارای پارکینگ اختصاصی با ظرفیت مناسب برای مهمانان شما است.",
+    },
+  ],
 };
 
 export default function Home() {
@@ -121,13 +152,13 @@ export default function Home() {
 
       <ServicesSection items={config.servicesItems} />
 
-      <div className="container mx-auto flex flex-col gap-20">
         <WeddingPackage />
-      </div>
 
       <TimelessMoments />
-      <Faq />
-      <ImagesGallery />
+      <div className="container mx-auto flex flex-col gap-20">
+        <FaqsSection faqs={config.faqsData} />
+      </div>
+      {/* <ImagesGallery /> */}
     </div>
   );
 }

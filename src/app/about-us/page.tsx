@@ -7,7 +7,7 @@ import IntroAboutUs, {
 } from "@/components/about-us/intro-about-us";
 import IntroductionVideosSlider from "@/components/about-us/intro-video-slider";
 import Reviews from "@/components/about-us/reviews";
-import Faq from "@/components/landing/Faq";
+import Faq from "@/components/landing/faq-section";
 import InputComments from "@/components/about-us/input-comments";
 
 const introAboutUsData: IntroAboutUsProps[] = [

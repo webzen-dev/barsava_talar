@@ -14,7 +14,7 @@ const TimelessMomentsComponent = dynamic(
   () => import("@/components/landing/TimelessMoments")
 );
 
-const FaqComponent = dynamic(() => import("@/components/landing/Faq"));
+const FaqComponent = dynamic(() => import("@/components/landing/faq-section"));
 
 const Services = () => {
   return (
