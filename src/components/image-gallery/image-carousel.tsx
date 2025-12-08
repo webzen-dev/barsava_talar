@@ -3,6 +3,9 @@
 import { useImageCarousel } from "@/lib/hooks/_useImageCarousel";
 import clsx from "clsx";
 import Image from "next/image";
+import HeaderSections from "../header-sections";
+import ScrollFadeProvider from "../ScrollFadeProvider";
+
 const images = [
   { id: 1, src: "/images/women/DSC07610.webp", title: "سالن بانوان" },
   { id: 2, src: "/images/other-images/other-2.webp", title: "ورودی تالار" },
@@ -28,29 +31,31 @@ function Carousel() {
   const { refCarousel, selectedIndex, snaps } = useImageCarousel();
 
   return (
-    <div className="flex flex-col gap-5">
-      <div className="overflow-hidden py-10" ref={refCarousel}>
+    <div className="flex flex-col gap-7 gallery-images-hero">
+      <div className="overflow-hidden pt-6" ref={refCarousel}>
         <div className="flex -me-2">
           {images.map((img, i) => (
             <div
               key={i}
-              className="shrink-0 grow-0 w-7/9 md:min-w-1/3 md:w-1/3 lg:min-w-1/5 lg:w-1/5 aspect-square pe-4"
+              className="shrink-0 grow-0 w-7/9 md:min-w-1/3 md:w-1/3 lg:min-w-1/5 lg:w-1/5 pe-4"
             >
               <div
                 className={clsx(
-                  "w-full h-full transition-color duration-800 flex items-center justify-center gap-4 flex-col ease-in-out rounded-2xl relative z-0",
-                  selectedIndex === i
-                    ? "scale-110 z-20 grayscale-0"
-                    : "scale-90  grayscale"
+                  "w-full h-full flex items-center justify-center gap-4 flex-col rounded-2xl relative z-0"
                 )}
               >
-                <div className="relative flex-1 w-full">
+                <div className="relative flex-1 w-full aspect-square">
                   <Image
                     src={img.src}
-                    alt=""
+                    alt="image carousel item"
                     fill
                     draggable={false}
-                    className="rounded-2xl object-cover"
+                    className={clsx(
+                      "rounded-2xl object-cover transition-color duration-800 ease-in-out",
+                      selectedIndex === i
+                        ? "scale-110 z-20 grayscale-0"
+                        : "scale-95 grayscale"
+                    )}
                   />
                 </div>
                 <b
@@ -68,7 +73,7 @@ function Carousel() {
         </div>
       </div>
 
-      <div className="flex gap-2 justify-center mb-2" dir="ltr">
+      <div className="flex gap-2 justify-center mb-2">
         {snaps.map((_, i) => (
           <button
             key={i}
@@ -85,8 +90,24 @@ function Carousel() {
 
 export default function ImageCarousel() {
   return (
-    <section className="w-full">
-        
+    <section className="w-full flex flex-col gap-5">
+      <ScrollFadeProvider
+        selector=".gallery-images-hero"
+        enableScrollTrigger={false}
+      />
+      <div className="flex items-center justify-center">
+        <div className="flex flex-col text-center w-full items-center">
+          <HeaderSections className="gallery-images-hero" />
+
+          <b className="text-md md:text-2xl mb-2.5 gallery-images-hero">گالری تصاویر</b>
+
+          <b className="text-base text-black/70 sm:text-base gallery-images-hero">
+            یه نگاه کوتاه کافیه تا حس و حال خاص باغ تالاربارثاوا رو لمس کنی.
+            اینجاست که هر گوشه‌ش خاطره‌ساز میشه.
+          </b>
+        </div>
+      </div>
+
       <Carousel />
     </section>
   );

@@ -71,9 +71,10 @@ export default function AboutSectionCarousel({
           {snaps.map((_, i) => (
             <span
               key={i}
-              className={`h-1 w-8 rounded-full transition-colors ${
+              className={clsx(
+                "h-1 w-8 rounded-full transition-colors ",
                 i === selectedIndex ? "bg-[var(--gold)]" : "bg-black/20"
-              }`}
+              )}
             />
           ))}
         </div>

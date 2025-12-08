@@ -2,6 +2,7 @@
 
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
+import Autoplay from "embla-carousel-autoplay";
 
 import type { EmblaCarouselType } from "embla-carousel";
 
@@ -23,13 +24,16 @@ export function useImageCarousel() {
     setSelectedIndex(api.selectedScrollSnap());
   }, []);
 
-  const [refCarousel, api] = useEmblaCarousel({
-    watchResize: false,
-    watchSlides: false,
-    direction: "rtl",
-    loop: true,
-    align: "center",
-  });
+  const [refCarousel, api] = useEmblaCarousel(
+    {
+      watchResize: false,
+      watchSlides: false,
+      direction: "rtl",
+      loop: true,
+      align: "center",
+    },
+    [Autoplay({ delay: 1500, stopOnInteraction: false })]
+  );
 
   useEffect(() => {
     if (api != null) setSnaps(api.scrollSnapList());
