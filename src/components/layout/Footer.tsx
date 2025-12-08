@@ -16,7 +16,7 @@ const Footer = () => {
   if (pathname?.startsWith("/dashboard")) return null;
   if (pathname?.startsWith("/reservation")) return null;
   return (
-    <footer className="" dir="rtl">
+    <footer className="mt-20" dir="rtl">
       <div className="flex flex-col p-10 bg-[#403D39] gap-10 rounded-t-2xl">
         <div className="flex justify-between gap-5 max-md:flex-col max-md:items-center">
           <Link
