@@ -5,7 +5,7 @@
 
   export default function WeddingPackage() {
     return (
-      <div className="flex flex-col items-center w-full gap-6 px-5 md:px-0">
+      <div className="flex flex-col items-center w-full gap-6">
         <ScrollFadeProvider
           selector=".wedding-package"
           enabledStagger={true}

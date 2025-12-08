@@ -6,8 +6,6 @@ import WeddingPackage from "@/components/landing/_wedding-package-section";
 import FaqsSection from "@/components/landing/faq-section";
 import TimelessMoments from "@/components/landing/timeless-moments-section";
 
-import ImagesGallery from "@/components/landing/ImagesGallery";
-
 const config = {
   aboutSliderData: [
     {
@@ -156,7 +154,6 @@ export default function Home() {
         <WeddingPackage />
         <TimelessMoments />
         <FaqsSection faqs={config.faqsData} />
-        {/* <ImagesGallery /> */}
       </div>
     </div>
   );

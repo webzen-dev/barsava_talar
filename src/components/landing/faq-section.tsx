@@ -16,6 +16,7 @@ interface faqItem {
 interface faqProps {
   faqs: faqItem[];
 }
+
 function FaqItem({ faq, className }: { faq: faqItem; className: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const answerRef = useRef<HTMLDivElement>(null);
