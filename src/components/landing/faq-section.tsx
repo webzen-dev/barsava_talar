@@ -4,6 +4,8 @@ import clsx from "clsx";
 import { motion } from "motion/react";
 import { useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import ScrollFadeProvider from "../ScrollFadeProvider";
+import HeaderSections from "../header-sections";
 
 interface faqItem {
   id: number;
@@ -14,7 +16,7 @@ interface faqItem {
 interface faqProps {
   faqs: faqItem[];
 }
-function FaqItem({ faq }: { faq: faqItem }) {
+function FaqItem({ faq, className }: { faq: faqItem; className: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const answerRef = useRef<HTMLDivElement>(null);
 
@@ -25,8 +27,9 @@ function FaqItem({ faq }: { faq: faqItem }) {
   return (
     <div
       className={clsx(
-        "flex flex-col rounded-2xl border-2 gap-4 opacity-90 cursor-pointer px-4",
-        isOpen ? "border-black/50" : "border-black"
+        "flex flex-col rounded-2xl gap-4 cursor-pointer px-4",
+        isOpen ? "bg-black/10" : "bg-black/5",
+        className
       )}
       onClick={() => setIsOpen(!isOpen)}
       tabIndex={0}
@@ -35,7 +38,9 @@ function FaqItem({ faq }: { faq: faqItem }) {
         <motion.b
           className="m-0 text-sm md:text-base"
           transition={{ duration: 0.2 }}
-          animate={{ color: isOpen ? "var(--gold)" : "var(--brown)" }}
+          animate={{
+            color: isOpen ? "rgba(0, 0, 0, 1)" : "rgba(0, 0, 0, 0.5)",
+          }}
         >
           <span className="text-lg">{faq.id.toLocaleString("fa-IR")}.</span>
           {faq.question}
@@ -45,7 +50,7 @@ function FaqItem({ faq }: { faq: faqItem }) {
           transition={{ duration: 0.2 }}
           animate={{
             rotate: isOpen ? -180 : 0,
-            color: isOpen ? "var(--gold)" : "var(--brown)",
+            color: isOpen ? "rgba(0, 0, 0, 1)" : "rgba(0, 0, 0, 0.5)",
           }}
         >
           <IoIosArrowDown />
@@ -76,11 +81,15 @@ function FaqItem({ faq }: { faq: faqItem }) {
 
 export default function FaqsSection({ faqs }: faqProps) {
   return (
-    <div className="flex flex-col gap-5 flex-1/2">
-      <b className="text-lg md:text-2xl font-bold mb-5">سوالات متداول</b>
+    <div className="flex flex-col gap-4 flex-1/2">
+      <ScrollFadeProvider selector=".faqs-animtaion" enabledStagger={true} />
+      <HeaderSections className="faqs-animtaion" />
+      <b className="text-lg md:text-2xl font-bold mb-5 faqs-animtaion text-center">
+        سوالات متداول
+      </b>
       {faqs.map((data, index) => {
-        return <FaqItem faq={data} key={index} />;
+        return <FaqItem faq={data} key={index} className="faqs-animtaion" />;
       })}
-      </div>
+    </div>
   );
 }

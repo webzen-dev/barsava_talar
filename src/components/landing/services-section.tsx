@@ -24,7 +24,7 @@ export default function ServicesSection({ items }: { items: ServicesType[] }) {
         <HeaderSections className="services-section" />
 
         <b className="text-lg md:text-2xl services-section">خدمات ما</b>
-        
+
         <p className="text-sm md:text-base md:max-w-4/5 text-black/70 services-section">
           ارائه خدمات تخصصی برای برگزاری عروسی‌ها و جشن‌های به‌یادماندنی، با
           برنامه‌ریزی دقیق و اجرای هماهنگ. همچنین امکان میزبانی ایونت‌ها و
@@ -32,16 +32,17 @@ export default function ServicesSection({ items }: { items: ServicesType[] }) {
         </p>
       </div>
 
-      <div className={clsx("w-full px-5 py-10 bg-[var(--brown)] relative")}>
-        <Image
-          src={"/images/aluminum-foil-6961638_960_720.jpg"}
-          className="grayscale opacity-10 object-cover"
-          style={{ opacity: "10%" }}
-          fill
-          alt="shape"
-        />
+      <div className={clsx("w-full h-full px-5 py-10 bg-[var(--brown)] relative")}>
+        <div className="absolute w-full h-full inset-0 opacity-10 z-10">
+          <Image
+            src="/images/aluminum-foil-6961638_960_720.jpg"
+            className="grayscale object-cover"
+            fill
+            alt="shape"
+          />
+        </div>
 
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 2xl:gap-10 items-stretch justify-items-center">
+        <div className="relative z-20 container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 2xl:gap-10 items-stretch justify-items-center">
           {items.map((service) => (
             <div
               key={service.id}

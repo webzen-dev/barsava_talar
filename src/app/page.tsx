@@ -144,7 +144,7 @@ const config = {
 export default function Home() {
   return (
     <div className="flex flex-col gap-30 bg-[var(--page-background)] overflow-hidden pt-20">
-      <div className="px-5 md:px-10 container mx-auto flex flex-col gap-30">
+      <div className="container mx-auto flex flex-col gap-30 px-5 md:px-10 ">
         <HeroSection />
         <AboutSection data={config.aboutSliderData} />
         <HeartfeltPlanning data={config.heartfeltPlanningData} />
@@ -152,7 +152,7 @@ export default function Home() {
 
       <ServicesSection items={config.servicesItems} />
 
-      <div className="container mx-auto flex flex-col gap-20">
+      <div className="container mx-auto flex flex-col gap-30 px-5 md:px-10">
         <WeddingPackage />
         <TimelessMoments />
         <FaqsSection faqs={config.faqsData} />
