@@ -43,7 +43,7 @@ export default function TimelessMoments() {
           className="object-cover rounded-2xl w-full rotate-[9deg] md:rotate-[5deg] aspect-square md:max-w-45 lg:max-w-75 relative z-20 md:-ms-30 transition-[filter] duration-300 ease-in-out grayscale hover:grayscale-0 timeless-moments-element"
         />
 
-        <div className="absolute w-full md:w-70 lg:w-85 aspect-square z-30 timeless-moments-element -top-15">
+        <div className="md:absolute w-full md:w-70 lg:w-85 aspect-square z-30 timeless-moments-element md:-top-15">
           <Image
             src="/images/newlyweds-walking-in-amazing-blossoming-flowers-fi-2024-09-16-08-59-12-utc_11zon.jpg"
             alt="timeless moments image"
