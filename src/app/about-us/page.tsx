@@ -7,7 +7,7 @@ import IntroAboutUs, {
 } from "@/components/about-us/_intro-about-us";
 import IntroductionVideosSlider from "@/components/about-us/_intro-video-carousel";
 import Reviews from "@/components/about-us/_reviews-section";
-import Faq from "@/components/landing/Faq";
+import FaqsSection from "@/components/landing/faq-section";
 import InputComments from "@/components/about-us/_input-comments";
 
 const config = {
@@ -105,6 +105,37 @@ const config = {
       poster: "/images/505450223_18307463164212975_2637873274641937436_n.jpg",
     },
   ],
+    faqsData: [
+    {
+      id: 1,
+      question: "ظرفیت تالار چقدر است؟",
+      answer: "مجموعه با ظرفیت حداکثری ۵۰۰ نفر، امکان پذیرایی دارد.",
+    },
+    {
+      id: 2,
+      question: "اطلاع از تاریخ برگزاری؟",
+      answer:
+        "جهت استعلام تاریخ برگزاری مراسم، لطفاً با شماره‌های درج‌شده تماس حاصل فرمایید.",
+    },
+    {
+      id: 3,
+      question: "آیا امکان تزئینات دلخواه وجود دارد؟",
+      answer:
+        "بله، شما می‌توانید نوع دکور، رنگ‌بندی و چینش میزها را مطابق سلیقه خود انتخاب کنید.",
+    },
+    {
+      id: 4,
+      question: "آیا برای عکاسی و فیلم‌برداری محدودیت دارید؟",
+      answer:
+        "خیر، امکان همکاری با گروه عکاسی دلخواه شما وجود دارد و از طرف مجموعه محدودیتی اعمال نمی‌شود.",
+    },
+    {
+      id: 5,
+      question: "پارکینگ مجموعه چطور است؟",
+      answer:
+        "مجموعه دارای پارکینگ اختصاصی با ظرفیت مناسب برای مهمانان شما است.",
+    },
+  ],
 };
 
 export default function AboutUs() {
@@ -163,7 +194,7 @@ export default function AboutUs() {
 
       <Reviews data={config.comments} />
       <AboutIntroVideo />
-      <Faq />
+      <FaqsSection faqs={config.faqsData}/>
       <InputComments />
     </div>
   );
