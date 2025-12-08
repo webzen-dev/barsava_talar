@@ -11,7 +11,7 @@ export default function WeddingPackage() {
         enabledStagger={true}
         position="top 50%"
         staggerTimeLine={0.3}
-      />;
+      />
       <div className="flex flex-col gap-2.5 text-center w-full items-center">
         <HeaderSections className="wedding-package" />
 
