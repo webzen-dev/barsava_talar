@@ -27,8 +27,8 @@ function FaqItem({ faq, className }: { faq: faqItem; className: string }) {
   return (
     <div
       className={clsx(
-        "flex flex-col rounded-2xl gap-4 cursor-pointer px-4",
-        isOpen ? "bg-black/10" : "bg-black/5",
+        "flex flex-col rounded-2xl bg-black/5 gap-4 cursor-pointer px-4",
+        isOpen && "shadow-lg",
         className
       )}
       onClick={() => setIsOpen(!isOpen)}
@@ -81,15 +81,17 @@ function FaqItem({ faq, className }: { faq: faqItem; className: string }) {
 
 export default function FaqsSection({ faqs }: faqProps) {
   return (
-    <div className="flex flex-col gap-4 flex-1/2">
+    <div className="flex flex-col flex-1/2 items-center">
       <ScrollFadeProvider selector=".faqs-animtaion" enabledStagger={true} />
       <HeaderSections className="faqs-animtaion" />
-      <b className="text-lg md:text-2xl font-bold mb-5 faqs-animtaion text-center">
+      <b className="text-lg md:text-2xl font-bold mb-8 faqs-animtaion">
         سوالات متداول
       </b>
-      {faqs.map((data, index) => {
-        return <FaqItem faq={data} key={index} className="faqs-animtaion" />;
-      })}
+      <div className="flex flex-col w-full gap-3">
+        {faqs.map((data, index) => {
+          return <FaqItem faq={data} key={index} className="faqs-animtaion" />;
+        })}
+      </div>
     </div>
   );
 }
