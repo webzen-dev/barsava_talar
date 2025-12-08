@@ -1,61 +1,16 @@
-"use client";
-
-import ImageGalleryHeroSkeleton from "@/components/image-gallery/ImageGalleryHeroSkeleton";
-import dynamic from "next/dynamic";
-
-const ImageGalleryHero = dynamic(
-  () => import("@/components/image-gallery/ImageGalleryHero"),
-  {
-    // Skeleton Loading 
-    loading: () => (
-      <ImageGalleryHeroSkeleton/>
-    ),
-  }
-);
-
-const TitleImagesBox = dynamic(
-  () => import("@/components/image-gallery/TitleImagesBox"),
-  {
-    // images only > no need for SSR, no SEO impact
-    ssr: false,
-    loading: () => (
-      <div className="h-20 bg-gray-200 animate-pulse w-full mb-4" />
-    ),
-  }
-);
-
-const ImageBox = dynamic(() => import("@/components/image-gallery/ImageBox"), {
-  // images only > no need for SSR, no SEO impact
-  ssr: false,
-  loading: () => <div className="h-80 bg-gray-200 animate-pulse w-full mb-4" />,
-});
-
-const WomensHall = dynamic(
-  () => import("@/components/image-gallery/WomensHall"),
-  {
-    // images only > no need for SSR, no SEO impact
-    ssr: false,
-    loading: () => (
-      <div className="h-60 bg-gray-200 animate-pulse w-full mb-4" />
-    ),
-  }
-);
-
-const OtherPhoto = dynamic(
-  () => import("@/components/image-gallery/OtherPhoto"),
-  {
-    // images only > no need for SSR, no SEO impact
-    ssr: false,
-    loading: () => (
-      <div className="h-64 bg-gray-200 animate-pulse w-full mb-4" />
-    ),
-  }
-);
+import GridImagesBox from "@/components/image-gallery/grid-images-box";
+import ImageCarousel from "@/components/image-gallery/image-carousel";
+import ImageBox from "@/components/image-gallery/ImageBox";
+import ImageGalleryHero from "@/components/image-gallery/ImageGalleryHero";
+import OtherPhoto from "@/components/image-gallery/OtherPhoto";
+import TitleImagesBox from "@/components/image-gallery/TitleImagesBox";
+import WomensHall from "@/components/image-gallery/WomensHall";
 
 const ImageGallery = () => {
   return (
-    <div className="bg-[#F7F1EA] min-h-[100vh] flex flex-col w-full">
+    <div className="bg-[#F7F1EA] min-h-[100vh] flex flex-col w-full pt-40">
       <ImageGalleryHero />
+      <ImageCarousel />
       <TitleImagesBox />
       <ImageBox />
       <WomensHall />
