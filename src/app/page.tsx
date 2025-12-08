@@ -1,12 +1,12 @@
-import HeroSection from "@/components/landing/hero-section";
+import HeroSection from "@/components/landing/_hero-section";
 import AboutSection from "@/components/landing/_about-section";
-import HeartfeltPlanning from "@/components/landing/heartfelt-planning";
+import HeartfeltPlanning from "@/components/landing/_heartfelt-planning";
 import ServicesSection from "@/components/landing/services-section";
-import WeddingPackage from "@/components/landing/wedding-package-section";
+import WeddingPackage from "@/components/landing/_wedding-package-section";
 import FaqsSection from "@/components/landing/faq-section";
+import TimelessMoments from "@/components/landing/timeless-moments-section";
 
 import ImagesGallery from "@/components/landing/ImagesGallery";
-import TimelessMoments from "@/components/landing/TimelessMoments";
 
 const config = {
   aboutSliderData: [
@@ -156,7 +156,7 @@ export default function Home() {
         <WeddingPackage />
         <TimelessMoments />
         <FaqsSection faqs={config.faqsData} />
-        <ImagesGallery />
+        {/* <ImagesGallery /> */}
       </div>
     </div>
   );
