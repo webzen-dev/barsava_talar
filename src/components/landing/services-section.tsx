@@ -36,6 +36,7 @@ export default function ServicesSection({ items }: { items: ServicesType[] }) {
         <Image
           src={"/images/aluminum-foil-6961638_960_720.jpg"}
           className="grayscale opacity-10 object-cover"
+          style={{ opacity: "10%" }}
           fill
           alt="shape"
         />
@@ -51,7 +52,7 @@ export default function ServicesSection({ items }: { items: ServicesType[] }) {
                 alt={service.title}
                 width={100}
                 height={100}
-                className="object-cover  drop-shadow-[0_0_20px_var(--gold)]"
+                className="object-cover drop-shadow-[0_0_20px_var(--gold)]"
               />
 
               <b className="text-lg md:text-2xl text-[var(--gold)]">
