@@ -3,6 +3,7 @@ import HeaderSections from "../header-sections";
 import clsx from "clsx";
 import Link from "next/link";
 import ScrollFadeProvider from "../ScrollFadeProvider";
+
 interface ServicesType {
   id: number;
   title: string;
@@ -21,7 +22,9 @@ export default function ServicesSection({ items }: { items: ServicesType[] }) {
       />
       <div className="flex flex-col items-center text-center gap-4 container mx-auto px-5 md:px-10">
         <HeaderSections className="services-section" />
+
         <b className="text-lg md:text-2xl services-section">خدمات ما</b>
+        
         <p className="text-sm md:text-base md:max-w-4/5 text-black/70 services-section">
           ارائه خدمات تخصصی برای برگزاری عروسی‌ها و جشن‌های به‌یادماندنی، با
           برنامه‌ریزی دقیق و اجرای هماهنگ. همچنین امکان میزبانی ایونت‌ها و

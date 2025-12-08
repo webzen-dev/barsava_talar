@@ -1,5 +1,5 @@
 import HeroSection from "@/components/landing/hero-section";
-import AboutSection from "@/components/landing/about-section";
+import AboutSection from "@/components/landing/_about-section";
 import HeartfeltPlanning from "@/components/landing/heartfelt-planning";
 import ServicesSection from "@/components/landing/services-section";
 import WeddingPackage from "@/components/landing/wedding-package-section";
