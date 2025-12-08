@@ -34,7 +34,7 @@ export default function ScrollFadeProvider({
         ScrollTrigger.batch(elements, {
           start: position,
           once: true,
-          onEnter: batch => {
+          onEnter: (batch) => {
             gsap.fromTo(
               batch,
               { opacity: 0, y: translateY },

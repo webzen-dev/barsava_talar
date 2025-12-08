@@ -3,6 +3,7 @@
 import { useCarousel } from "@/lib/hooks/useCarousel";
 import Image from "next/image";
 import { IoPersonCircleOutline } from "react-icons/io5";
+import ScrollFadeProvider from "../ScrollFadeProvider";
 
 export interface CommentType {
   id: number;
@@ -16,13 +17,19 @@ export default function Reviews({ data }: { data: CommentType[] }) {
 
   return (
     <div className="w-full flex flex-col gap-10">
-      <b className="text-2xl text-center">نظرات کاربران درباره بارثاوا</b>
+      <ScrollFadeProvider selector=".reviews-fade" />
+      <b className="text-base md:text-2xl text-center reviews-fade">
+        نظرات کاربران درباره بارثاوا
+      </b>
 
-      <div className="overflow-hidden pb-10 h-90" ref={autoPlayRefCarousel}>
+      <div
+        className="overflow-hidden pb-10 h-90 reviews-fade"
+        ref={autoPlayRefCarousel}
+      >
         <div className="flex items-stretch -me-6">
-          {data.map((coment) => (
+          {data.map((comment) => (
             <div
-              key={coment.id}
+              key={comment.id}
               className="flex-[0_0_70%] md:flex-[0_0_33.33%] lg:flex-[0_0_25%] pe-6 select-none touch-pan-y touch-pinch-zoom will-change-scroll cursor-pointer"
             >
               <div className="w-full h-full flex flex-col gap-5 relative bg-white/50 shadow-lg shadow-black/10 p-6 rounded-2xl">
@@ -33,14 +40,14 @@ export default function Reviews({ data }: { data: CommentType[] }) {
                   alt="bride and groom"
                 />
 
-                <b className="text-xl">{coment.title}</b>
+                <b className="text-xl">{comment.title}</b>
 
-                <span className="text-black/60 flex-1">{coment.message}</span>
+                <span className="text-black/60 flex-1">{comment.message}</span>
 
                 <div className="flex gap-2 text-black/60">
                   <IoPersonCircleOutline className="h-7 w-7" />
 
-                  <span className="font-bold text-lg">{coment.fullName}</span>
+                  <span className="font-bold text-lg">{comment.fullName}</span>
                 </div>
               </div>
             </div>

@@ -35,6 +35,10 @@
 .faqs-animtaion,
 .timeless-moments-element,
 .timeless-moments-header,
+.about-el-fade-up,
+.intro-about-page,
+.about-intro-videos,
+.reviews-fade,
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
