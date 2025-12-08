@@ -1,12 +1,12 @@
-import HeroSection from "@/components/landing/hero-section";
+import HeroSection from "@/components/landing/_hero-section";
 import AboutSection from "@/components/landing/_about-section";
-import HeartfeltPlanning from "@/components/landing/heartfelt-planning";
+import HeartfeltPlanning from "@/components/landing/_heartfelt-planning";
 import ServicesSection from "@/components/landing/services-section";
-import WeddingPackage from "@/components/landing/wedding-package-section";
+import WeddingPackage from "@/components/landing/_wedding-package-section";
 import FaqsSection from "@/components/landing/faq-section";
 
 import ImagesGallery from "@/components/landing/ImagesGallery";
-import TimelessMoments from "@/components/landing/TimelessMoments";
+import TimelessMoments from "@/components/landing/timeless-moments-section";
 
 const config = {
   aboutSliderData: [
@@ -144,19 +144,19 @@ const config = {
 export default function Home() {
   return (
     <div className="flex flex-col gap-30 bg-[var(--page-background)] overflow-hidden pt-20">
-      <div className="container mx-auto flex flex-col gap-30 px-5 md:px-10 ">
+      {/* <div className="container mx-auto flex flex-col gap-30 px-5 md:px-10 ">
         <HeroSection />
         <AboutSection data={config.aboutSliderData} />
         <HeartfeltPlanning data={config.heartfeltPlanningData} />
-      </div>
+      </div> */}
 
-      <ServicesSection items={config.servicesItems} />
+      {/* <ServicesSection items={config.servicesItems} /> */}
 
       <div className="container mx-auto flex flex-col gap-30 px-5 md:px-10">
-        <WeddingPackage />
+        {/* <WeddingPackage /> */}
         <TimelessMoments />
-        <FaqsSection faqs={config.faqsData} />
-        <ImagesGallery />
+        {/* <FaqsSection faqs={config.faqsData} />
+        <ImagesGallery /> */}
       </div>
     </div>
   );

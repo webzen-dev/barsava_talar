@@ -12,7 +12,7 @@ const FullWeddingPlanningComponents = dynamic(
 );
 
 const TimelessMomentsComponent = dynamic(
-  () => import("@/components/landing/TimelessMoments")
+  () => import("@/components/landing/timeless-moments-section")
 );
 const faqsData = [
   {
