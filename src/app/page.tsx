@@ -106,37 +106,6 @@ const config = {
       src: "/images/services/camera.png",
     },
   ],
-  faqsData: [
-    {
-      id: 1,
-      question: "ظرفیت تالار چقدر است؟",
-      answer: "مجموعه با ظرفیت حداکثری ۵۰۰ نفر، امکان پذیرایی دارد.",
-    },
-    {
-      id: 2,
-      question: "اطلاع از تاریخ برگزاری؟",
-      answer:
-        "جهت استعلام تاریخ برگزاری مراسم، لطفاً با شماره‌های درج‌شده تماس حاصل فرمایید.",
-    },
-    {
-      id: 3,
-      question: "آیا امکان تزئینات دلخواه وجود دارد؟",
-      answer:
-        "بله، شما می‌توانید نوع دکور، رنگ‌بندی و چینش میزها را مطابق سلیقه خود انتخاب کنید.",
-    },
-    {
-      id: 4,
-      question: "آیا برای عکاسی و فیلم‌برداری محدودیت دارید؟",
-      answer:
-        "خیر، امکان همکاری با گروه عکاسی دلخواه شما وجود دارد و از طرف مجموعه محدودیتی اعمال نمی‌شود.",
-    },
-    {
-      id: 5,
-      question: "پارکینگ مجموعه چطور است؟",
-      answer:
-        "مجموعه دارای پارکینگ اختصاصی با ظرفیت مناسب برای مهمانان شما است.",
-    },
-  ],
 };
 
 export default function Home() {
@@ -153,7 +122,7 @@ export default function Home() {
       <div className="container mx-auto flex flex-col gap-30 px-5 md:px-10">
         <WeddingPackage />
         <TimelessMoments />
-        <FaqsSection faqs={config.faqsData} />
+        <FaqsSection />
       </div>
     </div>
   );

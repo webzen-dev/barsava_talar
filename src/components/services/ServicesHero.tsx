@@ -11,7 +11,7 @@ export default function ServicesHero() {
           className="object-cover rounded-2xl z-20"
         />
         <div className="absolute inset-0 z-10 h-full w-full animate-pulse rounded-2xl bg-gradient-to-tr from-gray-400 to-gray-300" />
-        <div
+        {/* <div
           className="absolute gap-5 z-30 top-0 left-0 right-0 bottom-0 bg-gradient-to-b from-[rgba(0,0,0,0.3)] rounded-2xl to-[rgba(0,0,0,0.7)] flex flex-col justify-start pt-20 text-[#F7F1EA] p-10  
         2xl:pt-30 2xl:px-15 max-md:p-5 max-md:pt-20
         "
@@ -26,7 +26,7 @@ export default function ServicesHero() {
             بگذارید ما تمام جزئیات را مدیریت کنیم در حالی که شما از سفر به سوی
             خوشبختی ابدی خود لذت می‌برید.
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
