@@ -23,6 +23,7 @@ export default function HeartfeltPlanning({
       />
       <div className="flex flex-col items-center w-full">
         <HeaderSections className="heart-felt-planning" />
+        
         <b className="text-lg md:text-2xl heart-felt-planning">
           برنامه‌ریزی صمیمانه
         </b>
@@ -43,6 +44,7 @@ export default function HeartfeltPlanning({
             />
 
             <b className="text-base md:text-lg">{box.title}</b>
+            
             <p className="text-sm md:text-base text-black/70 flex-1">
               {box.description}
             </p>

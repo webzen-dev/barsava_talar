@@ -1,18 +1,17 @@
 import ImageCarousel from "@/components/image-gallery/image-carousel";
-// import GridImagesBox from "@/components/image-gallery/grid-images-box";
-// import ImageBox from "@/components/image-gallery/ImageBox";
-// import OtherPhoto from "@/components/image-gallery/OtherPhoto";
-// import TitleImagesBox from "@/components/image-gallery/TitleImagesBox";
-// import WomensHall from "@/components/image-gallery/WomensHall";
+import ImageBox from "@/components/image-gallery/ImageBox";
+import OtherPhoto from "@/components/image-gallery/OtherPhoto";
+import TitleImagesBox from "@/components/image-gallery/TitleImagesBox";
+import WomensHall from "@/components/image-gallery/WomensHall";
 
 export default function ImageGallery() {
   return (
     <div className="bg-[var(--page-background)] flex flex-col w-full pt-30">
       <ImageCarousel />
-      {/* <TitleImagesBox />
+      <TitleImagesBox />
       <ImageBox />
       <WomensHall />
-      <OtherPhoto /> */}
+      <OtherPhoto />
     </div>
   );
 }

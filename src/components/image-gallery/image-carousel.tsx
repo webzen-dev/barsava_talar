@@ -51,7 +51,7 @@ function Carousel() {
                     fill
                     draggable={false}
                     className={clsx(
-                      "rounded-2xl object-cover transition-color duration-800 ease-in-out",
+                      "rounded-2xl object-cover transition-all duration-800 ease-in-out",
                       selectedIndex === i
                         ? "scale-110 z-20 grayscale-0"
                         : "scale-95 grayscale"
@@ -73,7 +73,7 @@ function Carousel() {
         </div>
       </div>
 
-      <div className="flex gap-2 justify-center mb-2">
+      {/* <div className="flex gap-2 justify-center mb-2">
         {snaps.map((_, i) => (
           <button
             key={i}
@@ -83,7 +83,7 @@ function Carousel() {
             )}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
@@ -91,11 +91,11 @@ function Carousel() {
 export default function ImageCarousel() {
   return (
     <section className="w-full flex flex-col gap-5">
-      <ScrollFadeProvider
+      {/* <ScrollFadeProvider
         selector=".gallery-images-hero"
         enableScrollTrigger={false}
-      />
-      <div className="flex items-center justify-center">
+      /> */}
+      <div className="flex items-center justify-center px-5 md:px-10">
         <div className="flex flex-col text-center w-full items-center">
           <HeaderSections className="gallery-images-hero" />
 

@@ -13,11 +13,6 @@ export interface MenuItem {
   ceremonies: string[];
 }
 
-// interface MenuDataType {
-//   PorsiMenus: MenuItem[];
-//   SelfMenus: MenuItem[];
-//   SelectedMenu: MenuItem[];
-// }
 
 export const menuData: MenuItem[] = [
   {
