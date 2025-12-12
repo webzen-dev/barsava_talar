@@ -1,0 +1,40 @@
+version: "3.9"
+
+services:
+  app:
+    container_name: barsava-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - ./.env
+    ports:
+      - "80:3000"    
+    volumes:
+      - ./logs:/var/log    
+      - ./:/usr/src/app:cached
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:3000/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    user: "0:0"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "3"
+
+# mysql:
+#   image: mysql:8
+#   environment:
+#     MYSQL_ROOT_PASSWORD: ...
+#     MYSQL_DATABASE: ...
+#   volumes:
+#     - mysql-data:/var/lib/mysql
+#   ports:
+#     - "3306:3306"
+
+volumes:
+  # mysql-data: {}
