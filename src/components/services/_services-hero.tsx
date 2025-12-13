@@ -1,0 +1,99 @@
+import clsx from "clsx";
+import { LuFlower } from "react-icons/lu";
+import { ImSpoonKnife } from "react-icons/im";
+import { MdAddTask, MdGroups } from "react-icons/md";
+import { GiMusicalNotes } from "react-icons/gi";
+import Image from "next/image";
+
+const data = [
+  {
+    id: 1,
+    icon: <LuFlower />,
+    title: "طراحی و دکوراسیون اختصاصی",
+    src: "/images/women/DSC07610.webp",
+    caption:
+      "فضاسازی و چیدمان سالن مطابق با تم و سلیقه مراسم شما، از گل‌آرایی تا نورپردازی حرفه‌ای",
+  },
+  {
+    id: 2,
+    icon: <ImSpoonKnife />,
+    title: "پذیرایی مجلل",
+    src: "/images/women/DSC07630.webp",
+    caption:
+      "منوی متنوع غذا و دسر با بهترین مواد اولیه، ارائه پذیرایی با کیفیت و منظم",
+  },
+  {
+    id: 3,
+    icon: <MdGroups />,
+    title: "تیم حرفه‌ای تشریفات",
+    src: "/images/women/juwqghdf.webp",
+    caption:
+      "پرسنل آموزش‌دیده و مجرب که با نظم، احترام و دقت در خدمت شما و مهمانانتان هستند",
+  },
+  {
+    id: 4,
+    icon: <MdAddTask />,
+    title: "مدیریت کامل مراسم",
+    src: "/images/gallery/6.webp",
+    caption:
+      "هماهنگی صفر تا صد مراسم، زمان‌بندی و کنترل جریان اجرا بدون کوچک‌ترین نگرانی",
+  },
+  {
+    id: 5,
+    icon: <GiMusicalNotes />,
+    title: "موسیقی و سرگرمی",
+    src: "/images/gallery/4.webp",
+    caption:
+      "برگزاری برنامه‌های موسیقی زنده یا DJ و سرگرمی‌های متنوع برای تجربه‌ای جذاب و فراموش‌نشدنی",
+  },
+];
+
+export default function ServicesHero() {
+  return (
+    <section className="w-full min-h-screen flex flex-col gap-10">
+      <div className="flex flex-col gap-3">
+        <b className="md:text-3xl">
+          میزبان خاطرات بی نظیر شما با خدمات ویژه هستیم
+        </b>
+
+        <p className="md:text-lg text-background/70 max-w-1/2">
+          در مجموعه بارثاوا هر بخش با دقت و ظرافت طراحی شده تا تجربه ای فراتر از
+          یک مراسم عادی رقم بخورد
+        </p>
+      </div>
+
+      <div className="flex flex-wrap gap-y-4 -me-4">
+        {data.map((service) => (
+          <div key={service.id} className="pe-4 min-w-1/3 w-1/3 flex flex-col">
+            <div
+              className={clsx(
+                "bg-white/40 rounded-md p-4 py-6 relative w-full",
+                "flex flex-col gap-2.5",
+                "after:content-[''] after:absolute after:w-10 after:h-10 after:rounded-full after:bg-[var(--page-background)] after:-bottom-5 after:-right-5",
+                "before:content-[''] before:absolute before:w-10 before:h-10 before:rounded-full before:bg-[var(--page-background)] before:-bottom-5 before:-left-5"
+              )}
+            >
+              <span className="text-5xl text-[var(--gold)]">
+                {service.icon}
+              </span>
+              <b className="md:text-lg">{service.title}</b>
+              
+              <p className="text-black/70">{service.caption}</p>
+            </div>
+
+            <div className="w-full aspect-2/1 bg-white/40 border-t-2 border-dashed border-black/20 p-5 rounded-b-md">
+              <div className="relative w-full h-full">
+                <Image
+                  src={service.src}
+                  fill
+                  alt={service.title}
+                  className="object-cover rounded-md"
+                />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
