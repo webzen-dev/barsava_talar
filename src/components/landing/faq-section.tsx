@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import ScrollFadeProvider from "../ScrollFadeProvider";
 import HeaderSections from "../header-sections";
+import { faqsData } from "@/data";
 
 interface faqItem {
   id: number;
@@ -13,9 +14,6 @@ interface faqItem {
   answer: string;
 }
 
-interface faqProps {
-  faqs: faqItem[];
-}
 
 function FaqItem({ faq, className }: { faq: faqItem; className: string }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -80,7 +78,7 @@ function FaqItem({ faq, className }: { faq: faqItem; className: string }) {
   );
 }
 
-export default function FaqsSection({ faqs }: faqProps) {
+export default function FaqsSection() {
   return (
     <div className="flex flex-col flex-1/2 items-center">
       <ScrollFadeProvider selector=".faqs-animtaion" enabledStagger={true} />
@@ -89,7 +87,7 @@ export default function FaqsSection({ faqs }: faqProps) {
         سوالات متداول
       </b>
       <div className="flex flex-col w-full gap-3">
-        {faqs.map((data, index) => {
+        {faqsData.map((data, index) => {
           return <FaqItem faq={data} key={index} className="faqs-animtaion" />;
         })}
       </div>

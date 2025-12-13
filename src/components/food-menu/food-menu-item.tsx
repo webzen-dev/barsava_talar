@@ -1,6 +1,4 @@
-import { MenuItem } from "@/app/food-menu/global-data_back-up";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { MenuItem } from "@/app/food-menu/global-data";
 
 interface FoodMenuItemProps {
   isOpen: () => void;
@@ -8,30 +6,16 @@ interface FoodMenuItemProps {
 }
 
 export default function FoodMenuItem({ menuData, isOpen }: FoodMenuItemProps) {
-  const menuRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    gsap.fromTo(
-      menuRef.current,
-      {
-        opacity: 0,
-        x: 200,
-      },
-      { opacity: 1, x: 0 }
-    );
-  }, []);
-
   return (
-    <div className="min-h-screen bg-black/ backdrop-blur- w-full fixed inset-0 z-60 overflow-y-auto">
-      <div
-        ref={menuRef}
-        className="w-9/10 md:w-4/5 lg:w-2/3 xl:w-1/2 min-h-full bg-white h-auto flex flex-col gap-7 p-10 relative"
-      >
+    <div className="min-h-screen bg-black/10 backdrop-blur-lg w-full fixed inset-0 z-60 overflow-y-auto">
+      <div className="w-9/10 md:w-4/5 lg:w-2/3 xl:w-1/2 min-h-full bg-white h-auto flex flex-col gap-7 p-10 relative">
         <b className="text-4xl text-center">{menuData.title}</b>
         <div className="flex-col flex md:flex-row gap-5 w-full justify-between">
           <div
             className={`flex gap-7 flex-col flex-1/2 md:border-l-2 md:border-l-black/20 ${
-         !menuData.desserts?.length ? "border-l-none flex-1 justify-center min-w-full items-center text-center border-none" : ""
-
+              !menuData.desserts?.length
+                ? "border-l-none flex-1 justify-center min-w-full items-center text-center border-none"
+                : ""
             }`}
           >
             <b className="text-2xl">غذای اصلی:</b>
