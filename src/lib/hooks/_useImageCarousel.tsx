@@ -26,7 +26,7 @@ export function useImageCarousel() {
   const [refCarousel, api] = useEmblaCarousel({
     watchResize: false,
     watchSlides: false,
-    direction: "rtl",
+    direction: "rtl", 
     loop: true,
     align: "center",
   });
