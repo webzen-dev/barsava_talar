@@ -10,7 +10,7 @@ import { MdOutlineClose } from "react-icons/md";
 import { usePathname } from "next/navigation";
 import dynamic from "next/dynamic";
 
-const MobileHeader = dynamic(()=>import('./MobileHeader'))
+const MobileHeader = dynamic(() => import("./MobileHeader"));
 export default function Header() {
   const pathname = usePathname();
   const [responsive, setResponsive] = useState<boolean>(false);
@@ -101,16 +101,7 @@ export default function Header() {
         >
           <span className="font-bold">گالری تصاویر</span>
         </Link>{" "}
-        <div className="h-[35px] w-[1px] bg-gray-300"></div>
-        <Link
-          className={`flex flex-col  items-center  px-4 text-[#423A2F] duration-300 ease-in-out transition-all hover:text-black  ${
-            pathname === "/food-menu" ? "text-[#dec39a]" : "text-[#423A2F]"
-          }`}
-          href={"/food-menu"}
-        >
-          <span className="font-bold">منو غذایی </span>
-        </Link>
-      </div>
+       </div>
       {/* cta box */}
       <div className="flex gap-4 max-md:hidden">
         <a

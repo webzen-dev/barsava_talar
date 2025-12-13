@@ -1,5 +1,5 @@
-import FoodMenuBox from "@/components/food-menu/food-menu-box";
-import { menuData } from "./global-data";
+import FoodMenuBox from "@/components/services/food-menu/_food-menu-box";
+import { menuData } from "../../data/food-menu-data";
 import HeaderSections from "@/components/header-sections";
 
 export default function FoodMenu() {
