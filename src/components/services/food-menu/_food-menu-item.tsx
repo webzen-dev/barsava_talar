@@ -1,32 +1,52 @@
 import { MenuItem } from "@/data/food-menu-data";
+import clsx from "clsx";
 
 interface FoodMenuItemProps {
-  isOpen: () => void;
   menuData: MenuItem;
 }
 
-export default function FoodMenuItem({ menuData, isOpen }: FoodMenuItemProps) {
+export default function FoodMenuItem({ menuData }: FoodMenuItemProps) {
   return (
-    <div className="min-h-screen bg-black/10 backdrop-blur-lg w-full fixed inset-0 z-60 overflow-y-auto">
-      <div className="w-9/10 md:w-4/5 lg:w-2/3 xl:w-1/2 min-h-full bg-white h-auto flex flex-col gap-7 p-10 relative">
+    <div
+      className={clsx(
+        "fixed inset-0 z-60 w-full min-h-screen overflow-y-auto",
+        "bg-black/10 backdrop-blur-lg",
+        "opacity-0 pe-[100%]",
+        "pointer-events-none",
+        "transition-all duration-300 ease-out",
+        "peer-checked:opacity-100",
+        "peer-checked:pe-0",
+        "peer-checked:pointer-events-auto"
+      )}
+    >
+      <div
+        className={clsx(
+          "w-full md:w-4/5 lg:w-2/3 xl:w-1/2 min-h-full h-auto ",
+          "bg-[var(--page-background)]flex flex-col gap-7 p-5 md:p-10 relative"
+        )}
+      >
         <b className="text-4xl text-center">{menuData.title}</b>
+
         <div className="flex-col flex md:flex-row gap-5 w-full justify-between">
           <div
-            className={`flex gap-7 flex-col flex-1/2 md:border-l-2 md:border-l-black/20 ${
+            className={clsx(
+              "flex gap-7 flex-col flex-1/2 md:border-l-2 md:border-l-black/20",
               !menuData.desserts?.length
                 ? "border-l-none flex-1 justify-center min-w-full items-center text-center border-none"
                 : ""
-            }`}
+            )}
           >
             <b className="text-2xl">غذای اصلی:</b>
+
             <div className="flex gap-5 text-black/70 flex-col text-sm">
               {menuData?.mainFood?.map((food: string, index: number) => (
                 <span key={index}>{food}</span>
               ))}
             </div>
+
           </div>
 
-          <div className="flex gap-7 flex-col  flex-1/2 max-md:pt-5 b">
+          <div className="flex gap-7 flex-col flex-1/2 max-md:pt-5">
             {menuData.sections
               .slice(0, 2)
               .map(
@@ -47,7 +67,7 @@ export default function FoodMenuItem({ menuData, isOpen }: FoodMenuItemProps) {
           </div>
         </div>
 
-        <div className="flex-col flex md:flex-row gap-5 w-full justify-between ">
+        <div className="flex-col flex md:flex-row gap-5 w-full justify-between">
           {menuData.sections
             .slice(2, 4)
             .map(
@@ -66,12 +86,13 @@ export default function FoodMenuItem({ menuData, isOpen }: FoodMenuItemProps) {
               )
             )}
         </div>
+
         <div className="flex-col flex md:flex-row gap-5 w-full justify-between flex-1">
-          <div className="flex gap-7 flex-col flex-1/2 ">
+          <div className="flex gap-7 flex-col flex-1/2">
             {menuData.ceremonies.length > 1 && (
               <b className="text-2xl"> تشریفات :</b>
             )}
-            <div className="flex gap-5 text-black/70 flex-wrap text-sm ">
+            <div className="flex gap-5 text-black/70 flex-wrap text-sm">
               {menuData.ceremonies.map((ce: string, index: number) => (
                 <span
                   key={index}
@@ -83,12 +104,6 @@ export default function FoodMenuItem({ menuData, isOpen }: FoodMenuItemProps) {
             </div>
           </div>
         </div>
-        <button
-          className=" bg-red-400 text-white py-2 px-4 rounded-lg cursor-pointer text-sm mt-10"
-          onClick={isOpen}
-        >
-          بستن منو
-        </button>
       </div>
     </div>
   );

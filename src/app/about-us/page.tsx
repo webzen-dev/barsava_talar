@@ -105,12 +105,11 @@ const config = {
       poster: "/images/505450223_18307463164212975_2637873274641937436_n.jpg",
     },
   ],
-
 };
 
 export default function AboutUs() {
   return (
-    <div className="bg-[var(--page-background)] flex flex-col w-full gap-10 container mx-auto pt-35 px-5 md:px-10 gap-30">
+    <div className="bg-[var(--page-background)] flex flex-col w-full container mx-auto pt-35 px-5 md:px-10 gap-30">
       <AboutHeroSection />
       <DescriptionBox />
 

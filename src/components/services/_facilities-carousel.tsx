@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useCarousel } from "@/lib/hooks/useCarousel";
 import clsx from "clsx";
+
 import { facilitiesDataType } from "./_facilities";
+import { useCarousel } from "@/lib/hooks/useCarousel";
 
 interface facilitiesCarouselProps {
   data: facilitiesDataType[];

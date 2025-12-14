@@ -1,4 +1,5 @@
 import HeaderSections from "../header-sections";
+import ScrollFadeProvider from "../ScrollFadeProvider";
 import FacilitiesCarousel from "./_facilities-carousel";
 
 export type facilitiesDataType = {
@@ -38,20 +39,24 @@ const facilitiesList: facilitiesDataType[] = [
 export default function Facilities() {
   return (
     <section className="flex flex-col gap-10">
+      <ScrollFadeProvider selector=".facilities" />
+
       {/* facilities header */}
       <div className="flex flex-col items-center text-center">
-        <HeaderSections />
+        <HeaderSections className="facilities" />
 
-        <p className="text-lg md:text-2xl mb-2.5">امکانات تالار مجلل بارثاوا</p>
+        <p className="text-lg md:text-2xl mb-2.5 facilities">
+          امکانات تالار مجلل بارثاوا
+        </p>
 
-        <p className="text-black/70 text-sm md:text-base">
+        <p className="text-black/70 text-sm md:text-base facilities">
           بارثاوا یک تالار نیست , ما اینجاییم تا رویای شمارا به وافعیت تبدیل
           کنیم
         </p>
       </div>
-      
+
       {/* facilities carousel  */}
-      <FacilitiesCarousel data={facilitiesList} />
+      <FacilitiesCarousel data={facilitiesList} className="facilities" />
     </section>
   );
 }

@@ -1,42 +1,41 @@
-"use client";
-
-import HeaderSections from "@/components/header-sections";
-import { MenuItem } from "@/data/food-menu-data";
 import clsx from "clsx";
-import dynamic from "next/dynamic";
 import Image from "next/image";
-import { useState } from "react";
+
+import { MenuItem } from "@/data/food-menu-data";
+
+import FoodMenuItem from "./_food-menu-item";
+import HeaderSections from "@/components/header-sections";
+import ScrollFadeProvider from "@/components/ScrollFadeProvider";
 
 interface FoodMenuBoxProps {
   menuData: MenuItem[];
 }
 
-const FoodMenuItem = dynamic(() => import("./_food-menu-item"), { ssr: false });
-
 export default function FoodMenuBox({ menuData }: FoodMenuBoxProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   return (
     <div className="flex flex-col gap-10">
+      <ScrollFadeProvider selector=".food-menu" />
       <div className="w-full flex flex-col gap-2 text-center items-center">
         <HeaderSections />
 
-        <b className="text-lg md:text-2xl">
+        <b className="text-lg md:text-2xl food-menu">
           گزینه‌های غذایی باغ تالار برای هر سلیقه
         </b>
 
-        <span className="text-sm text-black/70 md:text-base max-w-9/10 md:max-w-4/5">
+        <span className="text-sm text-black/70 md:text-base max-w-9/10 md:max-w-4/5 food-menu">
           تمام منوها با استاندارد پذیرایی باغ تالار آماده شده‌اند تا بهترین
           انتخاب را برای مراسم خود داشته باشید.
         </span>
       </div>
-      
+
       <div className="flex flex-wrap gap-y-14 md:gap-y-10 items-stretch">
         {menuData.map((item, index) => (
-          <div
+          <label
             key={index}
-            className="flex-1 max-md:min-w-full md:flex-1/2 lg:flex-1/3 xl:flex-1/4 md:p-4 xl:max-w-1/4"
+            className="flex-1 max-md:min-w-full md:flex-1/2 lg:flex-1/3 xl:flex-1/4 md:p-4 xl:max-w-1/4 food-menu"
           >
+            <input type="checkbox" className="peer hidden" />
+
             <div className="h-full w-full rounded-2xl relative flex flex-col gap-2">
               <div className="w-full aspect-square relative shadow-2xl max-h-98">
                 <div
@@ -57,23 +56,23 @@ export default function FoodMenuBox({ menuData }: FoodMenuBoxProps) {
               </div>
               <div className="flex  flex-col py-4 px-4 bg-white/90 gap-4 rounded-lg shadow-2xl flex-1">
                 <b className="text-lg">{item.title}</b>
+
                 <span className="text-black/60 text-sm flex-1">
                   {item.description}
                 </span>
-                <button
-                  className="text-sm bg-[var(--gold)] py-2 rounded-lg cursor-pointer text-white"
-                  onClick={() =>
-                    setOpenIndex(openIndex === index ? null : index)
-                  }
-                >
+
+                <span className="text-sm bg-[var(--gold)] py-2 rounded-lg cursor-pointer text-white flex justify-center">
                   مشاهده ایتم های منو
-                </button>
+                </span>
               </div>
             </div>
-            {openIndex === index && (
-              <FoodMenuItem isOpen={() => setOpenIndex(null)} menuData={item} />
-            )}
-          </div>
+
+            <FoodMenuItem menuData={item} />
+
+            <span className="fixed bg-red-400 rounded-lg bottom-5 left-5 z-70 px-4 py-2 text-white hidden peer-checked:flex cursor-pointer">
+              بستن منو
+            </span>
+          </label>
         ))}
       </div>
     </div>

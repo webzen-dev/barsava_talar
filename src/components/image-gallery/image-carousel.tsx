@@ -91,10 +91,10 @@ function Carousel() {
 export default function ImageCarousel() {
   return (
     <section className="w-full flex flex-col gap-5">
-      {/* <ScrollFadeProvider
+      <ScrollFadeProvider
         selector=".gallery-images-hero"
         enableScrollTrigger={false}
-      /> */}
+      />
       <div className="flex items-center justify-center px-5 md:px-10">
         <div className="flex flex-col text-center w-full items-center">
           <HeaderSections className="gallery-images-hero" />

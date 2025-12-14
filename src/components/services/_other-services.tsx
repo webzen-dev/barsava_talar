@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { LuCalendarHeart } from "react-icons/lu";
 import { IoFlowerOutline, IoLogoInstagram } from "react-icons/io5";
 import { PiCampfireLight, PiTelegramLogoLight } from "react-icons/pi";
-import { LuCalendarHeart } from "react-icons/lu";
+
+import ScrollFadeProvider from "../ScrollFadeProvider";
 
 const data = [
   {
@@ -32,10 +34,12 @@ const data = [
 
 export default function OtherServices() {
   return (
-    <div className="bg-[var(--brown)]">
+    <div className="bg-[var(--dark-background)]">
+      <ScrollFadeProvider selector=".other-services" />
+      
       <div className="container mx-auto px-5 md:px-10 py-10 flex flex-col gap-5 md:gap-10 text-[var(--page-background)]">
         <div className="w-full flex gap-5 md:gap-10 h-auto lg:h-112 flex-col lg:flex-row">
-          <div className="flex-1 h-full bg-[var(--page-background)]/20 rounded-2xl flex flex-col gap-5 p-5">
+          <div className="flex-1 h-full bg-[var(--page-background)]/20 rounded-2xl flex flex-col gap-5 p-5 other-services">
             <Image
               src={"/images/barsava logo(gold).PNG"}
               alt="logo"
@@ -74,7 +78,7 @@ export default function OtherServices() {
             </div>
           </div>
 
-          <div className="h-full aspect-2/1 lg:aspect-square relative">
+          <div className="h-full aspect-2/1 lg:aspect-square relative other-services">
             <Image
               src={"/images/other-images/other-2.webp"}
               alt="services image"
@@ -89,7 +93,7 @@ export default function OtherServices() {
             {data.map((item) => (
               <div
                 key={item.id}
-                className="flex-1/5 bg-[var(--page-background)]/5 rounded-2xl flex flex-col gap-4 p-4"
+                className="flex-1/5 bg-[var(--page-background)]/5 rounded-2xl flex flex-col gap-4 p-4 other-services"
               >
                 {item.icon}
                 <b className="md:text-lg">{item.title}</b>
@@ -100,9 +104,9 @@ export default function OtherServices() {
             ))}
           </div>
 
-          <div className="flex-2/6 bg-[var(--page-background)]/5 rounded-2xl flex flex-col gap-4 p-4">
+          <div className="flex-2/6 bg-[var(--page-background)]/5 rounded-2xl flex flex-col gap-4 p-4 other-services">
             <b className="md:text-lg">رزرو آنلاین مراسم</b>
-            
+
             <p className="text-[var(--page-background)]/80 text-sm md:text-base">
               بدون تماس و مراجعه حضوری، تاریخ مراسمت رو آنلاین انتخاب کن، جزئیات
               رو ثبت کن و با خیال راحت رزروت رو نهایی کن؛ سریع، شفاف و همیشه در
@@ -111,7 +115,7 @@ export default function OtherServices() {
 
             <Link
               href="/reservation"
-              className="text-[var(--page-background)] bg-[var(--brown)] w-36 py-2 rounded-lg text-sm cursor-pointer flex items-center justify-center"
+              className="text-[var(--page-background)] bg-[var(--gold)]/50 w-36 py-2 rounded-lg text-sm cursor-pointer flex items-center justify-center"
             >
               رزرو کنید !
             </Link>
