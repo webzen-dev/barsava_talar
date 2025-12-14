@@ -14,7 +14,6 @@ interface faqItem {
   answer: string;
 }
 
-
 function FaqItem({ faq, className }: { faq: faqItem; className: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const answerRef = useRef<HTMLDivElement>(null);
@@ -82,10 +81,12 @@ export default function FaqsSection() {
   return (
     <div className="flex flex-col flex-1/2 items-center">
       <ScrollFadeProvider selector=".faqs-animtaion" enabledStagger={true} />
+      
       <HeaderSections className="faqs-animtaion" />
       <b className="text-lg md:text-2xl font-bold mb-8 faqs-animtaion">
         سوالات متداول
       </b>
+
       <div className="flex flex-col w-full gap-3">
         {faqsData.map((data, index) => {
           return <FaqItem faq={data} key={index} className="faqs-animtaion" />;

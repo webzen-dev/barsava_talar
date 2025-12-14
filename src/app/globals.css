@@ -28,7 +28,12 @@
   --gold: #dec39a;
   --dark-background: #353330;
 }
-/* .gallery-images-hero, */
+
+.food-menu,
+.gallery-images-hero,
+.services-hero,
+.other-services,
+.facilities,
 .services-section,
 .heart-felt-planning,
 .wedding-package,

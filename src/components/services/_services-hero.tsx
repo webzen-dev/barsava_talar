@@ -3,7 +3,6 @@ import { LuFlower } from "react-icons/lu";
 import { ImSpoonKnife } from "react-icons/im";
 import { MdAddTask, MdGroups } from "react-icons/md";
 import { GiMusicalNotes } from "react-icons/gi";
-import Image from "next/image";
 import ScrollFadeProvider from "../ScrollFadeProvider";
 
 const data = [
@@ -51,7 +50,7 @@ const data = [
 
 export default function ServicesHero() {
   return (
-    <section className="w-full min-h-screen flex flex-col gap-10">
+    <section className="w-full flex flex-col gap-10">
       <ScrollFadeProvider
         selector=".services-hero"
         enableScrollTrigger={false}
@@ -77,7 +76,7 @@ export default function ServicesHero() {
           >
             <div
               className={clsx(
-                "bg-[var(--brown)]/5 rounded-xl p-4 py-6 relative w-full",
+                "bg-[var(--dark-background)]/50 text-[var(--page-background)] rounded-xl p-4 py-6 relative w-full",
                 "flex flex-col gap-2.5",
                 "after:content-[''] after:absolute after:w-10 after:h-10 after:rounded-full after:bg-[var(--page-background)] after:-bottom-5 after:-right-5",
                 "before:content-[''] before:absolute before:w-10 before:h-10 before:rounded-full before:bg-[var(--page-background)] before:-bottom-5 before:-left-5"
@@ -86,23 +85,14 @@ export default function ServicesHero() {
               <span className="text-5xl text-[var(--gold)]">
                 {service.icon}
               </span>
+              
               <b className="text-base md:text-lg">{service.title}</b>
 
-              <p className="text-black/70 text-sm md:text-base">
+              <p className="text-[var(--page-background)]/70 text-sm md:text-base">
                 {service.caption}
               </p>
             </div>
 
-            <div className="w-full aspect-2/1 bg-[var(--brown)]/5 border-t-2 border-dashed border-black/20 p-5 rounded-b-xl">
-              <div className="relative w-full h-full">
-                <Image
-                  src={service.src}
-                  fill
-                  alt={service.title}
-                  className="object-cover rounded-md"
-                />
-              </div>
-            </div>
           </div>
         ))}
       </div>
