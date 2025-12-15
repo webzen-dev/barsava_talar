@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# BarsavaHall – Online Hall Management and Reservation System
 
-First, run the development server:
+This project is an online hall reservation system that helps administrators manage bookings, services, and user messages.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Users can view hall images and the hall's food menus.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+****
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Features:**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Built with Next.js v15.14, leveraging server-side rendering (SSR) and static site generation (SSG) for optimal performance.
 
-## Learn More
+- Prisma v7 for efficient database management and type-safe queries.
 
-To learn more about Next.js, take a look at the following resources:
+- MySQL as the primary relational database for storing reservations, user messages, and hall data.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Embla Carousel integrated for smooth and responsive image and content carousels.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Structured with SSG architecture, ensuring fast load times and improved SEO.
 
-## Deploy on Vercel
+- Styled with Tailwind CSS for a modern, responsive, and utility-first design approach.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Admin dashboard for managing bookings, services, and user messages.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Users can browse hall images and view detailed food menus
+- Deployed using Docker and Dockploy for containerized, scalable, and easy-to-manage deployment.
+
+```URL: barsavahall.ir```
+
+This project was developed by Behnam Zamani (webzen-dev)
