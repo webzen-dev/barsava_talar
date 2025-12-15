@@ -2,10 +2,6 @@ FROM node:20-alpine AS builder
 
 WORKDIR /usr/src/app
 
-ENV NODE_OPTIONS="--max-old-space-size=512"
-ENV NEXT_TELEMETRY_DISABLED=1
-ENV NEXT_IMAGE_OPTIMIZATION_DISABLED=1
-
 RUN apk add --no-cache libc6-compat curl
 
 COPY package*.json ./
@@ -37,3 +33,4 @@ RUN npx prisma generate
 EXPOSE 3000
 
 CMD ["npm", "start"]
+
