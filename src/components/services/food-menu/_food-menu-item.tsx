@@ -9,7 +9,7 @@ export default function FoodMenuItem({ menuData }: FoodMenuItemProps) {
   return (
     <div
       className={clsx(
-        "fixed inset-0 z-60 w-full min-h-screen overflow-y-auto",
+        "fixed inset-0 z-60 min-h-screen overflow-y-auto w-screen",
         "bg-black/10 backdrop-blur-lg",
         "opacity-0 pe-[100%]",
         "pointer-events-none",
@@ -21,8 +21,8 @@ export default function FoodMenuItem({ menuData }: FoodMenuItemProps) {
     >
       <div
         className={clsx(
-          "w-full md:w-4/5 lg:w-2/3 xl:w-1/2 min-h-full h-auto ",
-          "bg-[var(--page-background)]flex flex-col gap-7 p-5 md:p-10 relative"
+          "w-full md:w-4/5 lg:w-2/3 xl:w-1/2 min-h-full h-auto",
+          "bg-[var(--page-background)] flex flex-col gap-7 p-5 md:p-10 relative"
         )}
       >
         <b className="text-4xl text-center">{menuData.title}</b>
@@ -43,7 +43,6 @@ export default function FoodMenuItem({ menuData }: FoodMenuItemProps) {
                 <span key={index}>{food}</span>
               ))}
             </div>
-
           </div>
 
           <div className="flex gap-7 flex-col flex-1/2 max-md:pt-5">

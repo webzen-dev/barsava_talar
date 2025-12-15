@@ -16,7 +16,7 @@ export default function FoodMenuBox({ menuData }: FoodMenuBoxProps) {
     <div className="flex flex-col gap-10">
       <ScrollFadeProvider selector=".food-menu" />
       <div className="w-full flex flex-col gap-2 text-center items-center">
-        <HeaderSections />
+        <HeaderSections className="food-menu" />
 
         <b className="text-lg md:text-2xl food-menu">
           گزینه‌های غذایی باغ تالار برای هر سلیقه
@@ -32,11 +32,11 @@ export default function FoodMenuBox({ menuData }: FoodMenuBoxProps) {
         {menuData.map((item, index) => (
           <label
             key={index}
-            className="flex-1 max-md:min-w-full md:flex-1/2 lg:flex-1/3 xl:flex-1/4 md:p-4 xl:max-w-1/4 food-menu"
+            className="flex-1 max-md:min-w-full md:flex-1/2 lg:flex-1/3 xl:flex-1/4 md:p-4 xl:max-w-1/4"
           >
             <input type="checkbox" className="peer hidden" />
 
-            <div className="h-full w-full rounded-2xl relative flex flex-col gap-2">
+            <div className="h-full w-full rounded-2xl relative flex flex-col gap-2 food-menu">
               <div className="w-full aspect-square relative shadow-2xl max-h-98">
                 <div
                   className={clsx(
