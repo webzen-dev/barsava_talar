@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" className="font-sans">
-      <body dir="rtl">
+      <body dir="rtl" className="bg-[var(--page-background)]">
         <Header />
         {children}
         <LogoSticker />

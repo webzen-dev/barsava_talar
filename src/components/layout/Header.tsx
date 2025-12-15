@@ -36,9 +36,9 @@ export default function Header() {
   }, []);
 
   // reservation
-  if (pathname?.startsWith("/dashboard")) return null;
-  if (pathname?.startsWith("/reservation")) return null;
-  if (pathname?.startsWith("/login")) return null;
+  // if (pathname?.startsWith("/dashboard")) return null;
+  // if (pathname?.startsWith("/reservation")) return null;
+  // if (pathname?.startsWith("/login")) return null;
 
   return (
     <header
