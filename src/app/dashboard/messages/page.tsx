@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { toast } from "sonner";
+import {  useState } from "react";
+// import axios from "axios";
+// import { toast } from "sonner";
 
 interface MessageType {
   id: number;
@@ -19,31 +19,31 @@ const Messages = () => {
   const [messages, setMessages] = useState<MessageType[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
-  useEffect(() => {
-    const fetchMessages = async () => {
-      try {
-        const res = await axios.get("/api/contact-us");
-        setMessages(res.data.data);
-      } catch (err) {
-        toast.error("خطا در دریافت پیام‌ها");
-      } finally {
-        setLoading(false);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchMessages = async () => {
+  //     try {
+  //       const res = await axios.get("/api/contact-us");
+  //       setMessages(res.data.data);
+  //     } catch (err) {
+  //       toast.error("خطا در دریافت پیام‌ها");
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
-    fetchMessages();
-  }, []);
+  //   fetchMessages();
+  // }, []);
 
-  const handleDelete = async (id: number) => {
-    try {
-      await axios.delete(`/api/contact-us/${id}`);
-      setMessages((prev) => prev.filter((msg) => msg.id !== id));
-      toast.success("پیام با موفقیت حذف شد");
-    } catch (err) {
-      toast.error("خطا در حذف پیام");
-    }
-  };
-;
+//   const handleDelete = async (id: number) => {
+//     try {
+//       await axios.delete(`/api/contact-us/${id}`);
+//       setMessages((prev) => prev.filter((msg) => msg.id !== id));
+//       toast.success("پیام با موفقیت حذف شد");
+//     } catch (err) {
+//       toast.error("خطا در حذف پیام");
+//     }
+//   };
+// ;
 
   return (
     <div className="h-full w-full bg-[rgba(236,236,236,0.8)] p-5 flex max-h-full overflow-y-auto gap-5 flex-col">
@@ -102,7 +102,7 @@ const Messages = () => {
               </button> */}
               <button
                 className="px-2.5 py-[4px] text-sm cursor-pointer bg-red-500 rounded-sm text-white max-md:w-full"
-                onClick={() => handleDelete(msg.id)}
+                // onClick={() => handleDelete(msg.id)}
               >
                 حذف
               </button>
