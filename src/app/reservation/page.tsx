@@ -3,6 +3,7 @@ import Link from "next/link";
 import { IoIosArrowBack } from "react-icons/io";
 
 import Image from "next/image";
+import ReservationForm from "@/components/reservation/_form";
 
 export default function Reservation() {
   return (
@@ -15,6 +16,7 @@ export default function Reservation() {
       </div>
       <div className="flex w-full h-full justify-between">
         {/* reservation form */}
+        <ReservationForm />
 
         <div className="relative h-full flex-1 hidden md:block 2xl:w-3/5">
           <Image
@@ -23,7 +25,7 @@ export default function Reservation() {
             alt="Reservation Image"
             className="object-cover"
           />
-          <div className="absolute top-0 left-0 bottom-0 right-0 flex flex-col items-end justify-center p-20 bg-gradient-to-t from-black/80 to-transparent">
+          <div className="absolute top-0 left-0 bottom-0 right-0 flex flex-col items-center justify-end p-20 bg-gradient-to-t from-black/80 to-transparent">
             <b className="text-4xl text-[var(--page-background)]">
               تالار بارثاوا
             </b>
