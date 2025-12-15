@@ -2,18 +2,21 @@ FROM node:20-alpine AS builder
 
 WORKDIR /usr/src/app
 
+ENV NODE_OPTIONS="--max-old-space-size=768"
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV NEXT_IMAGE_OPTIMIZATION_DISABLED=1
+
 RUN apk add --no-cache libc6-compat curl
 
 COPY package*.json ./
 COPY prisma ./prisma
 
-RUN npm install
+RUN npm ci --prefer-offline --no-audit --progress=false
 
 COPY . .
 
 RUN npx prisma generate
 RUN npm run build
-
 
 FROM node:20-alpine AS runner
 
