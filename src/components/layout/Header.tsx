@@ -127,8 +127,8 @@ export default function Header() {
         </Link>
         <div className="flex items-center gap-5 ">
           <div className="flex flex-col gap-1">
-            <a href="tel:09154013935" className="font-bold text-lg">
-              09154013935
+            <a href="tel:09153016115" className="font-bold text-lg">
+              09153016115
             </a>
             <span className="text-[11px]">منتظر تماس شما هستیم</span>
           </div>
