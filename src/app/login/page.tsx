@@ -14,31 +14,44 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   setLoading(true);
+
+  //   try {
+  //     const res = await signIn("admin-credentials", {
+  //       redirect: false,
+  //       username,
+  //       password,
+  //     });
+
+  //     if (!res?.ok) {
+  //       throw new Error(res?.error || "Login failed");
+  //     }
+
+  //     toast.success("Logged in successfully");
+  //     router.push("/dashboard/");
+  //     setUsername("");
+  //     setPassword("");
+  //   } catch (err) {
+  //     const message =
+  //       err instanceof Error ? err.message : "Something went wrong";
+  //     toast.error(message);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+
+  // };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setLoading(true);
-
-    try {
-      const res = await signIn("admin-credentials", {
-        redirect: false,
-        username,
-        password,
-      });
-
-      if (!res?.ok) {
-        throw new Error(res?.error || "Login failed");
-      }
-
-      toast.success("Logged in successfully");
-      router.push("/dashboard/");
+    if (username === "barsava-admin" && password === "barsava-admin@1234") {
+      router.push("/dashboard");
       setUsername("");
       setPassword("");
-    } catch (err) {
-      const message =
-        err instanceof Error ? err.message : "Something went wrong";
-      toast.error(message);
-    } finally {
-      setLoading(false);
+      toast.success("Logged in successfully");
+    } else {
+      toast.error("Something went Error");
     }
   };
 
