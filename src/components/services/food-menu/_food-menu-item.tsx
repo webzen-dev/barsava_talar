@@ -65,7 +65,7 @@ export default function FoodMenuItem({ menuData }: FoodMenuItemProps) {
               )}
           </div>
         </div>
-
+              
         <div className="flex-col flex md:flex-row gap-5 w-full justify-between">
           {menuData.sections
             .slice(2, 4)

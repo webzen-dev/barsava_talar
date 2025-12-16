@@ -13,7 +13,6 @@ export interface MenuItem {
   ceremonies: string[];
 }
 
-
 export const menuData: MenuItem[] = [
   {
     title: "منوی پرسی ۱",
@@ -26,6 +25,10 @@ export const menuData: MenuItem[] = [
       {
         title: "انواع سالاد",
         items: ["فصل", "ماکارونی"],
+      },
+      {
+        title: "دسر (2 نوع انتخابی)",
+        items: ["کرم کارامل", "ژله", "ترامیسو", "موس"],
       },
       {
         title: "نوشیدنی",
@@ -64,6 +67,10 @@ export const menuData: MenuItem[] = [
     desserts: ["ژله (2 نوع)", "کرم کارامل", "موس", "تیرامیسو"],
     sections: [
       { title: "نوشیدنی", items: ["دلستر", "دوغ", "نوشابه"] },
+      {
+        title: "دسر (2 نوع انتخابی)",
+        items: ["کرم کارامل", "ژله", "ترامیسو", "موس"],
+      },
       {
         title: "پذیرایی عصرانه",
         items: [
@@ -104,6 +111,10 @@ export const menuData: MenuItem[] = [
       {
         title: "نوشیدنی",
         items: ["نوشابه", "دوغ"],
+      },
+      {
+        title: "دسر (2 نوع انتخابی)",
+        items: ["ژله", "کرم کارامل", "ترکیبی"],
       },
       {
         title: "پذیرایی عصرانه",

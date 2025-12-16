@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 import { FiPhoneCall } from "react-icons/fi";
 import { IoCalendarOutline, IoDownloadOutline } from "react-icons/io5";
+
 interface Prop {
   responsive: boolean;
   setResponsive: (value: boolean) => void;
@@ -23,6 +24,7 @@ const MobileHeader: React.FC<Prop> = ({ responsive, setResponsive }) => {
       { opacity: 1, x: 0, duration: 1 }
     );
   }, [responsive]);
+  
   return (
     <div
       ref={mobileHeader}
@@ -54,12 +56,6 @@ const MobileHeader: React.FC<Prop> = ({ responsive, setResponsive }) => {
         >
           <span className="font-bold">گالری تصاویر</span>
         </Link>{" "}
-        <Link
-          className="flex flex-col  items-center  w-[120px] text-[#747474]  hover:text-black"
-          href={"/food-menu"}
-        >
-          <span className="font-bold">منو غذایی </span>
-        </Link>
       </div>
       <div className="flex gap-4 flex-col-reverse">
         <Link
