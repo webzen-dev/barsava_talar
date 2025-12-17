@@ -1,9 +1,9 @@
 // TimelessLoadImageProvider.ts
 "use client";
 
-import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useEffect } from "react";
+import gsap from "gsap";
 
 gsap.registerPlugin(ScrollTrigger);
 

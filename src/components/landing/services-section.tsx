@@ -1,7 +1,8 @@
-import Image from "next/image";
-import HeaderSections from "../header-sections";
 import clsx from "clsx";
 import Link from "next/link";
+import Image from "next/image";
+
+import HeaderSections from "../header-sections";
 import ScrollFadeProvider from "../ScrollFadeProvider";
 
 interface ServicesType {
@@ -32,7 +33,9 @@ export default function ServicesSection({ items }: { items: ServicesType[] }) {
         </p>
       </div>
 
-      <div className={clsx("w-full h-full px-5 py-10 bg-[var(--brown)] relative")}>
+      <div
+        className={clsx("w-full h-full px-5 py-10 bg-[var(--brown)] relative")}
+      >
         <div className="absolute w-full h-full inset-0 opacity-10 z-10">
           <Image
             src="/images/aluminum-foil-6961638_960_720.jpg"
@@ -64,7 +67,7 @@ export default function ServicesSection({ items }: { items: ServicesType[] }) {
 
               <Link
                 href={"/services"}
-                className="flex justify-center w-42 py-1 bg-[var(--gold)] rounded-lg mt-2"
+                className="flex justify-center w-42 py-1 bg-[var(--gold)] text-[var(--page-background)] rounded-lg mt-2"
               >
                 بیشتر بدانید
               </Link>

@@ -1,14 +1,14 @@
-import AboutHeroSection from "@/components/about-us/_about-hero-section";
+import AboutHeroSection from "@/components/about-us/about-hero-section";
 
-import AboutIntroVideo from "@/components/about-us/_about-intro-video";
+import AboutIntroVideo from "@/components/about-us/about-intro-video";
 import IntroAboutUs, {
   IntroAboutUsProps,
-} from "@/components/about-us/_intro-about-us";
+} from "@/components/about-us/intro-about-us";
 import IntroductionVideosSlider from "@/components/about-us/_intro-video-carousel";
-import Reviews from "@/components/about-us/_reviews-section";
+import Reviews from "@/components/about-us/reviews-section";
 import FaqsSection from "@/components/landing/faq-section";
-import InputComments from "@/components/about-us/_input-comments";
-import DescriptionBox from "@/components/about-us/_desciption-box";
+import InputComments from "@/components/about-us/input-comments";
+import DescriptionBox from "@/components/about-us/desciption-box";
 
 const config = {
   introAboutUsData: [
@@ -109,7 +109,7 @@ const config = {
 
 export default function AboutUs() {
   return (
-    <div className="bg-[var(--page-background)] flex flex-col w-full container mx-auto pt-35 px-5 md:px-10 gap-30">
+    <div className="grid container mx-auto px-5 md:px-10 gap-30">
       <AboutHeroSection />
       <DescriptionBox />
 

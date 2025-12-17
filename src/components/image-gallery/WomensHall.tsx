@@ -6,8 +6,8 @@ const WomensHall = () => {
     <div className="flex flex-col h-auto md:min-h-screen">
       <div className="flex items-center  justify-center p-10">
         <div className="flex flex-col gap-2.5 text-center w-full items-center">
-          <HeaderSections/>
-          <b className="text-4xl pb-2.5 max-md:text-base">تصاویر سالن بانوان</b>
+          <HeaderSections />
+          <b className="md:text-2xl">تصاویر سالن بانوان</b>
         </div>
       </div>
       <div
@@ -99,7 +99,6 @@ const WomensHall = () => {
             draggable={false}
           />
         </div>
-
 
         <div className="rounded-xl shadow-md col-span-1 lg:col-start-2 lg:row-start-5 lg:row-span-2 relative">
           <div className="absolute inset-0 z-10 w-full h-full animate-pulse bg-gradient-to-tr from-gray-400 to-gray-300 rounded-2xl" />

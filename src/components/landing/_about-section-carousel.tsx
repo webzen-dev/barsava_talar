@@ -5,7 +5,7 @@ import clsx from "clsx";
 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-import { AboutDataProps } from "./_about-section";
+import { AboutDataProps } from "./about-section";
 import { useCarousel } from "@/lib/hooks/useCarousel";
 
 function SlideItem({ slide }: { slide: AboutDataProps }) {

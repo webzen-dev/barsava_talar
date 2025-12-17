@@ -1,158 +1,160 @@
-"use client";
-import gsap from "gsap";
-import Image from "next/image";
+import clsx from "clsx";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-import { FiPhoneCall } from "react-icons/fi";
-import { HiOutlineMenuAlt1 } from "react-icons/hi";
-import { IoCalendarOutline, IoDownloadOutline } from "react-icons/io5";
-import { MdOutlineClose } from "react-icons/md";
-import { usePathname } from "next/navigation";
-import dynamic from "next/dynamic";
+import Image from "next/image";
 
-const MobileHeader = dynamic(() => import("./MobileHeader"));
+import {
+  IoCalendarOutline,
+  IoCallOutline,
+  IoDocumentTextOutline,
+  IoDownloadOutline,
+  IoHomeOutline,
+  IoImagesOutline,
+  IoSparklesOutline,
+} from "react-icons/io5";
+
+import ToggleMenuButton from "./_toggle-menu-button";
+import ScrollFadeProvider from "../ScrollFadeProvider";
+
+export const menuLinks = [
+  { label: "خانه", href: "/", icon: <IoHomeOutline className="w-6 h-6" /> },
+  {
+    label: "درباره",
+    href: "/about-us",
+    icon: <IoDocumentTextOutline className="w-6 h-6" />,
+  },
+  {
+    label: "خدمات",
+    href: "/services",
+    icon: <IoSparklesOutline className="w-6 h-6" />,
+  },
+  {
+    label: "گالری تصاویر",
+    href: "/image-gallery",
+    icon: <IoImagesOutline className="w-6 h-6" />,
+  },
+  {
+    label: "رزرو آنلاین",
+    href: "/reservation",
+    icon: <IoCalendarOutline className="w-6 h-6" />,
+  },
+  {
+    label: "تماس با ما",
+    href: "/contact-us",
+    icon: <IoCallOutline className="w-6 h-6" />,
+  },
+  {
+    label: "دانلود کاتالوگ",
+    href: "/cc.pdf",
+    icon: <IoDownloadOutline className="w-6 h-6" />,
+  },
+] as const;
+
 export default function Header() {
-  const pathname = usePathname();
-  const [responsive, setResponsive] = useState<boolean>(false);
+  const pathname = "/";
 
-  const header = useRef<HTMLElement | null>(null);
-  useEffect(() => {
-    if (header.current) {
-      gsap.fromTo(
-        header.current,
+  // const pathname = usePathname();
 
-        {
-          y: -50,
-          duration: 1,
-          opacity: 0,
-        },
-        {
-          duration: 1,
-          y: 0,
-          opacity: 1,
-        }
-      );
-    }
-  }, []);
-
-  // reservation
   // if (pathname?.startsWith("/dashboard")) return null;
   // if (pathname?.startsWith("/reservation")) return null;
   // if (pathname?.startsWith("/login")) return null;
 
   return (
-    <header
-      className="fixed h-[80px] items-center w-full top-0 left-0 right-0 2xl:px-[200px] xl:px-[100px] flex  gap-5 z-50 bg-none backdrop-blur-lg bg-[#f7f1ea] max-md:justify-between max-md:px-10  max-md:backdrop-blur-2xl max-sm:px-5 text-[#423A2F] "
-      dir="rtl"
-      ref={header}
-    >
-      <Link href={"/"} className="flex items-center  gap-3">
-        <Image
-          src={"/images/barsava logo(gold).PNG"}
-          alt="logo"
-          width={68}
-          height={73.85}
-          className="object-cover cursor-pointer"
-        />
-        <div
-          className="flex flex-col gap-1.5 text-[13px] font-semibold md:hidden lg:flex
-"
-        >
-          <span>رزرو تالار رؤیایی شما؛</span>
-          <span>لحظاتی به یاد ماندنی (:</span>
-        </div>
-      </Link>
-      {/* menu item */}
-      <div className="flex items-center flex-1 max-md:hidden">
-        <Link
-          className={`flex flex-col items-center  w-[100px]  duration-300 ease-in-out transition-all hover:text-black ${
-            pathname === "/" ? "text-[#dec39a]" : "text-[#423A2F]"
-          }`}
-          href={"/"}
-        >
-          <span className="font-bold">خانه</span>
-        </Link>
-        <div className="h-[35px] w-[1px] bg-gray-300"></div>
-        <Link
-          className={`flex flex-col  items-center  w-[120px] text-[#423A2F] duration-300 ease-in-out transition-all hover:text-black   ${
-            pathname === "/about-us" ? "text-[#dec39a]" : "text-[#423A2F]"
-          }`}
-          href={"/about-us"}
-          prefetch
-        >
-          <span className="font-bold">درباره</span>
-        </Link>
-        <div className="h-[35px] w-[1px] bg-gray-300"></div>
-        <Link
-          className={`flex flex-col  items-center  w-[120px] text-[#423A2F] duration-300 ease-in-out transition-all hover:text-black  ${
-            pathname === "/services" ? "text-[#dec39a]" : "text-[#423A2F]"
-          }`}
-          href={"/services"}
-          prefetch
-        >
-          <span className="font-bold">خدمات </span>
-        </Link>
-        <div className="h-[35px] w-[1px] bg-gray-300"></div>
-        <Link
-          className={`flex flex-col  items-center  w-[120px] text-[#423A2F] duration-300 ease-in-out transition-all hover:text-black  ${
-            pathname === "/image-gallery" ? "text-[#dec39a]" : "text-[#423A2F]"
-          }`}
-          href={"/image-gallery"}
-        >
-          <span className="font-bold">گالری تصاویر</span>
-        </Link>{" "}
-       </div>
-      {/* cta box */}
-      <div className="flex gap-4 max-md:hidden">
-        <a
-          download
-          href="/cc.pdf"
-          className="group bg-[#dec39a] text-white w-[48px] cursor-pointer h-[50px] rounded-lg flex justify-center items-center text-3xl duration-300 ease-in-out transition-all hover:w-[150px] hover:justify-around"
-        >
-          <IoDownloadOutline className="text-3xl" />
-          <span className="opacity-0 invisible transition-opacity duration-1000 text-sm absolute group-hover:relative group-hover:opacity-100 group-hover:visible">
-            دانلود کاتالوگ
-          </span>
-        </a>
+    <header className="fixed h-20 w-full top-0 left-0 right-0 flex justify-center z-50 bg-[var(--page-background)] text-[var(--brown)]">
+      <ScrollFadeProvider
+        selector=".header-fade"
+        translateY={-40}
+        duration={1}
+        enabledStagger={false}
+        enableScrollTrigger={false}
+      />
 
-        <Link
-          href={"/reservation"}
-          className="group bg-none border border-[#dec39a] text-[#dec39a] w-[48px] cursor-pointer h-[50px] rounded-lg flex justify-center items-center text-3xl duration-300 ease-in-out transition-all
-    hover:w-[120px] hover:justify-around"
-        >
-          <IoCalendarOutline className="text-3xl" />
-          <span className="opacity-0 invisible  transition-opacity duration-1000 text-sm absolute group-hover:relative group-hover:opacity-100 group-hover:visible ">
-            رزرو آنلاین
-          </span>
-        </Link>
-        <div className="flex items-center gap-5 ">
-          <div className="flex flex-col gap-1">
-            <a href="tel:09153016115" className="font-bold text-lg">
-              09153016115
-            </a>
-            <span className="text-[11px]">منتظر تماس شما هستیم</span>
+      <div className="container flex justify-between gap-12 items-center px-5 md:px-10 header-fade">
+        <Link href={"/"} className="flex items-center gap-3">
+          <Image
+            src={"/images/barsava logo(gold).PNG"}
+            alt="logo"
+            width={68}
+            height={73.85}
+            className="object-cover cursor-pointer"
+          />
+          <div className="flex flex-col gap-1.5 text-sm font-semibold">
+            رزرو تالار رؤیایی شما؛ <br />
+            لحظاتی به یاد ماندنی
           </div>
-          <Link
-            href={"/contact-us"}
-            className="group  border-none bg-[#dec39a] text-white w-[48px] cursor-pointer h-[50px] rounded-lg flex justify-center items-center text-2xl  duration-300 ease-in-out transition-all
-    hover:w-[120px] hover:justify-around"
-          >
-            <span className="opacity-0 invisible  transition-opacity duration-1000 text-sm absolute group-hover:relative group-hover:opacity-100 group-hover:visible ">
-              تماس با ما
-            </span>
-            <FiPhoneCall />
-          </Link>
+        </Link>
+
+        {/* menu item */}
+        <div className="hidden items-center flex-1 gap-7 md:flex">
+          {menuLinks.slice(0, 4).map((link, i) => (
+            <Link
+              key={i}
+              className={clsx(
+                "flex flex-col duration-300 ease-in-out transition-colors items-center hover:text-black  text-nowrap font-bold border-e-2 border-e-black/10 pe-7 last:border-none",
+                pathname === link.href
+                  ? "text-[var(--gold)]"
+                  : "text-[var(--brown)]"
+              )}
+              href={link.href}
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
+
+        {/* cta box */}
+        <div className="hidden gap-4 md:flex">
+          <a
+            download
+            href={menuLinks[6].href}
+            className={clsx(
+              "group bg-[var(--gold)] text-[var(--page-background)] w-12 cursor-pointer h-12.5 ",
+              "rounded-lg flex justify-center items-center text-3xl transition-[width,opacity] duration-300",
+              " hover:w-38 hover:justify-around ease-in-out"
+            )}
+          >
+            <span className="opacity-0 invisible transition-opacity duration-1000 text-sm absolute group-hover:relative group-hover:opacity-100 group-hover:visible">
+              {menuLinks[6].label}
+            </span>
+            {menuLinks[6].icon}
+          </a>
+
+          <Link
+            href={menuLinks[4].href}
+            className={clsx(
+              "w-12 h-12.5 border border-[var(--gold)] text-[var(--gold)] flex justify-center items-center hover:justify-around group",
+              "cursor-pointer rounded-lg text-3xl transition-[width,opacity] duration-300 ease-in-out hover:w-38"
+            )}
+          >
+            {menuLinks[4].icon}
+            <span className="opacity-0 invisible transition-opacity duration-1000 text-sm absolute group-hover:relative group-hover:opacity-100 group-hover:visible">
+              {menuLinks[4].label}
+            </span>
+          </Link>
+
+          <div className="flex items-center gap-5">
+            <div className="flex flex-col gap-1">
+              <a href="tel:09153016115" className="font-bold text-lg">
+                09153016115
+              </a>
+              <span className="text-xs">منتظر تماس شما هستیم</span>
+            </div>
+            <Link
+              href={menuLinks[5].href}
+              className={clsx(
+                "w-12 h-12.5 bg-[var(--gold)] text-[var(--page-background)] flex justify-center items-center hover:justify-around group",
+                "cursor-pointer rounded-lg text-3xl transition-[width,opacity] duration-300 ease-in-out hover:w-38"
+              )}
+            >
+              <span className="opacity-0 invisible transition-opacity duration-1000 text-sm absolute group-hover:relative group-hover:opacity-100 group-hover:visible">
+                {menuLinks[5].label}
+              </span>
+              {menuLinks[5].icon}
+            </Link>
+          </div>
+        </div>
+
+        <ToggleMenuButton />
       </div>
-      <button
-        className="text-3xl text-[#dec39a] rounded-lg w-[40px] h-[40px] flex items-center justify-center  md:hidden"
-        onClick={() => setResponsive(!responsive)}
-      >
-        {responsive ? <MdOutlineClose /> : <HiOutlineMenuAlt1 />}
-      </button>
-      {responsive && (
-        <MobileHeader responsive={responsive} setResponsive={setResponsive} />
-      )}
     </header>
   );
 }

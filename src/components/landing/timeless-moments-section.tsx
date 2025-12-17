@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import HeaderSections from "../header-sections";
 import ScrollFadeProvider from "../ScrollFadeProvider";
-import TimelessLoadImageProvider from "./_timeless-load-images-Provider";
+import TimelessLoadImageProvider from "./_timeless-load-images-provider";
 
 export default function TimelessMoments() {
   return (

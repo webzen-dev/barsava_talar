@@ -8,9 +8,7 @@ const ContactUsForm = dynamic(
 );
 const ContactUs = () => {
   return (
-    <div
-      className="bg-[#F7F1EA] min-h-[100vh] text-[#423A2F] pt-[100px] pb-[50px] px-10 flex flex-col gap-10 select-none"
-    >
+    <div className="px-5 md:px-10 grid gap-10">
       <ContactUsHeroSection />
       <ContactUsForm />
     </div>

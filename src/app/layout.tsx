@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import Header from "@/components/layout/Header";
-import LogoSticker from "@/components/LogoSticker";
-import Footer from "@/components/layout/Footer";
 import { Toaster } from "sonner";
-import "react-loading-skeleton/dist/skeleton.css";
-import "keen-slider/keen-slider.min.css";
+
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "تالار مجلل بارثاوا",
@@ -21,8 +20,7 @@ export default function RootLayout({
     <html lang="fa" className="font-sans">
       <body dir="rtl" className="bg-[var(--page-background)]">
         <Header />
-        {children}
-        <LogoSticker />
+        <div className="flex flex-col gap-30 pt-25">{children}</div>
         <Footer />
         <Toaster position="top-right" richColors theme="dark" dir="rtl" />
       </body>

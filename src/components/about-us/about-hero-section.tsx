@@ -1,5 +1,5 @@
 import ScrollFadeProvider from "../ScrollFadeProvider";
-import AboutHeroSlider from "./_hero-carousel";
+import AboutHeroCarousel from "./_hero-carousel";
 
 export default function AboutHeroSection() {
   return (
@@ -22,7 +22,7 @@ export default function AboutHeroSection() {
         </div>
       </div>
       <div className="about-hero">
-        <AboutHeroSlider />
+        <AboutHeroCarousel />
       </div>
     </div>
   );

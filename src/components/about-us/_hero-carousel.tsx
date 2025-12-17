@@ -14,7 +14,7 @@ const data = [
   { id: 7, src: "/images/about/DSC07755.webp" },
 ];
 
-export default function AboutHeroSlider() {
+export default function AboutHeroCarousel() {
   const { autoPlayRefCarousel } = useCarousel();
 
   return (
