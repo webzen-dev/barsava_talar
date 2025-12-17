@@ -3,11 +3,6 @@
 import gsap from "gsap";
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
-import {
-  IoCalendarOutline,
-  IoCallOutline,
-  IoDownloadOutline,
-} from "react-icons/io5";
 import { menuLinks } from "./Header";
 import clsx from "clsx";
 
@@ -22,15 +17,14 @@ const MobileHeader: React.FC<Prop> = ({ responsive, setResponsive }) => {
   const mobileHeader = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    if (!mobileHeader.current) return;
     gsap.fromTo(
       mobileHeader.current,
       {
-        x: 500,
-        opacity: 0,
-
+        x: 300,
         duration: 1,
       },
-      { opacity: 1, x: 0, duration: 1 }
+      { x: 0, duration: 0.5 }
     );
   }, [responsive]);
 

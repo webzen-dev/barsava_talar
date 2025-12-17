@@ -3,7 +3,7 @@ import Link from "next/link";
 import { IoIosArrowBack } from "react-icons/io";
 
 import Image from "next/image";
-import ReservationForm from "@/components/reservation/_form";
+import ReservationForm from "@/components/reservation/form";
 
 export default function Reservation() {
   return (

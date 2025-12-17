@@ -109,7 +109,7 @@ const config = {
 
 export default function AboutUs() {
   return (
-    <div className="grid container mx-auto px-5 md:px-10 gap-30">
+    <div className="flex flex-col container mx-auto px-5 md:px-10 gap-30 overflow-x-hidden">
       <AboutHeroSection />
       <DescriptionBox />
 

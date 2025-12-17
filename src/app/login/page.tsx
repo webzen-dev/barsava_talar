@@ -11,7 +11,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
   const router = useRouter();
 
   // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -56,15 +56,12 @@ const Login = () => {
   };
 
   return (
-    <div
-      className="w-full h-[100vh] flex items-center p-5 flex-col gap-7.5 justify-center 
-                 bg-gradient-to-b from-[#dec39a] to-white relative"
-    >
+    <div className="flex fixed inset-0 items-center flex-col gap-7.5 justify-center z-70 bg-[var(--page-background)]">
       {loading && <Loading />}
 
       <form
         onSubmit={handleSubmit}
-        className="w-[400px] shadow-2xl backdrop-blur-2xl bg-[rgb(255,255,255)] 
+        className="w-9/10 md:w-100 shadow-2xl backdrop-blur-2xl bg-[rgb(255,255,255)] 
                    flex flex-col gap-5 p-5 rounded-lg "
       >
         <h2 className="text-lg font-bold text-black">ورود به پنل ادمین</h2>

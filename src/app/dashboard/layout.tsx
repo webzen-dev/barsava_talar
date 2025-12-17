@@ -28,17 +28,17 @@ import { ReactNode } from "react";
 export default function AdminLayout({ children }: { children: ReactNode }) {
   return (
     // <SessionProvider>
-      <div
-        className="flex w-full h-[100vh] items-center justify-between relative  bg-[rgba(236,236,236,0.8)]"
-        dir="rtl"
-      >
-          <DashboardSidebar />
-          <div className="flex flex-col justify-between h-full flex-1 ">
-            <DashboardHeader />
-            {children}
-            {/* <AuthChecker>{children}</AuthChecker> */}
-          </div>
+    <div
+      className="flex w-full items-center justify-between bg-[rgba(236,236,236,0.8)] fixed inset-0 z-70"
+      dir="rtl"
+    >
+      <DashboardSidebar />
+      <div className="flex flex-col justify-between h-full flex-1 ">
+        <DashboardHeader />
+        {children}
+        {/* <AuthChecker>{children}</AuthChecker> */}
       </div>
+    </div>
     // </SessionProvider>
   );
 }

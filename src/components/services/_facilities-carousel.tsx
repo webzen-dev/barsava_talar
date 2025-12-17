@@ -3,7 +3,7 @@
 import Image from "next/image";
 import clsx from "clsx";
 
-import { facilitiesDataType } from "./_facilities";
+import { facilitiesDataType } from "./facilities";
 import { useCarousel } from "@/lib/hooks/useCarousel";
 
 interface facilitiesCarouselProps {

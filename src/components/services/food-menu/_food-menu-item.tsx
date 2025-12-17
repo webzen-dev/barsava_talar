@@ -31,9 +31,7 @@ export default function FoodMenuItem({ menuData }: FoodMenuItemProps) {
           <div
             className={clsx(
               "flex gap-7 flex-col flex-1/2 md:border-l-2 md:border-l-black/20",
-              !menuData.desserts?.length
-                ? "border-l-none flex-1 justify-center min-w-full items-center text-center border-none"
-                : ""
+                //  "border-l-none flex-1 justify-center min-w-full items-center text-center border-none"
             )}
           >
             <b className="text-2xl">غذای اصلی:</b>

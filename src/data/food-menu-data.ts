@@ -8,7 +8,6 @@ export interface MenuItem {
   image: string;
   description: string;
   mainFood: string[];
-  desserts: string[];
   sections: MenuSection[];
   ceremonies: string[];
 }
@@ -20,7 +19,6 @@ export const menuData: MenuItem[] = [
       "مجموعه‌ای کامل از غذاهای اصلی، نوشیدنی‌ها، سالاد و پذیرایی عصرانه برای مهمانی‌های باشکوه.",
     image: "/images/food-menu/640A1000.webp",
     mainFood: ["چلو ماهیچه"],
-    desserts: ["ژله (۲ نوع انتخابی)", "کرم کارامل", "موس", "تیرامیسو"],
     sections: [
       {
         title: "انواع سالاد",
@@ -64,7 +62,6 @@ export const menuData: MenuItem[] = [
       "مجموعه‌ای کامل از غذاهای اصلی، نوشیدنی‌ها، سالاد و پذیرایی عصرانه برای مهمانی‌های باشکوه.",
 
     mainFood: ["چلو گوشت"],
-    desserts: ["ژله (2 نوع)", "کرم کارامل", "موس", "تیرامیسو"],
     sections: [
       { title: "نوشیدنی", items: ["دلستر", "دوغ", "نوشابه"] },
       {
@@ -106,7 +103,6 @@ export const menuData: MenuItem[] = [
       "قیمه",
       "سالاد فصل",
     ],
-    desserts: ["ژله (۲ نوع)", "کرم کارامل", "ترکیبی"],
     sections: [
       {
         title: "نوشیدنی",
@@ -153,7 +149,6 @@ export const menuData: MenuItem[] = [
       "خورشت قیمه",
       "خورشت فسنجان یا قرمه‌سبزی",
     ],
-    desserts: ["دسر متنوع"],
     sections: [
       {
         title: "نوشیدنی",
@@ -211,7 +206,6 @@ export const menuData: MenuItem[] = [
       "خورشت قیمه",
       "خورشت فسنجان یا قرمه‌سبزی",
     ],
-    desserts: ["دسر متنوع"],
     sections: [
       {
         title: "نوشیدنی",
@@ -268,7 +262,6 @@ export const menuData: MenuItem[] = [
       "خورشت قیمه",
       "خورشت فسنجان یا قرمه سبزی",
     ],
-    desserts: ["دسر متنوع"],
     sections: [
       {
         title: "نوشیدنی",
@@ -321,7 +314,6 @@ export const menuData: MenuItem[] = [
       "خورشت قیمه",
       "خورشت فسنجان یا قرمه سبزی",
     ],
-    desserts: ["دسر متنوع"],
     sections: [
       {
         title: "نوشیدنی",
@@ -375,8 +367,6 @@ export const menuData: MenuItem[] = [
       "خورشت قیمه",
       "خورشت فسنجان یا قرمه‌سبزی",
     ],
-
-    desserts: ["دسر متنوع"],
 
     sections: [
       {
@@ -435,7 +425,6 @@ export const menuData: MenuItem[] = [
       "گوشت تکه‌ای",
       "خوراک زبان",
     ],
-    desserts: [],
     sections: [],
     ceremonies: [],
   },

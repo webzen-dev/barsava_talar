@@ -18,9 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" className="font-sans">
-      <body dir="rtl" className="bg-[var(--page-background)]">
+      <body dir="rtl" className="bg-[var(--page-background)] pt-25">
         <Header />
-        <div className="flex flex-col gap-30 pt-25">{children}</div>
+        {children}
         <Footer />
         <Toaster position="top-right" richColors theme="dark" dir="rtl" />
       </body>

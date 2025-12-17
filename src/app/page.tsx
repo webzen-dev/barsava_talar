@@ -36,6 +36,20 @@ const config = {
       link: "/image-gallery",
       src: "/images/landing-images/about-slider-4.webp",
     },
+    {
+      id: 5,
+      title: "حلقه‌های ازدواج",
+      caption: "نمادی از عشق ابدی",
+      link: "/image-gallery",
+      src: "/images/landing-images/about-slider-2.webp",
+    },
+    {
+      id: 6,
+      title: "مراسم عروسی",
+      caption: "لحظه‌ای خاص از حلقه انداختن",
+      link: "/image-gallery",
+      src: "/images/landing-images/about-slider-3.webp",
+    },
   ],
   heartfeltPlanningData: [
     {
@@ -110,7 +124,7 @@ const config = {
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden grid gap-30">
       <div className="container mx-auto flex flex-col gap-30 px-5 md:px-10">
         <HeroSection />
         <AboutSection data={config.aboutSliderData} />

@@ -1,6 +1,6 @@
 "use client";
 
-import { useImageCarousel } from "@/lib/hooks/_useImageCarousel";
+import { useImageCarousel } from "@/lib/hooks/useImageCarousel";
 import clsx from "clsx";
 import Image from "next/image";
 import HeaderSections from "../header-sections";

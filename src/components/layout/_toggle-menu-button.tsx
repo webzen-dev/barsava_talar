@@ -15,7 +15,7 @@ export default function ToggleMenuButton() {
     <>
       <button
         onClick={() => setResponsive(!responsive)}
-        className="text-3xl text-[var(--gold)] rounded-lg w-20 h-20 flex items-center justify-center md:hidden"
+        className="text-[var(--gold)] rounded-lg w-20 h-20 *:h-8 *:w-8 flex items-center justify-center md:hidden"
       >
         {responsive ? <MdOutlineClose /> : <HiOutlineMenuAlt1 />}
       </button>

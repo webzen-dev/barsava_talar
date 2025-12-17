@@ -14,6 +14,7 @@ import {
 
 import ToggleMenuButton from "./_toggle-menu-button";
 import ScrollFadeProvider from "../ScrollFadeProvider";
+import { NavLinks } from "./_nav-links";
 
 export const menuLinks = [
   { label: "خانه", href: "/", icon: <IoHomeOutline className="w-6 h-6" /> },
@@ -50,16 +51,14 @@ export const menuLinks = [
 ] as const;
 
 export default function Header() {
-  const pathname = "/";
-
-  // const pathname = usePathname();
-
-  // if (pathname?.startsWith("/dashboard")) return null;
-  // if (pathname?.startsWith("/reservation")) return null;
-  // if (pathname?.startsWith("/login")) return null;
-
   return (
-    <header className="fixed h-20 w-full top-0 left-0 right-0 flex justify-center z-50 bg-[var(--page-background)] text-[var(--brown)]">
+    <header
+      className={clsx(
+        "fixed top-0 left-0 right-0 z-50 h-20 w-full",
+        "flex justify-center",
+        "bg-[var(--page-background)] text-[var(--brown)]"
+      )}
+    >
       <ScrollFadeProvider
         selector=".header-fade"
         translateY={-40}
@@ -68,89 +67,116 @@ export default function Header() {
         enableScrollTrigger={false}
       />
 
-      <div className="container flex justify-between gap-12 items-center px-5 md:px-10 header-fade">
-        <Link href={"/"} className="flex items-center gap-3">
+      <div
+        className={clsx(
+          "container header-fade",
+          "flex items-center justify-between gap-12",
+          "px-5 md:px-10"
+        )}
+      >
+        <Link href="/" className="flex items-center gap-3 md:hidden lg:flex">
           <Image
-            src={"/images/barsava logo(gold).PNG"}
+            src="/images/barsava logo(gold).PNG"
             alt="logo"
             width={68}
             height={73.85}
             className="object-cover cursor-pointer"
           />
-          <div className="flex flex-col gap-1.5 text-sm font-semibold">
+
+          <div className="text-sm font-bold leading-6 text-nowrap md:hidden xl:block">
             رزرو تالار رؤیایی شما؛ <br />
             لحظاتی به یاد ماندنی
           </div>
         </Link>
 
-        {/* menu item */}
-        <div className="hidden items-center flex-1 gap-7 md:flex">
+        <div className="hidden md:flex flex-1 items-center gap-7">
           {menuLinks.slice(0, 4).map((link, i) => (
-            <Link
-              key={i}
-              className={clsx(
-                "flex flex-col duration-300 ease-in-out transition-colors items-center hover:text-black  text-nowrap font-bold border-e-2 border-e-black/10 pe-7 last:border-none",
-                pathname === link.href
-                  ? "text-[var(--gold)]"
-                  : "text-[var(--brown)]"
-              )}
-              href={link.href}
-            >
-              {link.label}
-            </Link>
+            <NavLinks link={link} key={i} />
           ))}
         </div>
 
-        {/* cta box */}
-        <div className="hidden gap-4 md:flex">
+        <div className="hidden md:flex items-center gap-4">
           <a
             download
             href={menuLinks[6].href}
             className={clsx(
-              "group bg-[var(--gold)] text-[var(--page-background)] w-12 cursor-pointer h-12.5 ",
-              "rounded-lg flex justify-center items-center text-3xl transition-[width,opacity] duration-300",
-              " hover:w-38 hover:justify-around ease-in-out"
+              "group flex items-center justify-center",
+              "w-12 h-12.5",
+              "bg-[var(--gold)] rounded-lg",
+              "text-3xl text-[var(--page-background)]",
+              "cursor-pointer transition-[width,opacity] duration-300 ease-in-out",
+              "hover:w-38 hover:justify-around"
             )}
           >
-            <span className="opacity-0 invisible transition-opacity duration-1000 text-sm absolute group-hover:relative group-hover:opacity-100 group-hover:visible">
+            <span
+              className={clsx(
+                "absolute text-sm",
+                "invisible opacity-0",
+                "transition-opacity duration-1000",
+                "group-hover:relative group-hover:visible group-hover:opacity-100"
+              )}
+            >
               {menuLinks[6].label}
             </span>
+
             {menuLinks[6].icon}
           </a>
 
           <Link
             href={menuLinks[4].href}
             className={clsx(
-              "w-12 h-12.5 border border-[var(--gold)] text-[var(--gold)] flex justify-center items-center hover:justify-around group",
-              "cursor-pointer rounded-lg text-3xl transition-[width,opacity] duration-300 ease-in-out hover:w-38"
+              "group flex items-center justify-center",
+              "w-12 h-12.5",
+              "border border-[var(--gold)] rounded-lg",
+              "text-3xl text-[var(--gold)]",
+              "cursor-pointer transition-[width,opacity] duration-300 ease-in-out",
+              "hover:w-38 hover:justify-around"
             )}
           >
-            {menuLinks[4].icon}
-            <span className="opacity-0 invisible transition-opacity duration-1000 text-sm absolute group-hover:relative group-hover:opacity-100 group-hover:visible">
-              {menuLinks[4].label}
-            </span>
-          </Link>
-
-          <div className="flex items-center gap-5">
-            <div className="flex flex-col gap-1">
-              <a href="tel:09153016115" className="font-bold text-lg">
-                09153016115
-              </a>
-              <span className="text-xs">منتظر تماس شما هستیم</span>
-            </div>
-            <Link
-              href={menuLinks[5].href}
+            <span
               className={clsx(
-                "w-12 h-12.5 bg-[var(--gold)] text-[var(--page-background)] flex justify-center items-center hover:justify-around group",
-                "cursor-pointer rounded-lg text-3xl transition-[width,opacity] duration-300 ease-in-out hover:w-38"
+                "absolute text-sm",
+                "opacity-0 invisible",
+                "transition-opacity duration-1000",
+                "group-hover:relative group-hover:opacity-100 group-hover:visible"
               )}
             >
-              <span className="opacity-0 invisible transition-opacity duration-1000 text-sm absolute group-hover:relative group-hover:opacity-100 group-hover:visible">
-                {menuLinks[5].label}
-              </span>
-              {menuLinks[5].icon}
-            </Link>
+              {menuLinks[4].label}
+            </span>
+            {menuLinks[4].icon}
+          </Link>
+
+          <div className="grid gap-1">
+            <a href="tel:09153016115" className="text-md font-bold">
+              09153016115
+            </a>
+
+            <span className="text-xs text-nowrap">منتظر تماس شما هستیم</span>
           </div>
+
+          <Link
+            href={menuLinks[5].href}
+            className={clsx(
+              "group flex items-center justify-center",
+              "w-12 h-12.5",
+              "bg-[var(--gold)] rounded-lg",
+              "text-3xl text-[var(--page-background)]",
+              "cursor-pointer transition-[width] duration-300 ease-in-out",
+              "hover:w-38 hover:justify-around"
+            )}
+          >
+            <span
+              className={clsx(
+                "absolute text-sm",
+                "opacity-0 invisible",
+                "transition-opacity duration-1000",
+                "group-hover:relative group-hover:opacity-100 group-hover:visible"
+              )}
+            >
+              {menuLinks[5].label}
+            </span>
+            {menuLinks[5].icon}
+          </Link>
         </div>
 
         <ToggleMenuButton />

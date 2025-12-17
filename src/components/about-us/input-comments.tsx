@@ -19,7 +19,7 @@ export default function InputComments() {
               />
 
               <span className="absolute -top-6 transform translate-y-1/2 bg-[#F7F1EA] px-2 text-[rgba(0,0,0,0.3)] text-sm md:text-base">
-                نام خانوادگی :
+                نام و نام خانوادگی :
               </span>
             </label>
 
