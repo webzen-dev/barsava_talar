@@ -124,7 +124,7 @@ const config = {
 
 export default function Home() {
   return (
-    <div className="overflow-hidden grid gap-30">
+    <div className="overflow-hidden flex flex-col gap-30">
       <div className="container mx-auto flex flex-col gap-30 px-5 md:px-10">
         <HeroSection />
         <AboutSection data={config.aboutSliderData} />
