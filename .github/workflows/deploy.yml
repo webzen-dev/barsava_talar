@@ -29,10 +29,10 @@ jobs:
       - name: Build Docker image
         run: |
           docker build \
-            -t ghcr.io/webzen-dev/barsava-7:latest \
+            -t ghcr.io/webzen-dev/barsava-app:latest \
             -f ./Dockerfile \
             .
 
       - name: Push Docker image to GHCR
         run: |
-          docker push ghcr.io/webzen-dev/barsava-7:latest
+          docker push ghcr.io/webzen-dev/barsava-app:latest
