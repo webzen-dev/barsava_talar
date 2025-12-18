@@ -1,10 +1,12 @@
 "use client";
 
-import gsap from "gsap";
-import Link from "next/link";
 import React, { useEffect, useRef } from "react";
-import { menuLinks } from "./Header";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import gsap from "gsap";
 import clsx from "clsx";
+
+import { menuLinks } from "./Header";
 
 interface Prop {
   responsive: boolean;
@@ -12,7 +14,7 @@ interface Prop {
 }
 
 const MobileHeader: React.FC<Prop> = ({ responsive, setResponsive }) => {
-  const pathname = "/about-us";
+  const pathname = usePathname()
 
   const mobileHeader = useRef<HTMLDivElement | null>(null);
 

@@ -40,7 +40,7 @@ export default function FoodMenuBox({ menuData }: FoodMenuBoxProps) {
               <div className="w-full aspect-square relative shadow-2xl max-h-98">
                 <div
                   className={clsx(
-                    "absolute flex items-center justify-center inset-0 bg-black/50 rounded-md",
+                    "absolute flex items-center justify-center inset-0 bg-black/50 rounded-md overflow-hidden",
                     "before:absolute before:top-4 before:left-1/2 before:-translate-x-1/2 before:w-[calc(100%-32px)] before:aspect-square before:rounded-md before:bg-black/50",
                     "after:absolute after:top-8 after:left-1/2 after:-translate-x-1/2 after:w-[calc(100%-64px)] after:aspect-square after:rounded-md after:bg-black/30"
                   )}

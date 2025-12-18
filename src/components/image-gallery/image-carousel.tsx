@@ -28,7 +28,7 @@ const images = [
 ];
 
 function Carousel() {
-  const { refCarousel, selectedIndex, snaps } = useImageCarousel();
+  const { refCarousel, selectedIndex } = useImageCarousel();
 
   return (
     <div className="flex flex-col gap-7 gallery-images-hero">

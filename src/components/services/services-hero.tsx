@@ -76,7 +76,7 @@ export default function ServicesHero() {
           >
             <div
               className={clsx(
-                "bg-[var(--dark-background)]/50 text-[var(--page-background)] rounded-xl p-4 py-6 relative w-full",
+                "bg-[var(--dark-background)]/80 text-[var(--page-background)] rounded-xl p-4 py-6 relative w-full",
                 "flex flex-col gap-2.5",
                 "after:content-[''] after:absolute after:w-10 after:h-10 after:rounded-full after:bg-[var(--page-background)] after:-bottom-5 after:-right-5",
                 "before:content-[''] before:absolute before:w-10 before:h-10 before:rounded-full before:bg-[var(--page-background)] before:-bottom-5 before:-left-5"

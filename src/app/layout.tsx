@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" className="font-sans">
-      <body dir="rtl" className="bg-[var(--page-background)] pt-25">
+      <body dir="rtl" className="bg-[var(--page-background)] pt-20">
         <Header />
         {children}
         <Footer />
