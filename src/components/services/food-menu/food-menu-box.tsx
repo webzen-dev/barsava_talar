@@ -54,6 +54,7 @@ export default function FoodMenuBox({ menuData }: FoodMenuBoxProps) {
                   />
                 </div>
               </div>
+              
               <div className="flex  flex-col py-4 px-4 bg-white/90 gap-4 rounded-lg shadow-2xl flex-1">
                 <b className="text-lg">{item.title}</b>
 

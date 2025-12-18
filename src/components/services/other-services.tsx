@@ -39,7 +39,7 @@ export default function OtherServices() {
       
       <div className="container mx-auto px-5 md:px-10 py-10 flex flex-col gap-5 md:gap-10 text-[var(--page-background)]">
         <div className="w-full flex gap-5 md:gap-10 h-auto lg:h-112 flex-col lg:flex-row">
-          <div className="flex-1 h-full bg-[var(--page-background)]/20 rounded-2xl flex flex-col gap-5 p-5 other-services">
+          <div className="flex-1 h-full bg-[rgba(247,241,234,0.2)] rounded-2xl flex flex-col gap-5 p-5 other-services">
             <Image
               src={"/images/barsava logo(gold).PNG"}
               alt="logo"
@@ -93,18 +93,18 @@ export default function OtherServices() {
             {data.map((item) => (
               <div
                 key={item.id}
-                className="flex-1/5 bg-[var(--page-background)]/5 rounded-2xl flex flex-col gap-4 p-4 other-services"
+                className="flex-1/5 bg-[rgba(247,241,234,0.05)] rounded-2xl flex flex-col gap-4 p-4 other-services"
               >
                 {item.icon}
                 <b className="md:text-lg">{item.title}</b>
-                <p className="text-[var(--page-background)]/80 text-sm md:text-base">
+                <p className="text-[bg-[rgba(247,241,234,0.8)]] text-sm md:text-base">
                   {item.caption}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="flex-2/6 bg-[var(--page-background)]/5 rounded-2xl flex flex-col gap-4 p-4 other-services">
+          <div className="flex-2/6 bg-[rgba(247,241,234,0.05)] rounded-2xl flex flex-col gap-4 p-4 other-services">
             <b className="md:text-lg">رزرو آنلاین مراسم</b>
 
             <p className="text-[var(--page-background)]/80 text-sm md:text-base">

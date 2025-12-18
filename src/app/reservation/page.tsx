@@ -7,7 +7,7 @@ import ReservationForm from "@/components/reservation/form";
 
 export default function Reservation() {
   return (
-    <div className="w-full fixed inset-0 z-60 flex flex-col text-[var(--brown)] h-auto min-h-screen md:h-screen">
+    <div className="w-full fixed inset-0 z-60 flex flex-col text-[var(--brown)] h-auto min-h-screen md:h-screen overflow-y-auto">
       {/* reservation Header */}
       <div className="w-full flex justify-between items-center p-6 absolute z-30 top-0 left-0 right-0 text-[var(--page-background)]">
         <Link href={"/"} className="text-3xl text-[var(--brown)]">
