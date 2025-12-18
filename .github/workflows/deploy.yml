@@ -23,16 +23,16 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: <your-github-username>
+          password: ${{ secrets.GHCR_PAT }}
 
       - name: Build Docker image
         run: |
           docker build \
-            -t ghcr.io/${{ github.repository_owner }}/barsava_app:latest \
+            -t ghcr.io/webzen-dev/barsava-7:latest \
             -f ./Dockerfile \
             .
 
       - name: Push Docker image to GHCR
         run: |
-          docker push ghcr.io/${{ github.repository_owner }}/barsava_app:latest
+          docker push ghcr.io/webzen-dev/barsava-7:latest
