@@ -62,7 +62,7 @@ export default function ServicesHero() {
           میزبان خاطرات بی نظیر شما با خدمات ویژه هستیم
         </b>
 
-        <p className="text-base md:text-lg text-background/70 md:max-w-1/2 services-hero">
+        <p className="text-base md:text-lg text-black/70 md:max-w-1/2 services-hero">
           در مجموعه بارثاوا هر بخش با دقت و ظرافت طراحی شده تا تجربه ای فراتر از
           یک مراسم عادی رقم بخورد
         </p>

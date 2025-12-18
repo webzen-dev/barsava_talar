@@ -1,12 +1,11 @@
 // /app/api/auth/[...nextauth]/route.ts
 import { authOptions as adminAuthOptions } from "@/lib/auth";
-import { memberAuthProvider } from "@/lib/register";
 import NextAuth from "next-auth"
 const adminOptions = adminAuthOptions();
 
 const combinedAuthOptions = {
   ...adminOptions,
-  providers: [...adminOptions.providers, memberAuthProvider],
+  providers: [...adminOptions.providers],
 };
 
 const handler = NextAuth(combinedAuthOptions);
