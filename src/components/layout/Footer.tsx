@@ -124,9 +124,9 @@ const Footer = () => {
       </div>
 
       <div className="flex justify-between gap-10 w-full *:text-nowrap flex-col lg:flex-row">
-        <div className="flex justify-between gap-10 flex-1 flex-col md:flex-row min-w-full">
+        <div className="flex justify-between gap-10 flex-1 flex-col md:flex-row w-full">
           {footerLinks.map((section, i) => (
-            <div key={i} className="flex flex-col gap-5">
+            <div key={i} className="flex flex-col gap-5 flex-1">
               <div className="flex items-center gap-2.5">
                 <b>{section.title}</b>
               </div>
@@ -143,9 +143,9 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="flex flex-1 w-full gap-10 justify-between flex-col md:flex-row">
+        <div className="flex flex-1 gap-10 justify-between flex-col md:flex-row">
           {socialLiks.map((section, i) => (
-            <div key={i} className="flex flex-col gap-3">
+            <div key={i} className="flex flex-col gap-3 flex-1">
               {section.map((item, idx) => (
                 <a
                   key={idx}
