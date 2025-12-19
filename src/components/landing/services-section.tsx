@@ -59,11 +59,11 @@ export default function ServicesSection({ items }: { items: ServicesType[] }) {
                 className="object-cover drop-shadow-[0_0_20px_var(--gold)]"
               />
 
-              <b className="text-lg md:text-2xl text-[var(--gold)]">
+              <b className="text-base md:text-2xl text-[var(--gold)]">
                 {service.title}
               </b>
 
-              <p className="text-white/70 flex-1">{service.caption}</p>
+              <p className="text-white/70 flex-1 text-sm md:text-base">{service.caption}</p>
 
               <Link
                 href={"/services"}

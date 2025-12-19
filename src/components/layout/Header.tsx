@@ -24,14 +24,14 @@ export const menuLinks = [
     icon: <IoDocumentTextOutline className="w-6 h-6" />,
   },
   {
-    label: "خدمات و منو غذایی",
-    href: "/services",
-    icon: <IoSparklesOutline className="w-6 h-6" />,
-  },
-  {
     label: "گالری تصاویر",
     href: "/image-gallery",
     icon: <IoImagesOutline className="w-6 h-6" />,
+  },
+    {
+    label: "خدمات و منو غذایی",
+    href: "/services",
+    icon: <IoSparklesOutline className="w-6 h-6" />,
   },
   {
     label: "رزرو آنلاین",

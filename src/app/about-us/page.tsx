@@ -109,7 +109,7 @@ const config = {
 
 export default function AboutUs() {
   return (
-    <div className="flex flex-col container mx-auto px-5 md:px-10 gap-30 overflow-x-hidden">
+    <div className="flex flex-col container mx-auto px-5 md:px-10 gap-20 overflow-x-hidden">
       <AboutHeroSection />
       <DescriptionBox />
 
@@ -122,10 +122,9 @@ export default function AboutUs() {
           />
         ))}
       </div>
+      
       <FaqsSection />
-
       <IntroductionVideosSlider data={config.introVideos} />
-
       <Reviews data={config.comments} />
       <AboutIntroVideo />
       <InputComments />

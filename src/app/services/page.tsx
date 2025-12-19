@@ -8,14 +8,14 @@ import { menuData } from "@/data/food-menu-data";
 
 export default function Services() {
   return (
-    <div className="flex flex-col w-full gap-30">
-      <div className="container mx-auto px-5 md:px-10 gap-30 flex flex-col">
+    <div className="flex flex-col w-full gap-20">
+      <div className="container mx-auto px-5 md:px-10 gap-20 flex flex-col">
         <ServicesHero />
       </div>
 
       <OtherServices />
 
-      <div className="container mx-auto px-5 md:px-10 gap-30 flex flex-col">
+      <div className="container mx-auto px-5 md:px-10 gap-20 flex flex-col">
         <Facilities />
         <FoodMenuBox menuData={menuData} />
         <FaqsSection />

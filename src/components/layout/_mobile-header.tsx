@@ -14,32 +14,26 @@ interface Prop {
 }
 
 const MobileHeader: React.FC<Prop> = ({ responsive, setResponsive }) => {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   const mobileHeader = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (!mobileHeader.current) return;
-    gsap.fromTo(
-      mobileHeader.current,
-      {
-        x: 300,
-        duration: 1,
-      },
-      { x: 0, duration: 0.5 }
-    );
+
+    gsap.to(mobileHeader.current, { x: 0, opacity: 100, duration: 0.9 });
   }, [responsive]);
 
   return (
     <div
       ref={mobileHeader}
       className={clsx(
-        "fixed top-20 right-0 w-full pt-10 min-h-screen overflow-y-auto",
-        "flex flex-col gap-10 px-5 z-50 bg-[var(--page-background)] text-base"
+        "fixed top-20 right-0 w-full pt-10 min-h-screen overflow-y-auto items-center",
+        "flex flex-col gap-10 px-5 z-50 bg-[var(--page-background)] text-base transform translate-x-full opacity-0 transition-all duration-300 ease-in-out"
       )}
       onClick={() => setResponsive(false)}
     >
-      <div className="flex w-full flex-col">
+      <div className="flex w-full flex-col items-center">
         {menuLinks.slice(0, 4).map((link, i) => (
           <Link
             key={i}
