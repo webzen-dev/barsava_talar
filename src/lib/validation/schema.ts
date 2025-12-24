@@ -7,9 +7,10 @@ export const reservationSchema = z.object({
   description: z.string().min(5).max(500),
   guests: z.number().min(1).max(500),
   date: z.string(),
-  memberId: z.number(),
 });
+
 export type ReservationInput = z.infer<typeof reservationSchema>;
+
 export const deleteReservationSchema = z.object({
   id: z.number().positive(),
 });

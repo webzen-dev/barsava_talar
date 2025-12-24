@@ -13,6 +13,7 @@ export async function POST(request: NextRequest) {
 
     const body = await request.json();
     const parsed = reservationSchema.safeParse(body);
+
     if (!parsed.success) {
       return NextResponse.json(
         { errors: parsed.error.flatten().fieldErrors },
@@ -48,9 +49,7 @@ export async function GET() {
     //   return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
     // }
     // const reservations = await prisma.reservation.findMany();
-    const reservations = await prisma.reservation.findMany({
-      where: { memberId: 2 },
-    });
+    const reservations = await prisma.reservation.findMany({});
 
     return NextResponse.json(reservations);
   } catch (error) {

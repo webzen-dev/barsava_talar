@@ -30,15 +30,6 @@ model Reservation {
   date         String
   status       String   @default("Pending")
   createdAt    DateTime @default(now())
-  member       Members? @relation(fields: [memberId], references: [id])
-  memberId     Int?
-}
-
-model Members {
-  id           Int           @id @default(autoincrement())
-  phoneNumber  String        @unique
-  createdAt    DateTime      @default(now())
-  reservations Reservation[]
 }
 
 model Menu {

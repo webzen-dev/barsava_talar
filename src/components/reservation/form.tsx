@@ -36,10 +36,7 @@ export default function ReservationForm() {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]:
-        e.target.type === "number"
-          ? Number(value)
-          : value,
+      [name]: e.target.type === "number" ? Number(value) : value,
     }));
   };
 
@@ -81,7 +78,7 @@ export default function ReservationForm() {
   }
 
   return (
-    <div className="flex-1 bg-[var(--page-background)] flex flex-col text-[var(--brown)] p-5 items-center gap-5 2xl:p-10 2xl:gap-10">
+    <div className="flex-1 bg-[var(--page-background)] flex flex-col text-[var(--brown)] pb-20 p-5 items-center gap-5 2xl:p-10 2xl:gap-10">
       <b className="md:text-2xl">رزرو کنید !</b>
       <span className="text-[var(--brown)]/70 text-sm text-center md:text-base">
         رویایی‌ترین لحظه‌های زندگی‌تان اینجاست! شما و عزیزانتان فقط یک قدم با
@@ -147,7 +144,7 @@ export default function ReservationForm() {
             name="phone_number"
             value={formData.phone_number}
             onChange={handleChange}
-            type="number"
+            type="text"
             className="w-full px-5 text-sm flex items-center h-[40px] border-b-2 border-b-solid border-b-[var(--brown)] bg-[var(--brown)]/10 rounded-t-lg"
             placeholder="0915000000"
           />

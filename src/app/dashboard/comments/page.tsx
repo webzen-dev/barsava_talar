@@ -69,7 +69,7 @@ export default function CommentsManagement() {
   return (
     <div className="h-full w-full bg-[rgba(236,236,236,0.8)] p-5 flex max-h-full overflow-y-auto gap-5 flex-col">
       <b className="text-2xl my-2">نظرات کاربران !</b>
-      <div className="grid gap-5">
+      <div className="grid gap-5">  
         {comments.map((comment) => (
           <CommentItem key={comment.id} data={comment} />
         ))}
